@@ -1,0 +1,13 @@
+services:
+  pcw-poc:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "1502:1502"
+      - "1503:1503"
+      - "8000:8000"
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+    command: ["bash","scripts/start_foreground.sh"]
