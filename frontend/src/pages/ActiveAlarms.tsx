@@ -171,7 +171,7 @@ export const ActiveAlarms = () => {
           </select>
           <select value={subFilter} onChange={e => setSubFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Submains</option>
-            {Array.from({length:20}, (_,i)=>`Submain${String(i+1).padStart(2,'0')}`).map(s => <option key={s} value={s}>{s}</option>)}
+            {Array.from({length:10}, (_,i)=>`Submain${String(i+1).padStart(2,'0')}`).map(s => <option key={s} value={s}>{s}</option>)}
           </select>
           <select value={priorityFilter} onChange={e => setPriorityFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Priorities</option>

@@ -161,7 +161,7 @@ export const SubmainDetail = () => {
                     <polygon points="295,360 305,360 300,375" fill="#2F91D1" pointerEvents="none" />
                     
                     {/* PTS: Circle Shape with High-Contrast Dual-Channel Alarm State */}
-                    {pts ? (
+                    {pts && (
                       <g transform="translate(300, 240)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pts.tagId); }} style={{ cursor: 'pointer' }}>
                         <circle 
                           cx="0" cy="0" r="24" fill="#ffffff" 
@@ -172,12 +172,6 @@ export const SubmainDetail = () => {
                         <text x="0" y="5" fill="#000000" fontSize="14" fontWeight="bold" textAnchor="middle">PT</text>
                         <text x="35" y="-5" fill="#000000" fontSize="16" fontWeight="900" textAnchor="start">{pts.value.toFixed(2)}</text>
                         <text x="35" y="12" fill="#000000" fontSize="12" fontWeight="600" textAnchor="start">{pts.displayTag}</text>
-                      </g>
-                    ) : (
-                      <g transform="translate(300, 240)">
-                        <circle cx="0" cy="0" r="24" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#666666" fontSize="14" textAnchor="middle" pointerEvents="none">PT</text>
-                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
                       </g>
                     )}
 
@@ -193,7 +187,7 @@ export const SubmainDetail = () => {
                     </g>
 
                     {/* FT: Square Shape (□) for Distinct Academic Thesis Identification */}
-                    {ft ? (
+                    {ft && (
                       <g transform="translate(300, 490)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ft.tagId); }} style={{ cursor: 'pointer' }}>
                         <rect 
                           x="-24" y="-24" width="48" height="48" rx="4" fill="#ffffff" 
@@ -205,12 +199,6 @@ export const SubmainDetail = () => {
                         <text x="35" y="-5" fill="#000000" fontSize="16" fontWeight="900" textAnchor="start">{ft.value.toFixed(2)}</text>
                         <text x="35" y="12" fill="#000000" fontSize="12" fontWeight="600" textAnchor="start">{ft.displayTag}</text>
                       </g>
-                    ) : (
-                      <g transform="translate(300, 490)">
-                        <rect x="-24" y="-24" width="48" height="48" rx="4" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#666666" fontSize="14" textAnchor="middle" pointerEvents="none">FT</text>
-                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
-                      </g>
                     )}
 
                     {/* Return Downward Pipe */}
@@ -218,7 +206,7 @@ export const SubmainDetail = () => {
                     <polygon points="295,680 305,680 300,695" fill="#D45A4A" pointerEvents="none" />
 
                     {/* PTR: Circle Shape with High-Contrast Dual-Channel Alarm State */}
-                    {ptr ? (
+                    {ptr && (
                       <g transform="translate(300, 600)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ptr.tagId); }} style={{ cursor: 'pointer' }}>
                         <circle 
                           cx="0" cy="0" r="24" fill="#ffffff" 
@@ -230,16 +218,10 @@ export const SubmainDetail = () => {
                         <text x="35" y="-5" fill="#000000" fontSize="16" fontWeight="900" textAnchor="start">{ptr.value.toFixed(2)}</text>
                         <text x="35" y="12" fill="#000000" fontSize="12" fontWeight="600" textAnchor="start">{ptr.displayTag}</text>
                       </g>
-                    ) : (
-                      <g transform="translate(300, 600)">
-                        <circle cx="0" cy="0" r="24" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#666666" fontSize="14" textAnchor="middle" pointerEvents="none">PT</text>
-                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
-                      </g>
                     )}
 
                     {/* PDT: Concentric Double Circles (◎) for Differential Pressure */}
-                    {pdt ? (
+                    {pdt && (
                       <g transform="translate(180, 420)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pdt.tagId); }} style={{ cursor: 'pointer' }}>
                         <circle 
                           cx="0" cy="0" r="24" fill="#ffffff" 
@@ -253,13 +235,6 @@ export const SubmainDetail = () => {
                         
                         <path d="M 0 -24 L 0 -150 L 100 -150" stroke="#000000" strokeWidth="1.5" strokeDasharray="4 4" fill="none" pointerEvents="none" />
                         <path d="M 0 24 L 0 200 L 100 200" stroke="#000000" strokeWidth="1.5" strokeDasharray="4 4" fill="none" pointerEvents="none" />
-                      </g>
-                    ) : (
-                      <g transform="translate(180, 420)">
-                        <circle cx="0" cy="0" r="24" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
-                        <circle cx="0" cy="0" r="16" fill="none" stroke="#000000" strokeWidth="1" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#666666" fontSize="13" textAnchor="middle" pointerEvents="none">DP</text>
-                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
                       </g>
                     )}
                   </g>

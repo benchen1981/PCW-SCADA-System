@@ -153,7 +153,7 @@ export const initialPcwSystems: PcwSystem[] = Array.from({ length: 8 }).map((_, 
   returnTemperature: 25.0,
   flow: 1000.0,
   lastUpdateTime: new Date().toISOString(),
-  submains: Array.from({ length: 20 }).map((_, j) => `PCW0${i + 1}.Submain${String(j + 1).padStart(2, '0')}`)
+  submains: Array.from({ length: 10 }).map((_, j) => `PCW0${i + 1}.Submain${String(j + 1).padStart(2, '0')}`)
 }));
 """
 
@@ -163,7 +163,7 @@ export const initialPcwSubmains: PcwSubmain[] = [];
 
 for (let i = 1; i <= 8; i++) {
   const systemId = `PCW0${i}`;
-  for (let j = 1; j <= 20; j++) {
+  for (let j = 1; j <= 10; j++) {
     const submainId = `Submain${String(j).padStart(2, '0')}`;
     const canonicalName = `${systemId}.${submainId}`;
     

@@ -204,7 +204,7 @@ export const LiveSensors = () => {
              </div>
              
              <div style={{ flex: 1, background: '#ffffff', border: '1.5px solid #000000', position: 'relative', overflow: 'auto' }}>
-                <svg width="3400" height="900" style={{ minWidth: '3400px' }} viewBox="0 0 3400 900">
+                <svg width="1800" height="900" style={{ minWidth: '1800px' }} viewBox="0 0 1800 900">
                   <defs>
                     <linearGradient id="pipeSupplyLg" x1="0%" y1="0%" x2="0%" y2="100%">
                       <stop offset="0%" stopColor="#2F91D1" stopOpacity="1"/>
@@ -217,18 +217,18 @@ export const LiveSensors = () => {
                   </defs>
 
                   {/* Main Supply Header */}
-                  <path d="M 50 150 L 3300 150" stroke="url(#pipeSupplyLg)" strokeWidth="16" fill="none" />
+                  <path d="M 50 150 L 1750 150" stroke="url(#pipeSupplyLg)" strokeWidth="16" fill="none" />
                   <text x="60" y="130" fill="#2F91D1" fontSize="18" fontWeight="bold">SUPPLY MAIN HEADER ({selectedPcw})</text>
-                  <polygon points="3250,140 3270,150 3250,160" fill="#000000" />
+                  <polygon points="1730,140 1750,150 1730,160" fill="#000000" />
 
                   {/* Main Return Header */}
-                  <path d="M 50 750 L 3300 750" stroke="url(#pipeReturnLg)" strokeWidth="16" fill="none" />
+                  <path d="M 50 750 L 1750 750" stroke="url(#pipeReturnLg)" strokeWidth="16" fill="none" />
                   <text x="60" y="780" fill="#D45A4A" fontSize="18" fontWeight="bold">RETURN MAIN HEADER ({selectedPcw})</text>
-                  <polygon points="3250,740 3270,750 3250,760" fill="#000000" />
+                  <polygon points="70,740 50,750 70,760" fill="#000000" />
 
-                  {/* Map over all 20 submains for this PCW */}
-                  {Array.from({length:20}, (_,i)=>`Submain${String(i+1).padStart(2,'0')}`).map((sm, idx) => {
-                    const xBase = 150 + idx * 160;
+                  {/* Map over strictly the 10 real submains for this PCW loop */}
+                  {Array.from({length: 10}, (_, i) => `Submain${String(i + 1).padStart(2, '0')}`).map((sm, idx) => {
+                    const xBase = 120 + idx * 165;
                     
                     const smSensors = sensors.filter(s => s.systemId === selectedPcw && s.submainId === sm);
                     const pts = smSensors.find(s => s.tagId.endsWith('PTS') || s.tagId.endsWith('PT1S'));
@@ -255,7 +255,7 @@ export const LiveSensors = () => {
                         <polygon points={`${xBase - 5},420 ${xBase + 5},420 ${xBase},430`} fill="#2F91D1" pointerEvents="none" />
                         
                         {/* Render PTS: Circle (○) */}
-                        {pts ? (
+                        {pts && (
                           <g transform={`translate(${xBase}, 240)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pts.tagId); }}>
                             <circle 
                               cx="0" cy="0" r="18" fill="#ffffff" 
@@ -266,11 +266,6 @@ export const LiveSensors = () => {
                             <text x="0" y="4" fill="#000000" fontSize="11" fontWeight="bold" textAnchor="middle">PT</text>
                             <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{pts.value.toFixed(2)}</text>
                           </g>
-                        ) : (
-                          <g transform={`translate(${xBase}, 240)`}>
-                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#666666" fontSize="11" textAnchor="middle">PT</text>
-                          </g>
                         )}
 
                         {/* Valve */}
@@ -278,7 +273,7 @@ export const LiveSensors = () => {
                            <polygon points="-12,-8 -12,8 12,-8 12,8" fill="#ffffff" stroke="#000000" strokeWidth="2" />
                         </g>
 
-                        {/* FAB TOOL BOX */}
+                        {/* FAB TOOL BOX (TOOL01~TOOL10) */}
                         <g transform={`translate(${xBase - 35}, 380)`} pointerEvents="none">
                           <rect x="0" y="0" width="70" height="60" fill="#ffffff" stroke="#000000" strokeWidth="2" rx="4" />
                           <text x="35" y="35" fill="#000000" fontSize="12" textAnchor="middle" fontWeight="bold">TOOL{String(idx + 1).padStart(2, '0')}</text>
@@ -289,7 +284,7 @@ export const LiveSensors = () => {
                         <polygon points={`${xBase - 5},730 ${xBase + 5},730 ${xBase},745`} fill="#D45A4A" pointerEvents="none" />
 
                         {/* Render PTR: Circle (○) */}
-                        {ptr ? (
+                        {ptr && (
                           <g transform={`translate(${xBase}, 510)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ptr.tagId); }}>
                             <circle 
                               cx="0" cy="0" r="18" fill="#ffffff" 
@@ -300,15 +295,10 @@ export const LiveSensors = () => {
                             <text x="0" y="4" fill="#000000" fontSize="11" fontWeight="bold" textAnchor="middle">PT</text>
                             <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{ptr.value.toFixed(2)}</text>
                           </g>
-                        ) : (
-                          <g transform={`translate(${xBase}, 510)`}>
-                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#666666" fontSize="11" textAnchor="middle">PT</text>
-                          </g>
                         )}
 
                         {/* Render PDT: Concentric Double Circles (◎) */}
-                        {pdt ? (
+                        {pdt && (
                           <g transform={`translate(${xBase}, 600)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pdt.tagId); }}>
                             <circle 
                               cx="0" cy="0" r="18" fill="#ffffff" 
@@ -320,16 +310,10 @@ export const LiveSensors = () => {
                             <text x="0" y="4" fill="#000000" fontSize="10" fontWeight="bold" textAnchor="middle">DP</text>
                             <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{pdt.value.toFixed(2)}</text>
                           </g>
-                        ) : (
-                          <g transform={`translate(${xBase}, 600)`}>
-                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
-                            <circle cx="0" cy="0" r="12" fill="none" stroke="#000000" strokeWidth="1" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#666666" fontSize="10" textAnchor="middle">DP</text>
-                          </g>
                         )}
 
                         {/* Flow Meter FT: Square Shape (□) */}
-                        {ft ? (
+                        {ft && (
                           <g transform={`translate(${xBase}, 690)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ft.tagId); }}>
                             <rect 
                               x="-18" y="-18" width="36" height="36" rx="3" fill="#ffffff" 
@@ -339,11 +323,6 @@ export const LiveSensors = () => {
                             />
                             <text x="0" y="4" fill="#000000" fontSize="11" fontWeight="bold" textAnchor="middle">FT</text>
                             <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{ft.value.toFixed(2)}</text>
-                          </g>
-                        ) : (
-                          <g transform={`translate(${xBase}, 690)`}>
-                            <rect x="-18" y="-18" width="36" height="36" rx="3" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#666666" fontSize="11" textAnchor="middle">FT</text>
                           </g>
                         )}
                         
