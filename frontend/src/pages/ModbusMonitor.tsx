@@ -293,7 +293,7 @@ export const ModbusMonitor = () => {
                 </select>
                 <select value={simSubFilter} onChange={e=>setSimSubFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', width: '100%' }}>
                   <option value="">All Submains</option>
-                  {Array.from({length: 20}).map((_, i) => <option key={i} value={`Submain${String(i+1).padStart(2,'0')}`}>{`Submain${String(i+1).padStart(2,'0')}`}</option>)}
+                  {Array.from({length: 10}).map((_, i) => <option key={i} value={`Submain${String(i+1).padStart(2,'0')}`}>{`Submain${String(i+1).padStart(2,'0')}`}</option>)}
                 </select>
                 <select value={simTypeFilter} onChange={e=>setSimTypeFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', width: '100%' }}>
                   <option value="">All Sensor Types</option>

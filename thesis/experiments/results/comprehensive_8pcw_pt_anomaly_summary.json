@@ -13,7 +13,7 @@
     "PCW01_PT_01_S": {
       "system": "PCW01",
       "pos": "SUPPLY",
-      "base": 2.2,
+      "base": 1.5,
       "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 9,
@@ -133,7 +133,7 @@
     "PCW01_PT_02_R": {
       "system": "PCW01",
       "pos": "RETURN",
-      "base": 1.7,
+      "base": 1.5,
       "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 9,
@@ -253,7 +253,7 @@
     "PCW02_PT_01_S": {
       "system": "PCW02",
       "pos": "SUPPLY",
-      "base": 2.2,
+      "base": 1.5,
       "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 10,
@@ -373,7 +373,7 @@
     "PCW02_PT_02_R": {
       "system": "PCW02",
       "pos": "RETURN",
-      "base": 1.7,
+      "base": 1.5,
       "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 10,
@@ -493,8 +493,8 @@
     "PCW03_PT_01_S": {
       "system": "PCW03",
       "pos": "SUPPLY",
-      "base": 2.1,
-      "span": 0.3999999999999999,
+      "base": 1.9,
+      "span": 0.40000000000000013,
       "test_count": 10,
       "prediction_hits": 9,
       "alarm_hits": 0,
@@ -613,7 +613,7 @@
     "PCW03_PT_02_R": {
       "system": "PCW03",
       "pos": "RETURN",
-      "base": 1.65,
+      "base": 1.9,
       "span": 0.40000000000000013,
       "test_count": 10,
       "prediction_hits": 10,
@@ -733,8 +733,8 @@
     "PCW04_PT_01_S": {
       "system": "PCW04",
       "pos": "SUPPLY",
-      "base": 2.1,
-      "span": 0.3999999999999999,
+      "base": 1.9,
+      "span": 0.40000000000000013,
       "test_count": 10,
       "prediction_hits": 10,
       "alarm_hits": 0,
@@ -853,7 +853,7 @@
     "PCW04_PT_02_R": {
       "system": "PCW04",
       "pos": "RETURN",
-      "base": 1.65,
+      "base": 1.9,
       "span": 0.40000000000000013,
       "test_count": 10,
       "prediction_hits": 9,
@@ -973,8 +973,8 @@
     "PCW05_PT_01_S": {
       "system": "PCW05",
       "pos": "SUPPLY",
-      "base": 2.0,
-      "span": 0.40000000000000013,
+      "base": 2.5,
+      "span": 0.40000000000000036,
       "test_count": 10,
       "prediction_hits": 9,
       "alarm_hits": 0,
@@ -1093,8 +1093,8 @@
     "PCW05_PT_02_R": {
       "system": "PCW05",
       "pos": "RETURN",
-      "base": 1.6,
-      "span": 0.40000000000000013,
+      "base": 2.5,
+      "span": 0.40000000000000036,
       "test_count": 10,
       "prediction_hits": 10,
       "alarm_hits": 0,
@@ -1213,8 +1213,8 @@
     "PCW06_PT_01_S": {
       "system": "PCW06",
       "pos": "SUPPLY",
-      "base": 2.0,
-      "span": 0.40000000000000013,
+      "base": 2.5,
+      "span": 0.40000000000000036,
       "test_count": 10,
       "prediction_hits": 9,
       "alarm_hits": 0,
@@ -1333,8 +1333,8 @@
     "PCW06_PT_02_R": {
       "system": "PCW06",
       "pos": "RETURN",
-      "base": 1.6,
-      "span": 0.40000000000000013,
+      "base": 2.5,
+      "span": 0.40000000000000036,
       "test_count": 10,
       "prediction_hits": 10,
       "alarm_hits": 0,
@@ -1453,8 +1453,8 @@
     "PCW07_PT_01_S": {
       "system": "PCW07",
       "pos": "SUPPLY",
-      "base": 1.9,
-      "span": 0.40000000000000013,
+      "base": 2.2,
+      "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 10,
       "alarm_hits": 0,
@@ -1573,7 +1573,7 @@
     "PCW07_PT_02_R": {
       "system": "PCW07",
       "pos": "RETURN",
-      "base": 1.5,
+      "base": 2.2,
       "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 9,
@@ -1693,8 +1693,8 @@
     "PCW08_PT_01_S": {
       "system": "PCW08",
       "pos": "SUPPLY",
-      "base": 1.9,
-      "span": 0.40000000000000013,
+      "base": 2.2,
+      "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 9,
       "alarm_hits": 0,
@@ -1813,7 +1813,7 @@
     "PCW08_PT_02_R": {
       "system": "PCW08",
       "pos": "RETURN",
-      "base": 1.5,
+      "base": 2.2,
       "span": 0.3999999999999999,
       "test_count": 10,
       "prediction_hits": 10,

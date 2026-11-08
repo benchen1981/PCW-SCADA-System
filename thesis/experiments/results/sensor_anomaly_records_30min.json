@@ -12,9 +12,9 @@
     "hard_breach_min": null,
     "lead_time_min": 13.0,
     "peak_n10": 5.0,
-    "mean_val": 2.2345,
-    "max_val": 2.2966,
-    "min_val": 2.1949
+    "mean_val": 1.5345,
+    "max_val": 1.5966,
+    "min_val": 1.4949
   },
   {
     "run_id": 2,
@@ -29,9 +29,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 2.2507,
-    "max_val": 2.3397,
-    "min_val": 2.196
+    "mean_val": 1.5507,
+    "max_val": 1.6397,
+    "min_val": 1.496
   },
   {
     "run_id": 3,
@@ -46,9 +46,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 2.2683,
-    "max_val": 2.396,
-    "min_val": 2.1932
+    "mean_val": 1.5683,
+    "max_val": 1.696,
+    "min_val": 1.4932
   },
   {
     "run_id": 4,
@@ -63,9 +63,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.0,
-    "mean_val": 2.1663,
-    "max_val": 2.2044,
-    "min_val": 2.0995
+    "mean_val": 1.4663,
+    "max_val": 1.5044,
+    "min_val": 1.3995
   },
   {
     "run_id": 5,
@@ -80,9 +80,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 5.45,
-    "mean_val": 2.1483,
-    "max_val": 2.2055,
-    "min_val": 2.0573
+    "mean_val": 1.4483,
+    "max_val": 1.5055,
+    "min_val": 1.3573
   },
   {
     "run_id": 6,
@@ -97,9 +97,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 2.1316,
-    "max_val": 2.2037,
-    "min_val": 2.0062
+    "mean_val": 1.4316,
+    "max_val": 1.5037,
+    "min_val": 1.3062
   },
   {
     "run_id": 7,
@@ -114,9 +114,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 15.0,
-    "mean_val": 2.2723,
-    "max_val": 2.3056,
-    "min_val": 2.1975
+    "mean_val": 1.5723,
+    "max_val": 1.6056,
+    "min_val": 1.4975
   },
   {
     "run_id": 8,
@@ -131,9 +131,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 2.128,
-    "max_val": 2.2063,
-    "min_val": 2.0947
+    "mean_val": 1.428,
+    "max_val": 1.5063,
+    "min_val": 1.3947
   },
   {
     "run_id": 9,
@@ -148,9 +148,9 @@
     "hard_breach_min": null,
     "lead_time_min": 20.0,
     "peak_n10": 1.5,
-    "mean_val": 2.2046,
-    "max_val": 2.2609,
-    "min_val": 2.195
+    "mean_val": 1.5046,
+    "max_val": 1.5609,
+    "min_val": 1.495
   },
   {
     "run_id": 10,
@@ -165,9 +165,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.38,
-    "mean_val": 2.1995,
-    "max_val": 2.2093,
-    "min_val": 2.1887
+    "mean_val": 1.4995,
+    "max_val": 1.5093,
+    "min_val": 1.4887
   },
   {
     "run_id": 11,
@@ -182,9 +182,9 @@
     "hard_breach_min": null,
     "lead_time_min": 14.0,
     "peak_n10": 5.0,
-    "mean_val": 1.7348,
-    "max_val": 1.7963,
-    "min_val": 1.6947
+    "mean_val": 1.5348,
+    "max_val": 1.5963,
+    "min_val": 1.4947
   },
   {
     "run_id": 12,
@@ -199,9 +199,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 5.0,
-    "mean_val": 1.7509,
-    "max_val": 1.847,
-    "min_val": 1.6932
+    "mean_val": 1.5509,
+    "max_val": 1.647,
+    "min_val": 1.4932
   },
   {
     "run_id": 13,
@@ -216,9 +216,9 @@
     "hard_breach_min": null,
     "lead_time_min": 21.0,
     "peak_n10": 6.67,
-    "mean_val": 1.769,
-    "max_val": 1.8975,
-    "min_val": 1.6982
+    "mean_val": 1.569,
+    "max_val": 1.6975,
+    "min_val": 1.4982
   },
   {
     "run_id": 14,
@@ -233,9 +233,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 4.29,
-    "mean_val": 1.6655,
-    "max_val": 1.7033,
-    "min_val": 1.6033
+    "mean_val": 1.4655,
+    "max_val": 1.5033,
+    "min_val": 1.4033
   },
   {
     "run_id": 15,
@@ -250,9 +250,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 1.6493,
-    "max_val": 1.7061,
-    "min_val": 1.5543
+    "mean_val": 1.4493,
+    "max_val": 1.5061,
+    "min_val": 1.3543
   },
   {
     "run_id": 16,
@@ -267,9 +267,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.6314,
-    "max_val": 1.7046,
-    "min_val": 1.5001
+    "mean_val": 1.4314,
+    "max_val": 1.5046,
+    "min_val": 1.3001
   },
   {
     "run_id": 17,
@@ -284,9 +284,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 8.57,
-    "mean_val": 1.7721,
-    "max_val": 1.8063,
-    "min_val": 1.6953
+    "mean_val": 1.5721,
+    "max_val": 1.6063,
+    "min_val": 1.4953
   },
   {
     "run_id": 18,
@@ -301,9 +301,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 15.0,
-    "mean_val": 1.6286,
-    "max_val": 1.7057,
-    "min_val": 1.5899
+    "mean_val": 1.4286,
+    "max_val": 1.5057,
+    "min_val": 1.3899
   },
   {
     "run_id": 19,
@@ -318,9 +318,9 @@
     "hard_breach_min": null,
     "lead_time_min": 9.0,
     "peak_n10": 1.29,
-    "mean_val": 1.7034,
-    "max_val": 1.7662,
-    "min_val": 1.6942
+    "mean_val": 1.5034,
+    "max_val": 1.5662,
+    "min_val": 1.4942
   },
   {
     "run_id": 20,
@@ -335,9 +335,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.56,
-    "mean_val": 1.6996,
-    "max_val": 1.7089,
-    "min_val": 1.6899
+    "mean_val": 1.4996,
+    "max_val": 1.5089,
+    "min_val": 1.4899
   },
   {
     "run_id": 21,
@@ -352,9 +352,9 @@
     "hard_breach_min": null,
     "lead_time_min": 12.0,
     "peak_n10": 4.0,
-    "mean_val": 2.2345,
-    "max_val": 2.2957,
-    "min_val": 2.194
+    "mean_val": 1.5345,
+    "max_val": 1.5957,
+    "min_val": 1.494
   },
   {
     "run_id": 22,
@@ -369,9 +369,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 6.0,
-    "mean_val": 2.2509,
-    "max_val": 2.3413,
-    "min_val": 2.1958
+    "mean_val": 1.5509,
+    "max_val": 1.6413,
+    "min_val": 1.4958
   },
   {
     "run_id": 23,
@@ -386,9 +386,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 2.2686,
-    "max_val": 2.3871,
-    "min_val": 2.1947
+    "mean_val": 1.5686,
+    "max_val": 1.6871,
+    "min_val": 1.4947
   },
   {
     "run_id": 24,
@@ -403,9 +403,9 @@
     "hard_breach_min": null,
     "lead_time_min": 9.0,
     "peak_n10": 5.0,
-    "mean_val": 2.1656,
-    "max_val": 2.203,
-    "min_val": 2.1086
+    "mean_val": 1.4656,
+    "max_val": 1.503,
+    "min_val": 1.4086
   },
   {
     "run_id": 25,
@@ -420,9 +420,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 2.1479,
-    "max_val": 2.2058,
-    "min_val": 2.0533
+    "mean_val": 1.4479,
+    "max_val": 1.5058,
+    "min_val": 1.3533
   },
   {
     "run_id": 26,
@@ -437,9 +437,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 2.1318,
-    "max_val": 2.2075,
-    "min_val": 2.0088
+    "mean_val": 1.4318,
+    "max_val": 1.5075,
+    "min_val": 1.3088
   },
   {
     "run_id": 27,
@@ -454,9 +454,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 7.5,
-    "mean_val": 2.2717,
-    "max_val": 2.3038,
-    "min_val": 2.1976
+    "mean_val": 1.5717,
+    "max_val": 1.6038,
+    "min_val": 1.4976
   },
   {
     "run_id": 28,
@@ -471,9 +471,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 10.0,
-    "mean_val": 2.1284,
-    "max_val": 2.2046,
-    "min_val": 2.0937
+    "mean_val": 1.4284,
+    "max_val": 1.5046,
+    "min_val": 1.3937
   },
   {
     "run_id": 29,
@@ -488,9 +488,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.45,
-    "mean_val": 2.2027,
-    "max_val": 2.2615,
-    "min_val": 2.1923
+    "mean_val": 1.5027,
+    "max_val": 1.5615,
+    "min_val": 1.4923
   },
   {
     "run_id": 30,
@@ -505,9 +505,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.85,
-    "mean_val": 2.199,
-    "max_val": 2.2093,
-    "min_val": 2.1861
+    "mean_val": 1.499,
+    "max_val": 1.5093,
+    "min_val": 1.4861
   },
   {
     "run_id": 31,
@@ -522,9 +522,9 @@
     "hard_breach_min": null,
     "lead_time_min": 10.0,
     "peak_n10": 5.0,
-    "mean_val": 1.7344,
-    "max_val": 1.794,
-    "min_val": 1.6967
+    "mean_val": 1.5344,
+    "max_val": 1.594,
+    "min_val": 1.4967
   },
   {
     "run_id": 32,
@@ -539,9 +539,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.0,
-    "mean_val": 1.752,
-    "max_val": 1.8461,
-    "min_val": 1.6964
+    "mean_val": 1.552,
+    "max_val": 1.6461,
+    "min_val": 1.4964
   },
   {
     "run_id": 33,
@@ -556,9 +556,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 1.7682,
-    "max_val": 1.8872,
-    "min_val": 1.6927
+    "mean_val": 1.5682,
+    "max_val": 1.6872,
+    "min_val": 1.4927
   },
   {
     "run_id": 34,
@@ -573,9 +573,9 @@
     "hard_breach_min": null,
     "lead_time_min": 10.0,
     "peak_n10": 5.0,
-    "mean_val": 1.6652,
-    "max_val": 1.7028,
-    "min_val": 1.6051
+    "mean_val": 1.4652,
+    "max_val": 1.5028,
+    "min_val": 1.4051
   },
   {
     "run_id": 35,
@@ -590,9 +590,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 6.0,
-    "mean_val": 1.6486,
-    "max_val": 1.703,
-    "min_val": 1.5592
+    "mean_val": 1.4486,
+    "max_val": 1.503,
+    "min_val": 1.3592
   },
   {
     "run_id": 36,
@@ -607,9 +607,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.6318,
-    "max_val": 1.7055,
-    "min_val": 1.5112
+    "mean_val": 1.4318,
+    "max_val": 1.5055,
+    "min_val": 1.3112
   },
   {
     "run_id": 37,
@@ -624,9 +624,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 15.0,
-    "mean_val": 1.7722,
-    "max_val": 1.8058,
-    "min_val": 1.6971
+    "mean_val": 1.5722,
+    "max_val": 1.6058,
+    "min_val": 1.4971
   },
   {
     "run_id": 38,
@@ -641,9 +641,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 7.5,
-    "mean_val": 1.629,
-    "max_val": 1.7035,
-    "min_val": 1.5954
+    "mean_val": 1.429,
+    "max_val": 1.5035,
+    "min_val": 1.3954
   },
   {
     "run_id": 39,
@@ -658,9 +658,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.4,
-    "mean_val": 1.7017,
-    "max_val": 1.7578,
-    "min_val": 1.695
+    "mean_val": 1.5017,
+    "max_val": 1.5578,
+    "min_val": 1.495
   },
   {
     "run_id": 40,
@@ -675,9 +675,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.56,
-    "mean_val": 1.6998,
-    "max_val": 1.7079,
-    "min_val": 1.689
+    "mean_val": 1.4998,
+    "max_val": 1.5079,
+    "min_val": 1.489
   },
   {
     "run_id": 41,
@@ -692,9 +692,9 @@
     "hard_breach_min": null,
     "lead_time_min": 14.0,
     "peak_n10": 4.62,
-    "mean_val": 2.1351,
-    "max_val": 2.1985,
-    "min_val": 2.0953
+    "mean_val": 1.9351,
+    "max_val": 1.9985,
+    "min_val": 1.8953
   },
   {
     "run_id": 42,
@@ -709,9 +709,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 6.67,
-    "mean_val": 2.1521,
-    "max_val": 2.2423,
-    "min_val": 2.0964
+    "mean_val": 1.9521,
+    "max_val": 2.0423,
+    "min_val": 1.8964
   },
   {
     "run_id": 43,
@@ -726,9 +726,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 2.1685,
-    "max_val": 2.2911,
-    "min_val": 2.0951
+    "mean_val": 1.9685,
+    "max_val": 2.0911,
+    "min_val": 1.8951
   },
   {
     "run_id": 44,
@@ -743,9 +743,9 @@
     "hard_breach_min": null,
     "lead_time_min": 13.0,
     "peak_n10": 4.62,
-    "mean_val": 2.0658,
-    "max_val": 2.1034,
-    "min_val": 2.0027
+    "mean_val": 1.8658,
+    "max_val": 1.9034,
+    "min_val": 1.8027
   },
   {
     "run_id": 45,
@@ -760,9 +760,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 5.45,
-    "mean_val": 2.0483,
-    "max_val": 2.1027,
-    "min_val": 1.9533
+    "mean_val": 1.8483,
+    "max_val": 1.9027,
+    "min_val": 1.7533
   },
   {
     "run_id": 46,
@@ -777,9 +777,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 7.5,
-    "mean_val": 2.0312,
-    "max_val": 2.104,
-    "min_val": 1.9078
+    "mean_val": 1.8312,
+    "max_val": 1.904,
+    "min_val": 1.7078
   },
   {
     "run_id": 47,
@@ -794,9 +794,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 2.172,
-    "max_val": 2.2071,
-    "min_val": 2.0985
+    "mean_val": 1.972,
+    "max_val": 2.0071,
+    "min_val": 1.8985
   },
   {
     "run_id": 48,
@@ -811,9 +811,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 8.57,
-    "mean_val": 2.0277,
-    "max_val": 2.1075,
-    "min_val": 1.9928
+    "mean_val": 1.8277,
+    "max_val": 1.9075,
+    "min_val": 1.7928
   },
   {
     "run_id": 49,
@@ -828,9 +828,9 @@
     "hard_breach_min": null,
     "lead_time_min": 7.0,
     "peak_n10": 1.66,
-    "mean_val": 2.1062,
-    "max_val": 2.1637,
-    "min_val": 2.0916
+    "mean_val": 1.9062,
+    "max_val": 1.9637,
+    "min_val": 1.8916
   },
   {
     "run_id": 50,
@@ -845,9 +845,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.92,
-    "mean_val": 2.099,
-    "max_val": 2.1093,
-    "min_val": 2.0892
+    "mean_val": 1.899,
+    "max_val": 1.9093,
+    "min_val": 1.8892
   },
   {
     "run_id": 51,
@@ -862,9 +862,9 @@
     "hard_breach_min": null,
     "lead_time_min": 9.0,
     "peak_n10": 5.45,
-    "mean_val": 1.6836,
-    "max_val": 1.7453,
-    "min_val": 1.6433
+    "mean_val": 1.9336,
+    "max_val": 1.9953,
+    "min_val": 1.8933
   },
   {
     "run_id": 52,
@@ -879,9 +879,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.0,
-    "mean_val": 1.7019,
-    "max_val": 1.7966,
-    "min_val": 1.6457
+    "mean_val": 1.9519,
+    "max_val": 2.0466,
+    "min_val": 1.8957
   },
   {
     "run_id": 53,
@@ -896,9 +896,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.7187,
-    "max_val": 1.8475,
-    "min_val": 1.6446
+    "mean_val": 1.9687,
+    "max_val": 2.0975,
+    "min_val": 1.8946
   },
   {
     "run_id": 54,
@@ -913,9 +913,9 @@
     "hard_breach_min": null,
     "lead_time_min": 13.0,
     "peak_n10": 4.62,
-    "mean_val": 1.6153,
-    "max_val": 1.6514,
-    "min_val": 1.5537
+    "mean_val": 1.8653,
+    "max_val": 1.9014,
+    "min_val": 1.8037
   },
   {
     "run_id": 55,
@@ -930,9 +930,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 1.5988,
-    "max_val": 1.6533,
-    "min_val": 1.5035
+    "mean_val": 1.8488,
+    "max_val": 1.9033,
+    "min_val": 1.7535
   },
   {
     "run_id": 56,
@@ -947,9 +947,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 1.5812,
-    "max_val": 1.6538,
-    "min_val": 1.4595
+    "mean_val": 1.8312,
+    "max_val": 1.9038,
+    "min_val": 1.7095
   },
   {
     "run_id": 57,
@@ -964,9 +964,9 @@
     "hard_breach_min": null,
     "lead_time_min": 23.0,
     "peak_n10": 15.0,
-    "mean_val": 1.7208,
-    "max_val": 1.7542,
-    "min_val": 1.6473
+    "mean_val": 1.9708,
+    "max_val": 2.0042,
+    "min_val": 1.8973
   },
   {
     "run_id": 58,
@@ -981,9 +981,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.5784,
-    "max_val": 1.6529,
-    "min_val": 1.5441
+    "mean_val": 1.8284,
+    "max_val": 1.9029,
+    "min_val": 1.7941
   },
   {
     "run_id": 59,
@@ -998,9 +998,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.59,
-    "mean_val": 1.6525,
-    "max_val": 1.7089,
-    "min_val": 1.6447
+    "mean_val": 1.9025,
+    "max_val": 1.9589,
+    "min_val": 1.8947
   },
   {
     "run_id": 60,
@@ -1015,9 +1015,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.5,
-    "mean_val": 1.6495,
-    "max_val": 1.6644,
-    "min_val": 1.6404
+    "mean_val": 1.8995,
+    "max_val": 1.9144,
+    "min_val": 1.8904
   },
   {
     "run_id": 61,
@@ -1032,9 +1032,9 @@
     "hard_breach_min": null,
     "lead_time_min": 14.0,
     "peak_n10": 5.0,
-    "mean_val": 2.1342,
-    "max_val": 2.1927,
-    "min_val": 2.0951
+    "mean_val": 1.9342,
+    "max_val": 1.9927,
+    "min_val": 1.8951
   },
   {
     "run_id": 62,
@@ -1049,9 +1049,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.67,
-    "mean_val": 2.1514,
-    "max_val": 2.2448,
-    "min_val": 2.0963
+    "mean_val": 1.9514,
+    "max_val": 2.0448,
+    "min_val": 1.8963
   },
   {
     "run_id": 63,
@@ -1066,9 +1066,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 2.1694,
-    "max_val": 2.2965,
-    "min_val": 2.0982
+    "mean_val": 1.9694,
+    "max_val": 2.0965,
+    "min_val": 1.8982
   },
   {
     "run_id": 64,
@@ -1083,9 +1083,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 4.62,
-    "mean_val": 2.0666,
-    "max_val": 2.1057,
-    "min_val": 2.0083
+    "mean_val": 1.8666,
+    "max_val": 1.9057,
+    "min_val": 1.8083
   },
   {
     "run_id": 65,
@@ -1100,9 +1100,9 @@
     "hard_breach_min": null,
     "lead_time_min": 19.0,
     "peak_n10": 6.0,
-    "mean_val": 2.0483,
-    "max_val": 2.1026,
-    "min_val": 1.9574
+    "mean_val": 1.8483,
+    "max_val": 1.9026,
+    "min_val": 1.7574
   },
   {
     "run_id": 66,
@@ -1117,9 +1117,9 @@
     "hard_breach_min": null,
     "lead_time_min": 20.0,
     "peak_n10": 6.0,
-    "mean_val": 2.0312,
-    "max_val": 2.1027,
-    "min_val": 1.9097
+    "mean_val": 1.8312,
+    "max_val": 1.9027,
+    "min_val": 1.7097
   },
   {
     "run_id": 67,
@@ -1134,9 +1134,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 2.1717,
-    "max_val": 2.2058,
-    "min_val": 2.096
+    "mean_val": 1.9717,
+    "max_val": 2.0058,
+    "min_val": 1.896
   },
   {
     "run_id": 68,
@@ -1151,9 +1151,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 15.0,
-    "mean_val": 2.0288,
-    "max_val": 2.1035,
-    "min_val": 1.996
+    "mean_val": 1.8288,
+    "max_val": 1.9035,
+    "min_val": 1.796
   },
   {
     "run_id": 69,
@@ -1168,9 +1168,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.89,
-    "mean_val": 2.1021,
-    "max_val": 2.1624,
-    "min_val": 2.0937
+    "mean_val": 1.9021,
+    "max_val": 1.9624,
+    "min_val": 1.8937
   },
   {
     "run_id": 70,
@@ -1185,9 +1185,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.66,
-    "mean_val": 2.0994,
-    "max_val": 2.1134,
-    "min_val": 2.0909
+    "mean_val": 1.8994,
+    "max_val": 1.9134,
+    "min_val": 1.8909
   },
   {
     "run_id": 71,
@@ -1202,9 +1202,9 @@
     "hard_breach_min": null,
     "lead_time_min": 20.0,
     "peak_n10": 5.45,
-    "mean_val": 1.6849,
-    "max_val": 1.7473,
-    "min_val": 1.6498
+    "mean_val": 1.9349,
+    "max_val": 1.9973,
+    "min_val": 1.8998
   },
   {
     "run_id": 72,
@@ -1219,9 +1219,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 1.7018,
-    "max_val": 1.794,
-    "min_val": 1.643
+    "mean_val": 1.9518,
+    "max_val": 2.044,
+    "min_val": 1.893
   },
   {
     "run_id": 73,
@@ -1236,9 +1236,9 @@
     "hard_breach_min": null,
     "lead_time_min": 19.0,
     "peak_n10": 6.0,
-    "mean_val": 1.7181,
-    "max_val": 1.8381,
-    "min_val": 1.6453
+    "mean_val": 1.9681,
+    "max_val": 2.0881,
+    "min_val": 1.8953
   },
   {
     "run_id": 74,
@@ -1253,9 +1253,9 @@
     "hard_breach_min": null,
     "lead_time_min": 12.0,
     "peak_n10": 5.0,
-    "mean_val": 1.6159,
-    "max_val": 1.6554,
-    "min_val": 1.5545
+    "mean_val": 1.8659,
+    "max_val": 1.9054,
+    "min_val": 1.8045
   },
   {
     "run_id": 75,
@@ -1270,9 +1270,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 6.0,
-    "mean_val": 1.5998,
-    "max_val": 1.6556,
-    "min_val": 1.508
+    "mean_val": 1.8498,
+    "max_val": 1.9056,
+    "min_val": 1.758
   },
   {
     "run_id": 76,
@@ -1287,9 +1287,9 @@
     "hard_breach_min": null,
     "lead_time_min": 20.0,
     "peak_n10": 7.5,
-    "mean_val": 1.5812,
-    "max_val": 1.6534,
-    "min_val": 1.4592
+    "mean_val": 1.8312,
+    "max_val": 1.9034,
+    "min_val": 1.7092
   },
   {
     "run_id": 77,
@@ -1304,9 +1304,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.7206,
-    "max_val": 1.7572,
-    "min_val": 1.6453
+    "mean_val": 1.9706,
+    "max_val": 2.0072,
+    "min_val": 1.8953
   },
   {
     "run_id": 78,
@@ -1321,9 +1321,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.5786,
-    "max_val": 1.6538,
-    "min_val": 1.5439
+    "mean_val": 1.8286,
+    "max_val": 1.9038,
+    "min_val": 1.7939
   },
   {
     "run_id": 79,
@@ -1338,9 +1338,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.71,
-    "mean_val": 1.6528,
-    "max_val": 1.7077,
-    "min_val": 1.6446
+    "mean_val": 1.9028,
+    "max_val": 1.9577,
+    "min_val": 1.8946
   },
   {
     "run_id": 80,
@@ -1355,9 +1355,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.66,
-    "mean_val": 1.6497,
-    "max_val": 1.6607,
-    "min_val": 1.641
+    "mean_val": 1.8997,
+    "max_val": 1.9107,
+    "min_val": 1.891
   },
   {
     "run_id": 81,
@@ -1372,9 +1372,9 @@
     "hard_breach_min": null,
     "lead_time_min": 13.0,
     "peak_n10": 4.62,
-    "mean_val": 2.034,
-    "max_val": 2.0927,
-    "min_val": 1.9953
+    "mean_val": 2.534,
+    "max_val": 2.5927,
+    "min_val": 2.4953
   },
   {
     "run_id": 82,
@@ -1389,9 +1389,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 5.45,
-    "mean_val": 2.052,
-    "max_val": 2.1482,
-    "min_val": 1.9947
+    "mean_val": 2.552,
+    "max_val": 2.6482,
+    "min_val": 2.4947
   },
   {
     "run_id": 83,
@@ -1406,9 +1406,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 2.0677,
-    "max_val": 2.1908,
-    "min_val": 1.9949
+    "mean_val": 2.5677,
+    "max_val": 2.6908,
+    "min_val": 2.4949
   },
   {
     "run_id": 84,
@@ -1423,9 +1423,9 @@
     "hard_breach_min": null,
     "lead_time_min": 14.0,
     "peak_n10": 5.0,
-    "mean_val": 1.9659,
-    "max_val": 2.0038,
-    "min_val": 1.9068
+    "mean_val": 2.4659,
+    "max_val": 2.5038,
+    "min_val": 2.4068
   },
   {
     "run_id": 85,
@@ -1440,9 +1440,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 5.45,
-    "mean_val": 1.9491,
-    "max_val": 2.0071,
-    "min_val": 1.8581
+    "mean_val": 2.4491,
+    "max_val": 2.5071,
+    "min_val": 2.3581
   },
   {
     "run_id": 86,
@@ -1457,9 +1457,9 @@
     "hard_breach_min": null,
     "lead_time_min": 19.0,
     "peak_n10": 6.0,
-    "mean_val": 1.9314,
-    "max_val": 2.0014,
-    "min_val": 1.8138
+    "mean_val": 2.4314,
+    "max_val": 2.5014,
+    "min_val": 2.3138
   },
   {
     "run_id": 87,
@@ -1474,9 +1474,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 7.5,
-    "mean_val": 2.0719,
-    "max_val": 2.1064,
-    "min_val": 1.9969
+    "mean_val": 2.5719,
+    "max_val": 2.6064,
+    "min_val": 2.4969
   },
   {
     "run_id": 88,
@@ -1491,9 +1491,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.9286,
-    "max_val": 2.006,
-    "min_val": 1.8912
+    "mean_val": 2.4286,
+    "max_val": 2.506,
+    "min_val": 2.3912
   },
   {
     "run_id": 89,
@@ -1508,9 +1508,9 @@
     "hard_breach_min": null,
     "lead_time_min": 19.0,
     "peak_n10": 1.66,
-    "mean_val": 2.0034,
-    "max_val": 2.0669,
-    "min_val": 1.9925
+    "mean_val": 2.5034,
+    "max_val": 2.5669,
+    "min_val": 2.4925
   },
   {
     "run_id": 90,
@@ -1525,9 +1525,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.45,
-    "mean_val": 2.0003,
-    "max_val": 2.0108,
-    "min_val": 1.9893
+    "mean_val": 2.5003,
+    "max_val": 2.5108,
+    "min_val": 2.4893
   },
   {
     "run_id": 91,
@@ -1542,9 +1542,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 1.6345,
-    "max_val": 1.6984,
-    "min_val": 1.5976
+    "mean_val": 2.5345,
+    "max_val": 2.5984,
+    "min_val": 2.4976
   },
   {
     "run_id": 92,
@@ -1559,9 +1559,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.67,
-    "mean_val": 1.652,
-    "max_val": 1.7385,
-    "min_val": 1.5952
+    "mean_val": 2.552,
+    "max_val": 2.6385,
+    "min_val": 2.4952
   },
   {
     "run_id": 93,
@@ -1576,9 +1576,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 1.6687,
-    "max_val": 1.7872,
-    "min_val": 1.5976
+    "mean_val": 2.5687,
+    "max_val": 2.6872,
+    "min_val": 2.4976
   },
   {
     "run_id": 94,
@@ -1593,9 +1593,9 @@
     "hard_breach_min": null,
     "lead_time_min": 15.0,
     "peak_n10": 5.0,
-    "mean_val": 1.5652,
-    "max_val": 1.6013,
-    "min_val": 1.5071
+    "mean_val": 2.4652,
+    "max_val": 2.5013,
+    "min_val": 2.4071
   },
   {
     "run_id": 95,
@@ -1610,9 +1610,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.0,
-    "mean_val": 1.5479,
-    "max_val": 1.6034,
-    "min_val": 1.451
+    "mean_val": 2.4479,
+    "max_val": 2.5034,
+    "min_val": 2.351
   },
   {
     "run_id": 96,
@@ -1627,9 +1627,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.5318,
-    "max_val": 1.6103,
-    "min_val": 1.4037
+    "mean_val": 2.4318,
+    "max_val": 2.5103,
+    "min_val": 2.3037
   },
   {
     "run_id": 97,
@@ -1644,9 +1644,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 15.0,
-    "mean_val": 1.6713,
-    "max_val": 1.706,
-    "min_val": 1.5958
+    "mean_val": 2.5713,
+    "max_val": 2.606,
+    "min_val": 2.4958
   },
   {
     "run_id": 98,
@@ -1661,9 +1661,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.5291,
-    "max_val": 1.6048,
-    "min_val": 1.4947
+    "mean_val": 2.4291,
+    "max_val": 2.5048,
+    "min_val": 2.3947
   },
   {
     "run_id": 99,
@@ -1678,9 +1678,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.93,
-    "mean_val": 1.6035,
-    "max_val": 1.6612,
-    "min_val": 1.5947
+    "mean_val": 2.5035,
+    "max_val": 2.5612,
+    "min_val": 2.4947
   },
   {
     "run_id": 100,
@@ -1695,9 +1695,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.66,
-    "mean_val": 1.5999,
-    "max_val": 1.6125,
-    "min_val": 1.5857
+    "mean_val": 2.4999,
+    "max_val": 2.5125,
+    "min_val": 2.4857
   },
   {
     "run_id": 101,
@@ -1712,9 +1712,9 @@
     "hard_breach_min": null,
     "lead_time_min": 15.0,
     "peak_n10": 4.62,
-    "mean_val": 2.0339,
-    "max_val": 2.0933,
-    "min_val": 1.9959
+    "mean_val": 2.5339,
+    "max_val": 2.5933,
+    "min_val": 2.4959
   },
   {
     "run_id": 102,
@@ -1729,9 +1729,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.45,
-    "mean_val": 2.0507,
-    "max_val": 2.1418,
-    "min_val": 1.9933
+    "mean_val": 2.5507,
+    "max_val": 2.6418,
+    "min_val": 2.4933
   },
   {
     "run_id": 103,
@@ -1746,9 +1746,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 2.0688,
-    "max_val": 2.1935,
-    "min_val": 1.9921
+    "mean_val": 2.5688,
+    "max_val": 2.6935,
+    "min_val": 2.4921
   },
   {
     "run_id": 104,
@@ -1763,9 +1763,9 @@
     "hard_breach_min": null,
     "lead_time_min": 15.0,
     "peak_n10": 5.0,
-    "mean_val": 1.9666,
-    "max_val": 2.0063,
-    "min_val": 1.907
+    "mean_val": 2.4666,
+    "max_val": 2.5063,
+    "min_val": 2.407
   },
   {
     "run_id": 105,
@@ -1780,9 +1780,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.45,
-    "mean_val": 1.9482,
-    "max_val": 2.0019,
-    "min_val": 1.8552
+    "mean_val": 2.4482,
+    "max_val": 2.5019,
+    "min_val": 2.3552
   },
   {
     "run_id": 106,
@@ -1797,9 +1797,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 5.45,
-    "mean_val": 1.932,
-    "max_val": 2.0037,
-    "min_val": 1.8117
+    "mean_val": 2.432,
+    "max_val": 2.5037,
+    "min_val": 2.3117
   },
   {
     "run_id": 107,
@@ -1814,9 +1814,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 8.57,
-    "mean_val": 2.0718,
-    "max_val": 2.1053,
-    "min_val": 1.9946
+    "mean_val": 2.5718,
+    "max_val": 2.6053,
+    "min_val": 2.4946
   },
   {
     "run_id": 108,
@@ -1831,9 +1831,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 6.0,
-    "mean_val": 1.9281,
-    "max_val": 2.0029,
-    "min_val": 1.894
+    "mean_val": 2.4281,
+    "max_val": 2.5029,
+    "min_val": 2.394
   },
   {
     "run_id": 109,
@@ -1848,9 +1848,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 1.88,
-    "mean_val": 2.0066,
-    "max_val": 2.0628,
-    "min_val": 1.9954
+    "mean_val": 2.5066,
+    "max_val": 2.5628,
+    "min_val": 2.4954
   },
   {
     "run_id": 110,
@@ -1865,9 +1865,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.74,
-    "mean_val": 1.9993,
-    "max_val": 2.0089,
-    "min_val": 1.988
+    "mean_val": 2.4993,
+    "max_val": 2.5089,
+    "min_val": 2.488
   },
   {
     "run_id": 111,
@@ -1882,9 +1882,9 @@
     "hard_breach_min": null,
     "lead_time_min": 10.0,
     "peak_n10": 5.45,
-    "mean_val": 1.6343,
-    "max_val": 1.6939,
-    "min_val": 1.5975
+    "mean_val": 2.5343,
+    "max_val": 2.5939,
+    "min_val": 2.4975
   },
   {
     "run_id": 112,
@@ -1899,9 +1899,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 1.6519,
-    "max_val": 1.7459,
-    "min_val": 1.5962
+    "mean_val": 2.5519,
+    "max_val": 2.6459,
+    "min_val": 2.4962
   },
   {
     "run_id": 113,
@@ -1916,9 +1916,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.6679,
-    "max_val": 1.7863,
-    "min_val": 1.5941
+    "mean_val": 2.5679,
+    "max_val": 2.6863,
+    "min_val": 2.4941
   },
   {
     "run_id": 114,
@@ -1933,9 +1933,9 @@
     "hard_breach_min": null,
     "lead_time_min": 10.0,
     "peak_n10": 5.0,
-    "mean_val": 1.5668,
-    "max_val": 1.6063,
-    "min_val": 1.5044
+    "mean_val": 2.4668,
+    "max_val": 2.5063,
+    "min_val": 2.4044
   },
   {
     "run_id": 115,
@@ -1950,9 +1950,9 @@
     "hard_breach_min": null,
     "lead_time_min": 19.0,
     "peak_n10": 6.0,
-    "mean_val": 1.5482,
-    "max_val": 1.6036,
-    "min_val": 1.4569
+    "mean_val": 2.4482,
+    "max_val": 2.5036,
+    "min_val": 2.3569
   },
   {
     "run_id": 116,
@@ -1967,9 +1967,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.532,
-    "max_val": 1.6077,
-    "min_val": 1.4059
+    "mean_val": 2.432,
+    "max_val": 2.5077,
+    "min_val": 2.3059
   },
   {
     "run_id": 117,
@@ -1984,9 +1984,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 6.67,
-    "mean_val": 1.6717,
-    "max_val": 1.7076,
-    "min_val": 1.5941
+    "mean_val": 2.5717,
+    "max_val": 2.6076,
+    "min_val": 2.4941
   },
   {
     "run_id": 118,
@@ -2001,9 +2001,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 7.5,
-    "mean_val": 1.5284,
-    "max_val": 1.602,
-    "min_val": 1.4938
+    "mean_val": 2.4284,
+    "max_val": 2.502,
+    "min_val": 2.3938
   },
   {
     "run_id": 119,
@@ -2018,9 +2018,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.5,
-    "mean_val": 1.6022,
-    "max_val": 1.6598,
-    "min_val": 1.5944
+    "mean_val": 2.5022,
+    "max_val": 2.5598,
+    "min_val": 2.4944
   },
   {
     "run_id": 120,
@@ -2035,9 +2035,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.44,
-    "mean_val": 1.6004,
-    "max_val": 1.6107,
-    "min_val": 1.5883
+    "mean_val": 2.5004,
+    "max_val": 2.5107,
+    "min_val": 2.4883
   },
   {
     "run_id": 121,
@@ -2052,9 +2052,9 @@
     "hard_breach_min": null,
     "lead_time_min": 10.0,
     "peak_n10": 5.0,
-    "mean_val": 1.9346,
-    "max_val": 2.0,
-    "min_val": 1.8978
+    "mean_val": 2.2346,
+    "max_val": 2.3,
+    "min_val": 2.1978
   },
   {
     "run_id": 122,
@@ -2069,9 +2069,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.0,
-    "mean_val": 1.9509,
-    "max_val": 2.0442,
-    "min_val": 1.8942
+    "mean_val": 2.2509,
+    "max_val": 2.3442,
+    "min_val": 2.1942
   },
   {
     "run_id": 123,
@@ -2086,9 +2086,9 @@
     "hard_breach_min": null,
     "lead_time_min": 19.0,
     "peak_n10": 6.0,
-    "mean_val": 1.9687,
-    "max_val": 2.0873,
-    "min_val": 1.8934
+    "mean_val": 2.2687,
+    "max_val": 2.3873,
+    "min_val": 2.1934
   },
   {
     "run_id": 124,
@@ -2103,9 +2103,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 5.0,
-    "mean_val": 1.8653,
-    "max_val": 1.9044,
-    "min_val": 1.8003
+    "mean_val": 2.1653,
+    "max_val": 2.2044,
+    "min_val": 2.1003
   },
   {
     "run_id": 125,
@@ -2120,9 +2120,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 4.62,
-    "mean_val": 1.8485,
-    "max_val": 1.9066,
-    "min_val": 1.7546
+    "mean_val": 2.1485,
+    "max_val": 2.2066,
+    "min_val": 2.0546
   },
   {
     "run_id": 126,
@@ -2137,9 +2137,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.8317,
-    "max_val": 1.9045,
-    "min_val": 1.7061
+    "mean_val": 2.1317,
+    "max_val": 2.2045,
+    "min_val": 2.0061
   },
   {
     "run_id": 127,
@@ -2154,9 +2154,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 15.0,
-    "mean_val": 1.9712,
-    "max_val": 2.005,
-    "min_val": 1.894
+    "mean_val": 2.2712,
+    "max_val": 2.305,
+    "min_val": 2.194
   },
   {
     "run_id": 128,
@@ -2171,9 +2171,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.8289,
-    "max_val": 1.9074,
-    "min_val": 1.7936
+    "mean_val": 2.1289,
+    "max_val": 2.2074,
+    "min_val": 2.0936
   },
   {
     "run_id": 129,
@@ -2188,9 +2188,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 2.07,
-    "mean_val": 1.9012,
-    "max_val": 1.9615,
-    "min_val": 1.8943
+    "mean_val": 2.2012,
+    "max_val": 2.2615,
+    "min_val": 2.1943
   },
   {
     "run_id": 130,
@@ -2205,9 +2205,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.55,
-    "mean_val": 1.8995,
-    "max_val": 1.9142,
-    "min_val": 1.8888
+    "mean_val": 2.1995,
+    "max_val": 2.2142,
+    "min_val": 2.1888
   },
   {
     "run_id": 131,
@@ -2222,9 +2222,9 @@
     "hard_breach_min": null,
     "lead_time_min": 11.0,
     "peak_n10": 4.62,
-    "mean_val": 1.5344,
-    "max_val": 1.5922,
-    "min_val": 1.498
+    "mean_val": 2.2344,
+    "max_val": 2.2922,
+    "min_val": 2.198
   },
   {
     "run_id": 132,
@@ -2239,9 +2239,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 5.45,
-    "mean_val": 1.5512,
-    "max_val": 1.6399,
-    "min_val": 1.4954
+    "mean_val": 2.2512,
+    "max_val": 2.3399,
+    "min_val": 2.1954
   },
   {
     "run_id": 133,
@@ -2256,9 +2256,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 1.5685,
-    "max_val": 1.6928,
-    "min_val": 1.4933
+    "mean_val": 2.2685,
+    "max_val": 2.3928,
+    "min_val": 2.1933
   },
   {
     "run_id": 134,
@@ -2273,9 +2273,9 @@
     "hard_breach_min": null,
     "lead_time_min": 13.0,
     "peak_n10": 5.45,
-    "mean_val": 1.4654,
-    "max_val": 1.5051,
-    "min_val": 1.4027
+    "mean_val": 2.1654,
+    "max_val": 2.2051,
+    "min_val": 2.1027
   },
   {
     "run_id": 135,
@@ -2290,9 +2290,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 5.45,
-    "mean_val": 1.4489,
-    "max_val": 1.5046,
-    "min_val": 1.3583
+    "mean_val": 2.1489,
+    "max_val": 2.2046,
+    "min_val": 2.0583
   },
   {
     "run_id": 136,
@@ -2307,9 +2307,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 7.5,
-    "mean_val": 1.4315,
-    "max_val": 1.5053,
-    "min_val": 1.3032
+    "mean_val": 2.1315,
+    "max_val": 2.2053,
+    "min_val": 2.0032
   },
   {
     "run_id": 137,
@@ -2324,9 +2324,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 6.67,
-    "mean_val": 1.5724,
-    "max_val": 1.6076,
-    "min_val": 1.4986
+    "mean_val": 2.2724,
+    "max_val": 2.3076,
+    "min_val": 2.1986
   },
   {
     "run_id": 138,
@@ -2341,9 +2341,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.4292,
-    "max_val": 1.5014,
-    "min_val": 1.3949
+    "mean_val": 2.1292,
+    "max_val": 2.2014,
+    "min_val": 2.0949
   },
   {
     "run_id": 139,
@@ -2358,9 +2358,9 @@
     "hard_breach_min": null,
     "lead_time_min": 14.0,
     "peak_n10": 1.5,
-    "mean_val": 1.5074,
-    "max_val": 1.5629,
-    "min_val": 1.4934
+    "mean_val": 2.2074,
+    "max_val": 2.2629,
+    "min_val": 2.1934
   },
   {
     "run_id": 140,
@@ -2375,9 +2375,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 2.4,
-    "mean_val": 1.4992,
-    "max_val": 1.5113,
-    "min_val": 1.4906
+    "mean_val": 2.1992,
+    "max_val": 2.2113,
+    "min_val": 2.1906
   },
   {
     "run_id": 141,
@@ -2392,9 +2392,9 @@
     "hard_breach_min": null,
     "lead_time_min": 15.0,
     "peak_n10": 4.62,
-    "mean_val": 1.9339,
-    "max_val": 1.9962,
-    "min_val": 1.8929
+    "mean_val": 2.2339,
+    "max_val": 2.2962,
+    "min_val": 2.1929
   },
   {
     "run_id": 142,
@@ -2409,9 +2409,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 1.9526,
-    "max_val": 2.0455,
-    "min_val": 1.8949
+    "mean_val": 2.2526,
+    "max_val": 2.3455,
+    "min_val": 2.1949
   },
   {
     "run_id": 143,
@@ -2426,9 +2426,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.9684,
-    "max_val": 2.0921,
-    "min_val": 1.8929
+    "mean_val": 2.2684,
+    "max_val": 2.3921,
+    "min_val": 2.1929
   },
   {
     "run_id": 144,
@@ -2443,9 +2443,9 @@
     "hard_breach_min": null,
     "lead_time_min": 15.0,
     "peak_n10": 4.0,
-    "mean_val": 1.8655,
-    "max_val": 1.9031,
-    "min_val": 1.8022
+    "mean_val": 2.1655,
+    "max_val": 2.2031,
+    "min_val": 2.1022
   },
   {
     "run_id": 145,
@@ -2460,9 +2460,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 1.8489,
-    "max_val": 1.9075,
-    "min_val": 1.754
+    "mean_val": 2.1489,
+    "max_val": 2.2075,
+    "min_val": 2.054
   },
   {
     "run_id": 146,
@@ -2477,9 +2477,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 5.45,
-    "mean_val": 1.8312,
-    "max_val": 1.9062,
-    "min_val": 1.7067
+    "mean_val": 2.1312,
+    "max_val": 2.2062,
+    "min_val": 2.0067
   },
   {
     "run_id": 147,
@@ -2494,9 +2494,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 12.0,
-    "mean_val": 1.9708,
-    "max_val": 2.0038,
-    "min_val": 1.8957
+    "mean_val": 2.2708,
+    "max_val": 2.3038,
+    "min_val": 2.1957
   },
   {
     "run_id": 148,
@@ -2511,9 +2511,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 15.0,
-    "mean_val": 1.8288,
-    "max_val": 1.9026,
-    "min_val": 1.7947
+    "mean_val": 2.1288,
+    "max_val": 2.2026,
+    "min_val": 2.0947
   },
   {
     "run_id": 149,
@@ -2528,9 +2528,9 @@
     "hard_breach_min": null,
     "lead_time_min": 7.0,
     "peak_n10": 1.71,
-    "mean_val": 1.9101,
-    "max_val": 1.9655,
-    "min_val": 1.8942
+    "mean_val": 2.2101,
+    "max_val": 2.2655,
+    "min_val": 2.1942
   },
   {
     "run_id": 150,
@@ -2545,9 +2545,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.6,
-    "mean_val": 1.8996,
-    "max_val": 1.9108,
-    "min_val": 1.8888
+    "mean_val": 2.1996,
+    "max_val": 2.2108,
+    "min_val": 2.1888
   },
   {
     "run_id": 151,
@@ -2562,9 +2562,9 @@
     "hard_breach_min": null,
     "lead_time_min": 20.0,
     "peak_n10": 5.0,
-    "mean_val": 1.535,
-    "max_val": 1.6017,
-    "min_val": 1.4959
+    "mean_val": 2.235,
+    "max_val": 2.3017,
+    "min_val": 2.1959
   },
   {
     "run_id": 152,
@@ -2579,9 +2579,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 6.0,
-    "mean_val": 1.5511,
-    "max_val": 1.64,
-    "min_val": 1.4957
+    "mean_val": 2.2511,
+    "max_val": 2.34,
+    "min_val": 2.1957
   },
   {
     "run_id": 153,
@@ -2596,9 +2596,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.67,
-    "mean_val": 1.5693,
-    "max_val": 1.6928,
-    "min_val": 1.4965
+    "mean_val": 2.2693,
+    "max_val": 2.3928,
+    "min_val": 2.1965
   },
   {
     "run_id": 154,
@@ -2613,9 +2613,9 @@
     "hard_breach_min": null,
     "lead_time_min": 16.0,
     "peak_n10": 5.0,
-    "mean_val": 1.4657,
-    "max_val": 1.5039,
-    "min_val": 1.4038
+    "mean_val": 2.1657,
+    "max_val": 2.2039,
+    "min_val": 2.1038
   },
   {
     "run_id": 155,
@@ -2630,9 +2630,9 @@
     "hard_breach_min": null,
     "lead_time_min": 17.0,
     "peak_n10": 6.0,
-    "mean_val": 1.4495,
-    "max_val": 1.5046,
-    "min_val": 1.3621
+    "mean_val": 2.1495,
+    "max_val": 2.2046,
+    "min_val": 2.0621
   },
   {
     "run_id": 156,
@@ -2647,9 +2647,9 @@
     "hard_breach_min": null,
     "lead_time_min": 18.0,
     "peak_n10": 6.0,
-    "mean_val": 1.4311,
-    "max_val": 1.5025,
-    "min_val": 1.3101
+    "mean_val": 2.1311,
+    "max_val": 2.2025,
+    "min_val": 2.0101
   },
   {
     "run_id": 157,
@@ -2664,9 +2664,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 6.67,
-    "mean_val": 1.5713,
-    "max_val": 1.6052,
-    "min_val": 1.4949
+    "mean_val": 2.2713,
+    "max_val": 2.3052,
+    "min_val": 2.1949
   },
   {
     "run_id": 158,
@@ -2681,9 +2681,9 @@
     "hard_breach_min": null,
     "lead_time_min": 24.0,
     "peak_n10": 10.0,
-    "mean_val": 1.4282,
-    "max_val": 1.5017,
-    "min_val": 1.3925
+    "mean_val": 2.1282,
+    "max_val": 2.2017,
+    "min_val": 2.0925
   },
   {
     "run_id": 159,
@@ -2698,9 +2698,9 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.8,
-    "mean_val": 1.5056,
-    "max_val": 1.5621,
-    "min_val": 1.4951
+    "mean_val": 2.2056,
+    "max_val": 2.2621,
+    "min_val": 2.1951
   },
   {
     "run_id": 160,
@@ -2715,8 +2715,8 @@
     "hard_breach_min": null,
     "lead_time_min": 0.0,
     "peak_n10": 1.93,
-    "mean_val": 1.5,
-    "max_val": 1.5125,
-    "min_val": 1.4873
+    "mean_val": 2.2,
+    "max_val": 2.2125,
+    "min_val": 2.1873
   }
 ]

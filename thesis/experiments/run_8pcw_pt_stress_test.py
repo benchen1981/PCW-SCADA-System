@@ -26,16 +26,16 @@ def run_stress_test():
     print("STARTING 8-PCW MULTI-SENSOR AUTOMATED STRESS TEST SUITE (>= 35 MIN DURATION)")
     print("=" * 80)
 
-    # 8 PCW Systems Configuration
+    # 8 PCW Systems Configuration (Updated Final System Specs)
     pcw_configs = {
-        "PCW01": {"group": "G1", "supply_base": 2.20, "return_base": 1.70, "s_hi": 2.40, "s_hihi": 2.60, "s_lo": 2.00, "s_lolo": 1.80, "r_hi": 1.90, "r_hihi": 2.10, "r_lo": 1.50, "r_lolo": 1.30},
-        "PCW02": {"group": "G1", "supply_base": 2.20, "return_base": 1.70, "s_hi": 2.40, "s_hihi": 2.60, "s_lo": 2.00, "s_lolo": 1.80, "r_hi": 1.90, "r_hihi": 2.10, "r_lo": 1.50, "r_lolo": 1.30},
-        "PCW03": {"group": "G2", "supply_base": 2.10, "return_base": 1.65, "s_hi": 2.30, "s_hihi": 2.50, "s_lo": 1.90, "s_lolo": 1.70, "r_hi": 1.85, "r_hihi": 2.05, "r_lo": 1.45, "r_lolo": 1.25},
-        "PCW04": {"group": "G2", "supply_base": 2.10, "return_base": 1.65, "s_hi": 2.30, "s_hihi": 2.50, "s_lo": 1.90, "s_lolo": 1.70, "r_hi": 1.85, "r_hihi": 2.05, "r_lo": 1.45, "r_lolo": 1.25},
-        "PCW05": {"group": "G3", "supply_base": 2.00, "return_base": 1.60, "s_hi": 2.20, "s_hihi": 2.40, "s_lo": 1.80, "s_lolo": 1.60, "r_hi": 1.80, "r_hihi": 2.00, "r_lo": 1.40, "r_lolo": 1.20},
-        "PCW06": {"group": "G3", "supply_base": 2.00, "return_base": 1.60, "s_hi": 2.20, "s_hihi": 2.40, "s_lo": 1.80, "s_lolo": 1.60, "r_hi": 1.80, "r_hihi": 2.00, "r_lo": 1.40, "r_lolo": 1.20},
-        "PCW07": {"group": "G4", "supply_base": 1.90, "return_base": 1.50, "s_hi": 2.10, "s_hihi": 2.30, "s_lo": 1.70, "s_lolo": 1.50, "r_hi": 1.70, "r_hihi": 1.90, "r_lo": 1.30, "r_lolo": 1.10},
-        "PCW08": {"group": "G4", "supply_base": 1.90, "return_base": 1.50, "s_hi": 2.10, "s_hihi": 2.30, "s_lo": 1.70, "s_lolo": 1.50, "r_hi": 1.70, "r_hihi": 1.90, "r_lo": 1.30, "r_lolo": 1.10},
+        "PCW01": {"group": "G1", "supply_base": 1.50, "return_base": 1.50, "s_hi": 1.70, "s_hihi": 1.80, "s_lo": 1.30, "s_lolo": 1.20, "r_hi": 1.70, "r_hihi": 1.80, "r_lo": 1.30, "r_lolo": 1.20},
+        "PCW02": {"group": "G1", "supply_base": 1.50, "return_base": 1.50, "s_hi": 1.70, "s_hihi": 1.80, "s_lo": 1.30, "s_lolo": 1.20, "r_hi": 1.70, "r_hihi": 1.80, "r_lo": 1.30, "r_lolo": 1.20},
+        "PCW03": {"group": "G2", "supply_base": 1.90, "return_base": 1.90, "s_hi": 2.10, "s_hihi": 2.20, "s_lo": 1.70, "s_lolo": 1.50, "r_hi": 2.10, "r_hihi": 2.20, "r_lo": 1.70, "r_lolo": 1.50},
+        "PCW04": {"group": "G2", "supply_base": 1.90, "return_base": 1.90, "s_hi": 2.10, "s_hihi": 2.20, "s_lo": 1.70, "s_lolo": 1.50, "r_hi": 2.10, "r_hihi": 2.20, "r_lo": 1.70, "r_lolo": 1.50},
+        "PCW05": {"group": "G3", "supply_base": 2.50, "return_base": 2.50, "s_hi": 2.70, "s_hihi": 2.80, "s_lo": 2.30, "s_lolo": 2.20, "r_hi": 2.70, "r_hihi": 2.80, "r_lo": 2.30, "r_lolo": 2.20},
+        "PCW06": {"group": "G3", "supply_base": 2.50, "return_base": 2.50, "s_hi": 2.70, "s_hihi": 2.80, "s_lo": 2.30, "s_lolo": 2.20, "r_hi": 2.70, "r_hihi": 2.80, "r_lo": 2.30, "r_lolo": 2.20},
+        "PCW07": {"group": "G4", "supply_base": 2.20, "return_base": 2.20, "s_hi": 2.40, "s_hihi": 2.50, "s_lo": 2.00, "s_lolo": 1.90, "r_hi": 2.40, "r_hihi": 2.50, "r_lo": 2.00, "r_lolo": 1.90},
+        "PCW08": {"group": "G4", "supply_base": 2.20, "return_base": 2.20, "s_hi": 2.40, "s_hihi": 2.50, "s_lo": 2.00, "s_lolo": 1.90, "r_hi": 2.40, "r_hihi": 2.50, "r_lo": 2.00, "r_lolo": 1.90},
     }
 
     # 10 test iterations per sensor
