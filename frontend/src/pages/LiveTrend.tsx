@@ -199,7 +199,7 @@ export const LiveTrend = () => {
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Selected: {selectedTags.length}/8</span>
           </div>
           
-          <div style={{ marginTop: '1rem', padding: '0.5rem', background: '#333', borderRadius: '4px', fontSize: '0.9rem' }}>
+          <div style={{ marginTop: '1rem', padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', borderRadius: '4px', fontSize: '0.9rem' }}>
             <div>Live Window: Last 30 minutes</div>
             <label style={{ marginTop: '0.5rem', display: 'block' }}>
               <input type="checkbox" checked={showAlarmLimits} onChange={e => setShowAlarmLimits(e.target.checked)} /> Show Alarm Limits
@@ -207,14 +207,14 @@ export const LiveTrend = () => {
           </div>
 
           <h4 style={{ marginTop: '1rem' }}>Tag Selector</h4>
-          <input type="text" placeholder="Search Tag..." value={searchTag} onChange={e => setSearchTag(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', marginBottom: '0.5rem' }} />
+          <input type="text" placeholder="Search Tag..." value={searchTag} onChange={e => setSearchTag(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', marginBottom: '0.5rem' }} />
           
-          <select value={sysFilter} onChange={e => setSysFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', marginBottom: '0.5rem' }}>
+          <select value={sysFilter} onChange={e => setSysFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', marginBottom: '0.5rem' }}>
             {['PCW01','PCW02','PCW03','PCW04','PCW05','PCW06','PCW07','PCW08'].map(s => <option key={s} value={s}>{s}</option>)}
           </select>
           
           <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-            <button onClick={() => setSelectedTags([])} style={{ flex: 1, padding: '0.4rem', background: '#444', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '0.8rem' }}>Clear All</button>
+            <button onClick={() => setSelectedTags([])} style={{ flex: 1, padding: '0.4rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '0.8rem' }}>Clear All</button>
           </div>
           
           <div style={{ flex: 1, overflowY: 'auto', border: '1px solid var(--border)', padding: '0.5rem' }}>
@@ -225,17 +225,17 @@ export const LiveTrend = () => {
               const isExpanded = expandedSubmains.includes(sm);
               return (
                 <div key={sm} style={{ marginBottom: '0.5rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#222', padding: '0.4rem', cursor: 'pointer' }} onClick={() => toggleExpand(sm)}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#f3f4f6', border: '1.5px solid #000000', color: '#000000', padding: '0.4rem', cursor: 'pointer' }} onClick={() => toggleExpand(sm)}>
                     <strong style={{ fontSize: '0.85rem' }}>{isExpanded ? '▼' : '▶'} {sm}</strong>
                     <button 
                       onClick={(e) => { e.stopPropagation(); toggleSubmain(smSensors); }} 
-                      style={{ fontSize: '0.75rem', padding: '0.2rem 0.4rem', background: '#444', color: '#fff', border: 'none', borderRadius: '2px', cursor: 'pointer' }}
+                      style={{ fontSize: '0.75rem', padding: '0.2rem 0.4rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', borderRadius: '2px', cursor: 'pointer' }}
                     >
                       Select All
                     </button>
                   </div>
                   {isExpanded && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', padding: '0.5rem', background: '#1a1a1a' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', padding: '0.5rem', background: '#ffffff', border: '1px solid #000000' }}>
                       {smSensors.map(s => (
                         <label key={s.tagId} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.8rem' }}>
                           <input type="checkbox" checked={selectedTags.includes(s.tagId)} onChange={() => toggleTag(s.tagId)} />
@@ -257,13 +257,13 @@ export const LiveTrend = () => {
         <div className="card" style={{ flex: 1, padding: '1rem', display: 'flex', flexDirection: 'column', position: 'relative' }} onWheel={handleWheel}>
           {selectedTags.length > 0 && !isPreloading && trendData.length > 0 && (
             <div style={{ position: 'absolute', right: '2rem', top: '2rem', zIndex: 10, display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-              <div style={{ background: '#333', borderRadius: '4px', overflow: 'hidden', display: 'flex', flexDirection: 'column', border: '1px solid #555' }}>
-                <div style={{ padding: '2px 4px', background: '#222', fontSize: '0.7rem', textAlign: 'center', borderBottom: '1px solid #555' }}>Y-Axis</div>
-                <button onClick={() => setYPanOffset(o => o + 0.1 * yZoomLevel)} title="Pan Up" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>▲</button>
-                <button onClick={() => setYZoomLevel(z => Math.max(0.1, z - 0.2))} title="Zoom In" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>+</button>
-                <button onClick={() => { setYZoomLevel(1); setYPanOffset(0); }} title="Reset" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>↺</button>
-                <button onClick={() => setYZoomLevel(z => z + 0.2)} title="Zoom Out" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>-</button>
-                <button onClick={() => setYPanOffset(o => o - 0.1 * yZoomLevel)} title="Pan Down" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem' }}>▼</button>
+              <div style={{ background: '#ffffff', border: '1.5px solid #000000', color: '#000000', borderRadius: '4px', overflow: 'hidden', display: 'flex', flexDirection: 'column', border: '1.5px solid #000000' }}>
+                <div style={{ padding: '2px 4px', background: '#f3f4f6', border: '1.5px solid #000000', color: '#000000', fontSize: '0.7rem', textAlign: 'center', borderBottom: '1.5px solid #000000' }}>Y-Axis</div>
+                <button onClick={() => setYPanOffset(o => o + 0.1 * yZoomLevel)} title="Pan Up" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>▲</button>
+                <button onClick={() => setYZoomLevel(z => Math.max(0.1, z - 0.2))} title="Zoom In" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>+</button>
+                <button onClick={() => { setYZoomLevel(1); setYPanOffset(0); }} title="Reset" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>↺</button>
+                <button onClick={() => setYZoomLevel(z => z + 0.2)} title="Zoom Out" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>-</button>
+                <button onClick={() => setYPanOffset(o => o - 0.1 * yZoomLevel)} title="Pan Down" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem' }}>▼</button>
               </div>
             </div>
           )}
@@ -284,10 +284,10 @@ export const LiveTrend = () => {
             ) : (
                  <ResponsiveContainer width="100%" height="100%">
                    <LineChart data={trendData} onMouseMove={handleMouseMove}>
-                     <CartesianGrid strokeDasharray="3 3" stroke="#333" />
-                     <XAxis dataKey="timestamp" stroke="#888" tick={{fontSize: 10}} />
+                     <CartesianGrid strokeDasharray="3 3" stroke="#cccccc" />
+                     <XAxis dataKey="timestamp" stroke="#000000" tick={{fontSize: 10}} />
                      <YAxis 
-                       stroke="#888" 
+                       stroke="#000000" 
                        domain={() => {
                          let min = Infinity;
                          let max = -Infinity;
@@ -316,7 +316,7 @@ export const LiveTrend = () => {
                        }}
                        tick={{fontSize: 10}} 
                      />
-                     <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#444' }} />
+                     <Tooltip contentStyle={{ backgroundColor: '#ffffff', borderColor: '#000000', color: '#000000', fontWeight: 'bold' }} />
                      <Legend verticalAlign="top" height={36} />
                      {selectedTags.map((tag, i) => {
                        const sensor = sensors.find(s => s.tagId === tag);
@@ -334,7 +334,7 @@ export const LiveTrend = () => {
                          </React.Fragment>
                        );
                      })}
-                     <Brush dataKey="timestamp" height={30} stroke="#888" fill="#111" travellerWidth={10} startIndex={visibleRange[0]} endIndex={visibleRange[1]} onChange={handleBrushChange} />
+                     <Brush dataKey="timestamp" height={30} stroke="#000000" fill="#ffffff" stroke="#000000" travellerWidth={10} startIndex={visibleRange[0]} endIndex={visibleRange[1]} onChange={handleBrushChange} />
                    </LineChart>
                  </ResponsiveContainer>
             )

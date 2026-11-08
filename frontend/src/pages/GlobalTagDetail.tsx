@@ -28,12 +28,12 @@ export const GlobalTagDetail = () => {
     <div style={{
       position: 'fixed', top: 0, right: 0, bottom: 0, width: '400px', 
       background: 'var(--panel-bg)', borderLeft: '1px solid var(--border)',
-      boxShadow: '-4px 0 15px rgba(0,0,0,0.5)', zIndex: 1000,
+      boxShadow: '-4px 0 15px rgba(0,0,0,0.1)', zIndex: 1000,
       display: 'flex', flexDirection: 'column'
     }}>
       <div style={{ padding: '1rem', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <h3 style={{ margin: 0, color: 'var(--accent)' }}>Tag Detail Drawer</h3>
-        <button onClick={closeTagDetail} style={{ background: 'transparent', color: '#fff', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>&times;</button>
+        <button onClick={closeTagDetail} style={{ background: 'transparent', color: '#000000', border: 'none', fontSize: '1.5rem', cursor: 'pointer' }}>&times;</button>
       </div>
 
       {!tag ? (
@@ -96,10 +96,10 @@ export const GlobalTagDetail = () => {
           )}
 
           <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
-            <button onClick={handleGoToHistorian} style={{ flex: 1, padding: '0.5rem', background: '#3b82f6', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+            <button onClick={handleGoToHistorian} style={{ flex: 1, padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', fontWeight: 'bold', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
               View Historian Trend
             </button>
-            <button onClick={() => navigate('/modbus')} style={{ flex: 1, padding: '0.5rem', background: '#4b5563', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+            <button onClick={() => navigate('/modbus')} style={{ flex: 1, padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', fontWeight: 'bold', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
               Simulator Control
             </button>
           </div>

@@ -251,19 +251,19 @@ export const HistorianTrend = () => {
 
   return (
     <div className="dashboard-section" style={{ display: 'flex', flexDirection: 'column', height: '100%', position: 'relative' }}>
-        <div style={{ display: 'flex', gap: '1rem', background: '#222', padding: '0.5rem 1rem', alignItems: 'center', borderBottom: '1px solid var(--border)' }}>
-          <select value={sysFilter} onChange={e=>setSysFilter(e.target.value)} style={{ padding: '0.4rem', background: '#333', color: '#fff', border: '1px solid var(--border)', borderRadius: '4px' }}>
+        <div style={{ display: 'flex', gap: '1rem', background: '#ffffff', border: '1.5px solid #000000', padding: '0.5rem 1rem', alignItems: 'center', borderBottom: '1px solid var(--border)' }}>
+          <select value={sysFilter} onChange={e=>setSysFilter(e.target.value)} style={{ padding: '0.4rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', borderRadius: '4px' }}>
             <option value="">System (All)</option>
             {Array.from(new Set(sensors.map(s => s.systemId))).map(sys => <option key={sys} value={sys}>{sys}</option>)}
           </select>
 
-          <button onClick={() => { setDraftTags([...selectedTags]); setIsDrawerOpen(!isDrawerOpen); }} style={{ padding: '0.4rem 0.8rem', background: isDrawerOpen ? 'var(--accent)' : '#444', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+          <button onClick={() => { setDraftTags([...selectedTags]); setIsDrawerOpen(!isDrawerOpen); }} style={{ padding: '0.4rem 0.8rem', background: isDrawerOpen ? '#000000' : '#ffffff', color: isDrawerOpen ? '#ffffff' : '#000000', border: '1.5px solid #000000', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
             Select Tags ({selectedTags.length})
           </button>
           
           <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
             <span style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Time</span>
-            <select value={timeRange} onChange={e=>setTimeRange(e.target.value)} style={{ padding: '0.4rem', background: '#333', color: '#fff', border: '1px solid var(--border)', borderRadius: '4px' }}>
+            <select value={timeRange} onChange={e=>setTimeRange(e.target.value)} style={{ padding: '0.4rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', borderRadius: '4px' }}>
               <option value="5m">Last 5 minutes</option>
               <option value="15m">Last 15 minutes</option>
               <option value="1h">Last 1 hour</option>
@@ -281,20 +281,20 @@ export const HistorianTrend = () => {
                 <input type="datetime-local" value={customEnd} onChange={e=>setCustomEnd(e.target.value)} style={{ padding:'0.2rem' }}/>
               </>
             )}
-            <button onClick={() => executeQuery()} style={{ padding: '0.4rem 1rem', background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold', marginLeft: '0.5rem' }}>
+            <button onClick={() => executeQuery()} style={{ padding: '0.4rem 1rem', background: 'var(--accent)', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold', marginLeft: '0.5rem' }}>
               {isLoading ? 'Querying...' : 'QUERY TREND'}
             </button>
-            <button onClick={() => setVisibleRange([0, Math.max(0, historyData.length - 1)])} style={{ padding: '0.4rem 1rem', background: '#444', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+            <button onClick={() => setVisibleRange([0, Math.max(0, historyData.length - 1)])} style={{ padding: '0.4rem 1rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
               Reset View
             </button>
           </div>
         </div>
 
-        <div style={{ background: '#1a1a1a', padding: '0.5rem 1rem', borderBottom: '1px solid var(--border)', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
+        <div style={{ background: '#ffffff', border: '1.5px solid #000000', padding: '0.5rem 1rem', borderBottom: '1px solid var(--border)', display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
           <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Selected Tags:</span>
-          {selectedTags.length === 0 && <span style={{ fontSize: '0.8rem', color: '#555' }}>None</span>}
+          {selectedTags.length === 0 && <span style={{ fontSize: '0.8rem', color: '#666666' }}>None</span>}
           {selectedTags.map(t => (
-            <span key={t} style={{ background: '#333', padding: '0.2rem 0.5rem', borderRadius: '12px', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
+            <span key={t} style={{ background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.2rem 0.5rem', borderRadius: '12px', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
               {t} 
               <span onClick={() => removeSelectedTag(t)} style={{ cursor: 'pointer', color: 'var(--danger)', fontWeight: 'bold' }}>×</span>
             </span>
@@ -302,41 +302,41 @@ export const HistorianTrend = () => {
         </div>
 
         {isDrawerOpen && (
-          <div style={{ position: 'absolute', left: 0, top: '95px', width: '320px', height: 'calc(100% - 95px)', background: '#1a1a1a', borderRight: '1px solid var(--border)', zIndex: 10, display: 'flex', flexDirection: 'column', padding: '1rem', overflowY: 'auto', boxShadow: '2px 0 10px rgba(0,0,0,0.5)' }}>
+          <div style={{ position: 'absolute', left: 0, top: '95px', width: '320px', height: 'calc(100% - 95px)', background: '#ffffff', border: '1.5px solid #000000', borderRight: '1px solid var(--border)', zIndex: 10, display: 'flex', flexDirection: 'column', padding: '1rem', overflowY: 'auto', boxShadow: '2px 0 10px rgba(0,0,0,0.1)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
               <h3 style={{ margin: 0 }}>Select Historian Tags</h3>
-              <button onClick={() => setIsDrawerOpen(false)} style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', fontSize: '1.2rem' }}>✕</button>
+              <button onClick={() => setIsDrawerOpen(false)} style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', fontSize: '1.2rem' }}>✕</button>
             </div>
             
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <button onClick={() => setDraftTags([])} style={{ fontSize:'0.8rem', padding: '0.4rem 0.8rem', background: '#333', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Clear</button>
-                <button onClick={selectAllFiltered} style={{ fontSize:'0.8rem', padding: '0.4rem 0.8rem', background: '#333', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Select All</button>
+                <button onClick={() => setDraftTags([])} style={{ fontSize:'0.8rem', padding: '0.4rem 0.8rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Clear</button>
+                <button onClick={selectAllFiltered} style={{ fontSize:'0.8rem', padding: '0.4rem 0.8rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Select All</button>
               </div>
-              <button onClick={applyTags} style={{ fontSize:'0.8rem', padding: '0.4rem 0.8rem', background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>Apply Tags</button>
+              <button onClick={applyTags} style={{ fontSize:'0.8rem', padding: '0.4rem 0.8rem', background: 'var(--accent)', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}>Apply Tags</button>
             </div>
             
-            <input type="text" placeholder="Search Canonical Tag" value={search} onChange={e=>setSearch(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', marginBottom: '0.5rem' }} />
+            <input type="text" placeholder="Search Canonical Tag" value={search} onChange={e=>setSearch(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', marginBottom: '0.5rem' }} />
             
             <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <select value={sysFilter} onChange={e=>setSysFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', flex: 1 }}>
+              <select value={sysFilter} onChange={e=>setSysFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', flex: 1 }}>
                 <option value="">All Systems</option>
                 {Array.from(new Set(sensors.map(s => s.systemId))).map(sys => <option key={sys} value={sys}>{sys}</option>)}
               </select>
-              <select value={subFilter} onChange={e=>setSubFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', flex: 1 }}>
+              <select value={subFilter} onChange={e=>setSubFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', flex: 1 }}>
                 <option value="">All Submains</option>
                 {Array.from(new Set(sensors.filter(s => !sysFilter || s.systemId === sysFilter).map(s => s.submainId))).map(sm => <option key={sm} value={sm}>{sm}</option>)}
               </select>
             </div>
             
             <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <select value={sensorTypeFilter} onChange={e=>{setSensorTypeFilter(e.target.value); setExactSensorFilter('');}} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', flex: 1 }}>
+              <select value={sensorTypeFilter} onChange={e=>{setSensorTypeFilter(e.target.value); setExactSensorFilter('');}} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', flex: 1 }}>
                 <option value="">All Types (PT/FT/DP)</option>
                 <option value="PT">PT (Pressure)</option>
                 <option value="FT">FT (Flow)</option>
                 <option value="DP">DP (Differential)</option>
               </select>
-              <select value={exactSensorFilter} onChange={e=>setExactSensorFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', flex: 2 }}>
+              <select value={exactSensorFilter} onChange={e=>setExactSensorFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', flex: 2 }}>
                 <option value="">All Sensors</option>
                 {Array.from(new Set(sensors
                   .filter(s => !sysFilter || s.systemId === sysFilter)
@@ -348,7 +348,7 @@ export const HistorianTrend = () => {
             </div>
             
             <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <select value={featureFilter} onChange={e=>setFeatureFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)', flex: 1 }}>
+              <select value={featureFilter} onChange={e=>setFeatureFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)', flex: 1 }}>
                 <option value="">All Features</option>
                 <option value="RAW">Raw Sensor Value</option>
                 <option value="BaseAvg60">BaseAvg60</option>
@@ -362,7 +362,7 @@ export const HistorianTrend = () => {
               </select>
             </div>
             
-            <div style={{ flex: 1, overflowY: 'auto', border: '1px solid var(--border)', padding: '0.5rem', background: '#111', marginBottom: '0.5rem' }}>
+            <div style={{ flex: 1, overflowY: 'auto', border: '1px solid var(--border)', padding: '0.5rem', background: '#ffffff', marginBottom: '0.5rem' }}>
               {availableTags.map(t => (
                 <div key={t.tagId} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.85rem', padding: '0.2rem 0' }}>
                   <input type="checkbox" checked={draftTags.includes(t.tagId)} onChange={() => toggleDraftTag(t.tagId)} />
@@ -399,23 +399,23 @@ export const HistorianTrend = () => {
         <div className="card" style={{ flex: 1, padding: '1rem', position: 'relative' }} onWheel={handleWheel}>
           {historyData.length > 0 && (
             <div style={{ position: 'absolute', right: '2rem', top: '2rem', zIndex: 10, display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
-              <div style={{ background: '#333', borderRadius: '4px', overflow: 'hidden', display: 'flex', flexDirection: 'column', border: '1px solid #555' }}>
-                <div style={{ padding: '2px 4px', background: '#222', fontSize: '0.7rem', textAlign: 'center', borderBottom: '1px solid #555' }}>Y-Axis</div>
-                <button onClick={() => setYPanOffset(o => o + 0.1 * yZoomLevel)} title="Pan Up" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>▲</button>
-                <button onClick={() => setYZoomLevel(z => Math.max(0.1, z - 0.2))} title="Zoom In" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>+</button>
-                <button onClick={() => { setYZoomLevel(1); setYPanOffset(0); }} title="Reset" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>↺</button>
-                <button onClick={() => setYZoomLevel(z => z + 0.2)} title="Zoom Out" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem', borderBottom: '1px solid #444' }}>-</button>
-                <button onClick={() => setYPanOffset(o => o - 0.1 * yZoomLevel)} title="Pan Down" style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer', padding: '0.4rem' }}>▼</button>
+              <div style={{ background: '#ffffff', border: '1.5px solid #000000', color: '#000000', borderRadius: '4px', overflow: 'hidden', display: 'flex', flexDirection: 'column', border: '1.5px solid #000000' }}>
+                <div style={{ padding: '2px 4px', background: '#ffffff', border: '1.5px solid #000000', fontSize: '0.7rem', textAlign: 'center', borderBottom: '1.5px solid #000000' }}>Y-Axis</div>
+                <button onClick={() => setYPanOffset(o => o + 0.1 * yZoomLevel)} title="Pan Up" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>▲</button>
+                <button onClick={() => setYZoomLevel(z => Math.max(0.1, z - 0.2))} title="Zoom In" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>+</button>
+                <button onClick={() => { setYZoomLevel(1); setYPanOffset(0); }} title="Reset" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>↺</button>
+                <button onClick={() => setYZoomLevel(z => z + 0.2)} title="Zoom Out" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem', borderBottom: '1.5px solid #000000' }}>-</button>
+                <button onClick={() => setYPanOffset(o => o - 0.1 * yZoomLevel)} title="Pan Down" style={{ background: 'transparent', border: 'none', color: '#000000', cursor: 'pointer', padding: '0.4rem' }}>▼</button>
               </div>
             </div>
           )}
           {historyData.length > 0 ? (
                 <ResponsiveContainer width="100%" height="100%">
               <LineChart data={historyData} onMouseMove={handleMouseMove}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#333" />
-                <XAxis dataKey="timestamp" stroke="#888" tick={{fontSize: 10}} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#cccccc" />
+                <XAxis dataKey="timestamp" stroke="#000000" tick={{fontSize: 10}} />
                 <YAxis 
-                  stroke="#888" 
+                  stroke="#000000" 
                   domain={() => {
                     let min = Infinity;
                     let max = -Infinity;
@@ -444,7 +444,7 @@ export const HistorianTrend = () => {
                   }}
                   tick={{fontSize: 10}} 
                 />
-                <Tooltip contentStyle={{ backgroundColor: '#111', borderColor: '#444' }} />
+                <Tooltip contentStyle={{ backgroundColor: '#ffffff', borderColor: '#000000', color: '#000000' }} />
                 <Legend verticalAlign="top" height={36} />
                 {selectedTags.map((tag, i) => {
                   const sensor = sensors.find(s => s.tagId === tag);
@@ -463,7 +463,7 @@ export const HistorianTrend = () => {
                     </React.Fragment>
                   );
                 })}
-                <Brush dataKey="timestamp" height={30} stroke="#888" fill="#111" travellerWidth={10} startIndex={visibleRange[0]} endIndex={visibleRange[1]} onChange={handleBrushChange} />
+                <Brush dataKey="timestamp" height={30} stroke="#000000" fill="#ffffff" stroke="#000000" travellerWidth={10} startIndex={visibleRange[0]} endIndex={visibleRange[1]} onChange={handleBrushChange} />
               </LineChart>
             </ResponsiveContainer>
           ) : (

@@ -41,7 +41,7 @@ const GlobalClock = () => {
     return () => clearInterval(timer);
   }, []);
 
-  return <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{timeStr}</div>;
+  return <div style={{ fontSize: '0.8rem', color: '#000000', fontWeight: 'bold' }}>{timeStr}</div>;
 };
 
 const TopNavigation = () => {
@@ -55,10 +55,10 @@ const TopNavigation = () => {
     { path: '/historian', label: '3. Historian Trend' },
     { path: '/live-trend', label: '4. Live Trend' },
     { path: '/alarms', label: '5. Alarm Center', badge: unackCount > 0 ? `ALARM ${unackCount}` : null },
-    { path: '/t30', label: '6. System Prediction', style: { color: '#a78bfa' } },
-    { path: '/settings', label: '7. Prediction Tuning', style: { color: '#a78bfa' } },
+    { path: '/t30', label: '6. System Prediction' },
+    { path: '/settings', label: '7. Prediction Tuning' },
     { path: '/modbus', label: '8. Modbus Simulator' },
-    { path: '/model-info', label: '9. Prediction Model Info', style: { color: '#a78bfa' } },
+    { path: '/model-info', label: '9. Prediction Model Info' },
   ];
 
   return (
@@ -77,7 +77,7 @@ const TopNavigation = () => {
           >
             {n.label}
             {n.badge && (
-              <span className="alarm-flash" style={{ background: 'var(--danger)', color: '#fff', fontSize: '0.7rem', padding: '0.1rem 0.4rem', borderRadius: '4px', fontWeight: 'bold', marginLeft: '0.5rem' }}>
+              <span className="alarm-flash" style={{ background: '#ffffff', color: '#b91c1c', border: '1.5px solid #b91c1c', fontSize: '0.7rem', padding: '0.1rem 0.4rem', borderRadius: '4px', fontWeight: 'bold', marginLeft: '0.5rem' }}>
                 {n.badge}
               </span>
             )}

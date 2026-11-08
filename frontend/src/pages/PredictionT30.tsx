@@ -33,54 +33,54 @@ export const PredictionT30 = () => {
     <div className="dashboard-section" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <div>
-          <h2 style={{ color: '#a78bfa' }}>System Prediction</h2>
+          <h2 style={{ color: '#000000', fontWeight: 'bold' }}>System Prediction</h2>
           <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
             Early Warning Analytics (T-30 / T-20 / T-10) - Forecast Projection & Dynamic Anomaly Density
           </div>
         </div>
         <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '1rem', cursor: 'pointer', background: '#333', padding: '0.4rem 0.8rem', borderRadius: '4px' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '1rem', cursor: 'pointer', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.4rem 0.8rem', borderRadius: '4px' }}>
             <span style={{ color: predictionConfig?.global ? 'var(--success)' : 'var(--text-muted)' }}>{predictionConfig?.global ? 'Global Engine ON' : 'Global Engine OFF'}</span>
             <input type="checkbox" checked={predictionConfig?.global ?? true} onChange={e => updatePredictionConfig('global', 'ALL', e.target.checked)} />
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '0.5rem', background: '#222', padding: '0.4rem 0.8rem', borderRadius: '4px' }}>
-            <span style={{ fontSize: '0.8rem', color: '#ccc' }}>Sensitivity (N10 Threshold):</span>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.4rem 0.8rem', borderRadius: '4px' }}>
+            <span style={{ fontSize: '0.8rem', color: '#000000' }}>Sensitivity (N10 Threshold):</span>
             <input type="number" min="0.1" max="10" step="0.1" value={predictionConfig?.sensitivity ?? 2} 
               onChange={e => updatePredictionSensitivity(Number(e.target.value))}
-              style={{ width: '50px', background: '#444', color: '#fff', border: 'none', padding: '0.2rem', borderRadius: '2px', textAlign: 'center' }}
+              style={{ width: '50px', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', padding: '0.2rem', borderRadius: '2px', textAlign: 'center' }}
             />
           </label>
-          <select value={filterSys} onChange={e=>{setFilterSys(e.target.value); setFilterSub('');}} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)' }}>
+          <select value={filterSys} onChange={e=>{setFilterSys(e.target.value); setFilterSub('');}} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)' }}>
             <option value="">All Systems</option>
             {['PCW01','PCW02','PCW03','PCW04','PCW05','PCW06','PCW07','PCW08'].map(sys => (
               <option key={sys} value={sys}>{sys}</option>
             ))}
           </select>
-          <select value={filterSub} onChange={e=>setFilterSub(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)' }}>
+          <select value={filterSub} onChange={e=>setFilterSub(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)' }}>
             <option value="">All Submains</option>
             {Array.from(new Set(sensors.filter(s => !filterSys || s.systemId === filterSys).map(s => s.submainId))).map(sm => (
               <option key={sm} value={sm}>{sm}</option>
             ))}
           </select>
           {filterSys && !filterSub && (
-            <label style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.8rem', cursor: 'pointer', background: '#444', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.8rem', cursor: 'pointer', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
                <input type="checkbox" checked={predictionConfig?.systems[filterSys] !== false} onChange={e => updatePredictionConfig('system', filterSys, e.target.checked)} />
                {filterSys} Engine
             </label>
           )}
           {filterSub && (
-            <label style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.8rem', cursor: 'pointer', background: '#444', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.8rem', cursor: 'pointer', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.2rem 0.5rem', borderRadius: '4px' }}>
                <input type="checkbox" checked={predictionConfig?.submains[filterSub] !== false} onChange={e => updatePredictionConfig('submain', filterSub, e.target.checked)} />
                {filterSub} Engine
             </label>
           )}
-          <select value={filterType} onChange={e=>setFilterType(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)' }}>
+          <select value={filterType} onChange={e=>setFilterType(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)' }}>
             <option value="">All Types</option>
             <option value="PT">PT (Pressure)</option>
             <option value="FT">FT (Flow)</option>
             <option value="DP">DP (Differential)</option>
           </select>
-          <select value={filterState} onChange={e=>setFilterState(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid var(--border)' }}>
+          <select value={filterState} onChange={e=>setFilterState(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1px solid var(--border)' }}>
             <option value="">All States</option>
             <option value="NORMAL">NORMAL</option>
             <option value="T-30">T-30 Warning</option>
@@ -95,25 +95,25 @@ export const PredictionT30 = () => {
         <table>
           <thead style={{ position: 'sticky', top: 0, background: 'var(--panel-bg)', zIndex: 1 }}>
             <tr>
-              <th rowSpan={2} style={{ borderBottom: '2px solid #555' }}>Canonical Tag</th>
-              <th rowSpan={2} style={{ borderBottom: '2px solid #555', borderRight: '1px solid #444' }}>Limits (HH/H/L/LL)</th>
-              <th colSpan={4} style={{ textAlign: 'center', borderBottom: '1px solid #444', borderRight: '1px solid #444' }}>Anomaly Density (N10)</th>
-              <th colSpan={4} style={{ textAlign: 'center', borderBottom: '1px solid #444', borderRight: '1px solid #444' }}>Trend Forecast (Value + Slope*h)</th>
-              <th colSpan={2} style={{ textAlign: 'center', borderBottom: '1px solid #444' }}>Decision Engine</th>
+              <th rowSpan={2} style={{ borderBottom: '2px solid #000000' }}>Canonical Tag</th>
+              <th rowSpan={2} style={{ borderBottom: '2px solid #000000', borderRight: '1px solid #000000' }}>Limits (HH/H/L/LL)</th>
+              <th colSpan={4} style={{ textAlign: 'center', borderBottom: '1px solid #000000', borderRight: '1px solid #000000' }}>Anomaly Density (N10)</th>
+              <th colSpan={4} style={{ textAlign: 'center', borderBottom: '1px solid #000000', borderRight: '1px solid #000000' }}>Trend Forecast (Value + Slope*h)</th>
+              <th colSpan={2} style={{ textAlign: 'center', borderBottom: '1px solid #000000' }}>Decision Engine</th>
             </tr>
             <tr>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>Current Value</th>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>BaseAvg60</th>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>M60 / M10</th>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555', borderRight: '1px solid #444' }}>N10 (Limit &gt; {predictionConfig?.sensitivity ?? 2})</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>Current Value</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>BaseAvg60</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>M60 / M10</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000', borderRight: '1px solid #000000' }}>N10 (Limit &gt; {predictionConfig?.sensitivity ?? 2})</th>
               
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>Slope / min</th>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>Fcst-30</th>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>Fcst-20</th>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555', borderRight: '1px solid #444' }}>Fcst-10</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>Slope / min</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>Fcst-30</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>Fcst-20</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000', borderRight: '1px solid #000000' }}>Fcst-10</th>
               
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>State</th>
-              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #555' }}>Trigger Path Evidence</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>State</th>
+              <th style={{ fontSize: '0.75rem', borderBottom: '2px solid #000000' }}>Trigger Path Evidence</th>
             </tr>
           </thead>
           <tbody>
@@ -154,7 +154,7 @@ export const PredictionT30 = () => {
                   </td>
                   
                   {/* Limits Track */}
-                  <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', borderRight: '1px solid #444' }}>
+                  <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', borderRight: '1px solid #000000' }}>
                     {liveSensor ? (
                       <>
                         <span style={{ color: '#ff6b6b' }}>{liveSensor.engineeringLimits.highHigh.toFixed(2)}</span> / <span style={{ color: '#ff6b6b' }}>{liveSensor.engineeringLimits.high.toFixed(2)}</span> / <span style={{ color: '#4facfe' }}>{liveSensor.engineeringLimits.low.toFixed(2)}</span> / <span style={{ color: '#4facfe' }}>{liveSensor.engineeringLimits.lowLow.toFixed(2)}</span>
@@ -196,7 +196,7 @@ export const PredictionT30 = () => {
                     color: (liveSensor && (p.forecast10 >= liveSensor.engineeringLimits.highHigh || p.forecast10 <= liveSensor.engineeringLimits.lowLow)) 
                     ? 'var(--danger)' 
                     : 'inherit', 
-                    borderRight: '1px solid #444' 
+                    borderRight: '1px solid #000000' 
                   }}>{p.forecast10.toFixed(3)}</td>
                   
                   {/* Decision */}

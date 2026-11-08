@@ -156,7 +156,18 @@ class MockDatabase {
       const missing = minPoints - have;
       const seeded: SeriesPoint[] = [];
       for (let i = missing; i > 0; i--) {
-        seeded.push({ t: first - i * 60_000, v: base + (Math.random() - 0.5) * noise, q: 0 });
+        let v = base + (Math.random() - 0.5) * noise;
+        
+        // Dynamically apply faults during backfill based on config
+        if (conf?.scenario === 'DRIFT_UP') {
+            v += (minPoints - i) * (conf.driftRatePerMin || (L.high - L.low)*0.01);
+        } else if (conf?.scenario === 'DRIFT_DOWN') {
+            v -= (minPoints - i) * (conf.driftRatePerMin || (L.high - L.low)*0.01);
+        } else if (conf?.scenario === 'STEP' && (minPoints - i) > minPoints/2) {
+            v += (conf.stepOffset || (L.high - L.low)*0.15);
+        }
+        
+        seeded.push({ t: first - i * 60_000, v, q: 0 });
       }
       if (have === 0) seeded.forEach((p) => this.historian.append(sensor.tagId, p.t, p.v, p.q));
       else this.historian.replace(sensor.tagId, [...seeded, ...this.historian.tail(sensor.tagId, have)]);

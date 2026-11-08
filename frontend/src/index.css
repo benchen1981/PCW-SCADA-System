@@ -1,35 +1,46 @@
+/* High-Contrast Pure White Theme for Academic Thesis & B&W Printing */
 :root {
-  --bg-dark: #121212;
-  --panel-bg: #1e1e1e;
-  --border: #444;
-  --text-main: #e0e0e0;
-  --text-muted: #888;
-  --accent: #3b82f6;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --font-main: 'Noto Sans TC', sans-serif;
-  --font-mono: 'Roboto Condensed', monospace;
+  --bg-dark: #ffffff;
+  --panel-bg: #ffffff;
+  --card-bg: #ffffff;
+  --border: #000000;
+  --border-light: #cccccc;
+  --text-main: #000000;
+  --text-muted: #222222;
+  --text-dim: #444444;
+  --accent: #000000;
+  --accent-hover: #f0f0f0;
+  --success: #15803d;
+  --warning: #b45309;
+  --danger: #b91c1c;
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
 
 body { 
-  background-color: var(--bg-dark); 
-  color: var(--text-main); 
+  background-color: #ffffff !important; 
+  color: #000000 !important; 
   font-family: var(--font-main); 
+  -webkit-font-smoothing: antialiased;
 }
 
 .app-container {
   display: flex; 
   height: 100vh; 
   overflow: hidden;
+  background-color: #ffffff !important;
 }
 
 .sidebar { 
   width: 250px; 
-  background: var(--panel-bg); 
-  border-right: 1px solid var(--border); 
+  background: #ffffff !important; 
+  border-right: 2px solid #000000 !important; 
   display: flex; 
   flex-direction: column; 
   padding: 1rem 0; 
@@ -38,31 +49,37 @@ body {
 
 .sidebar-header {
   padding: 0 1.5rem 1rem 1.5rem; 
-  border-bottom: 1px solid var(--border); 
+  border-bottom: 2px solid #000000 !important; 
   margin-bottom: 1rem; 
-  color: var(--accent);
+  color: #000000 !important;
+  font-weight: 800;
 }
 
 .nav-item { 
-  padding: 1rem 1.5rem; 
+  padding: 0.8rem 1.2rem; 
   cursor: pointer; 
-  border-left: 4px solid transparent; 
-  font-size: 1.1rem; 
-  transition: 0.2s; 
+  border: 1.5px solid #000000 !important; 
+  margin: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.95rem; 
+  transition: 0.15s; 
   text-decoration: none;
-  color: var(--text-main);
+  color: #000000 !important;
+  background: #ffffff !important;
   display: flex;
   align-items: center;
-  min-height: 52px;
-  font-weight: 500;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-weight: 600;
 }
-.nav-item:hover { background: rgba(255,255,255,0.05); }
+.nav-item:hover { 
+  background: #f3f4f6 !important; 
+  border-color: #000000 !important;
+}
 .nav-item.active { 
-  border-left-color: var(--accent); 
-  background: rgba(59, 130, 246, 0.1); 
-  font-weight: bold; 
-  color: #fff;
+  border: 2.5px solid #000000 !important; 
+  background: #ffffff !important; 
+  font-weight: 900 !important; 
+  color: #000000 !important;
+  text-decoration: underline !important;
 }
 
 @keyframes flash {
@@ -81,36 +98,102 @@ body {
   flex-direction: column; 
   overflow-y: auto; 
   padding: 1.5rem; 
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
-.dashboard-section { display: flex; flex-direction: column; height: 100%; }
+.dashboard-section { 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; 
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
 
 .card { 
-  background: var(--panel-bg); 
-  border: 1px solid var(--border); 
-  border-radius: 4px; 
+  background: #ffffff !important; 
+  border: 1.5px solid #000000 !important; 
+  border-radius: 6px; 
   padding: 1rem; 
+  color: #000000 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.table-container { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 0.85rem; }
-th, td { padding: 0.5rem; text-align: left; border-bottom: 1px solid var(--border); }
-th { color: var(--text-muted); font-family: var(--font-main); }
+.table-container { 
+  overflow-x: auto; 
+  background: #ffffff !important;
+}
 
-.val { font-family: var(--font-mono); font-weight: bold; }
-.badge { padding: 2px 6px; border-radius: 3px; font-size: 0.7rem; font-weight: bold; color: #000; }
-.badge.normal { background: var(--success); }
-.badge.warning { background: var(--warning); }
-.badge.alarm { background: var(--danger); }
-.badge.neutral { background: var(--text-muted); }
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-family: var(--font-mono); 
+  font-size: 0.85rem; 
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+th, td { 
+  padding: 0.55rem; 
+  text-align: left; 
+  border: 1px solid #000000 !important; 
+  color: #000000 !important;
+}
+
+th { 
+  background: #f3f4f6 !important; 
+  color: #000000 !important; 
+  font-family: var(--font-main); 
+  font-weight: 800 !important;
+  border-top: 1.5px solid #000000 !important;
+  border-bottom: 2px solid #000000 !important;
+}
+
+.val { 
+  font-family: var(--font-mono); 
+  font-weight: bold; 
+  color: #000000 !important;
+}
+
+.badge { 
+  padding: 2px 7px; 
+  border-radius: 4px; 
+  font-size: 0.72rem; 
+  font-weight: 800; 
+  color: #000000 !important; 
+  border: 1.5px solid #000000 !important;
+  background: #ffffff !important;
+  display: inline-block;
+}
+.badge.normal { 
+  background: #ffffff !important; 
+  color: #15803d !important; 
+  border: 1.5px solid #15803d !important;
+}
+.badge.warning { 
+  background: #ffffff !important; 
+  color: #b45309 !important; 
+  border: 1.5px solid #b45309 !important;
+}
+.badge.alarm { 
+  background: #ffffff !important; 
+  color: #b91c1c !important; 
+  border: 2px solid #b91c1c !important;
+}
+.badge.neutral { 
+  background: #ffffff !important; 
+  color: #333333 !important; 
+  border: 1px solid #000000 !important;
+}
 
 /* 3-Zone Layout Shell */
 .scada-shell {
   height: 100vh;
   display: grid;
-  grid-template-rows: 60px minmax(0, 1fr) var(--alarm-height, 240px);
+  grid-template-rows: 64px minmax(0, 1fr) var(--alarm-height, 240px);
   overflow: hidden;
-  background-color: var(--bg-dark);
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .scada-shell.alarm-collapsed {
@@ -121,18 +204,21 @@ th { color: var(--text-muted); font-family: var(--font-main); }
   --alarm-height: 40vh;
 }
 
+/* Top Navigation Bar: High-Contrast Pure White Buttons */
 .top-navigation {
-  background: var(--panel-bg);
-  border-bottom: 1px solid var(--border);
+  background: #ffffff !important;
+  border-bottom: 2px solid #000000 !important;
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: 0.35rem 1rem !important;
   z-index: 100;
+  gap: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
 .top-nav-logo {
-  padding: 0 1.5rem;
-  border-right: 1px solid var(--border);
+  padding: 0.25rem 1rem 0.25rem 0.25rem !important;
+  border-right: 2px solid #000000 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,54 +226,73 @@ th { color: var(--text-muted); font-family: var(--font-main); }
 }
 
 .top-nav-logo h2 {
-  font-size: 1.2rem;
-  margin: 0;
-  color: var(--accent);
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  margin: 0 !important;
+  color: #000000 !important;
+  letter-spacing: 0.5px;
 }
 
 .top-nav-links {
   display: flex;
-  height: 100%;
+  align-items: center;
   flex: 1;
   overflow-x: auto;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
 }
 
+/* Individual Top Nav Buttons: Pure White Background, Deep Black Text, Crisp Border */
 .top-nav-item {
-  padding: 0 1.25rem;
-  display: flex;
-  align-items: center;
-  border-right: 1px solid var(--border);
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--text-main);
-  font-weight: 500;
-  transition: 0.2s;
-  white-space: nowrap;
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  border-radius: 5px !important;
+  padding: 0.45rem 0.85rem !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease-in-out !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .top-nav-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
 .top-nav-item.active {
-  background: rgba(59, 130, 246, 0.1);
-  color: #fff;
-  border-bottom: 3px solid var(--accent);
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 2.5px solid #000000 !important;
+  font-weight: 900 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18), inset 0 0 0 1px #000000 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
 }
 
 .scada-workspace {
   min-height: 0;
   overflow: auto;
   position: relative;
-  background: var(--bg-dark);
+  background: #ffffff !important;
+  color: #000000 !important;
 }
 
+/* Global Alarm Summary */
 .global-alarm-summary {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  border-top: 2px solid var(--border);
-  background: var(--panel-bg);
+  border-top: 2px solid #000000 !important;
+  background: #ffffff !important;
   z-index: 50;
   height: 100%;
 }
@@ -198,30 +303,120 @@ th { color: var(--text-muted); font-family: var(--font-main); }
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  border-bottom: 1px solid var(--border);
-  background: #252525;
+  border-bottom: 1.5px solid #000000 !important;
+  background: #ffffff !important;
+  color: #000000 !important;
   cursor: pointer;
   user-select: none;
   flex-shrink: 0;
+  font-weight: 800;
 }
 
 .alarm-summary-header h3 {
   margin: 0;
   font-size: 1rem;
+  font-weight: 800;
+  color: #000000 !important;
 }
 
 .alarm-summary-content {
   flex: 1;
   overflow-y: auto;
-  background: #111;
+  background: #ffffff !important;
+  color: #000000 !important;
 }
 
-.btn {
-  background: #333;
-  color: #fff;
-  border: 1px solid #555;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
+/* Standard Buttons & Form Controls */
+button, .btn {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  padding: 0.35rem 0.75rem !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  transition: all 0.15s ease-in-out !important;
 }
-.btn:hover { background: #444; }
+button:hover, .btn:hover { 
+  background: #f0f0f0 !important; 
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+button:active, .btn:active {
+  background: #e5e7eb !important;
+}
+
+input, select {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000 !important;
+  padding: 0.35rem 0.55rem !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+}
+input::placeholder {
+  color: #666666 !important;
+}
+
+
+/* Academic Thesis & B&W Printing Optimized Badges */
+.badge { 
+  padding: 3px 8px !important; 
+  border-radius: 4px !important; 
+  font-size: 0.75rem !important; 
+  font-weight: 800 !important; 
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* NORMAL: Crisp solid border, clear on white paper */
+.badge.normal { 
+  background: #ffffff !important; 
+  color: #15803d !important; 
+  border: 1.5px solid #15803d !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* WARNING / T-30 / T-20: Distinct THICK DASHED border, instantly recognizable in B&W */
+.badge.warning { 
+  background: #fef3c7 !important; 
+  color: #b45309 !important; 
+  border: 2px dashed #b45309 !important;
+  font-weight: 900 !important;
+}
+
+/* ALARM / CRITICAL / EVENT: Solid Inverted Black Badge with White Bold Text for maximum B&W contrast */
+.badge.alarm { 
+  background: #000000 !important; 
+  color: #ffffff !important; 
+  border: 2px solid #000000 !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+}
+
+.badge.neutral { 
+  background: #ffffff !important; 
+  color: #333333 !important; 
+  border: 1.5px solid #000000 !important;
+}
+
+/* Print-friendly scrollbars & selection */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}

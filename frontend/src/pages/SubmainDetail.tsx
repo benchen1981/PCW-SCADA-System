@@ -65,7 +65,7 @@ export const SubmainDetail = () => {
         <select 
           value={systemId} 
           onChange={(e) => navigate(`/submain/${e.target.value}`)}
-          style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555', borderRadius: '4px', marginLeft: 'auto' }}
+          style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', borderRadius: '4px', marginLeft: 'auto' }}
         >
           {['PCW01','PCW02','PCW03','PCW04','PCW05','PCW06','PCW07','PCW08'].map(sys => (
             <option key={sys} value={sys}>{sys}</option>
@@ -89,7 +89,7 @@ export const SubmainDetail = () => {
                   style={{
                     padding: '0.8rem', 
                     marginBottom: '0.5rem', 
-                    background: isActive ? 'var(--accent)' : 'rgba(255,255,255,0.05)',
+                    background: isActive ? '#f3f4f6' : '#ffffff', border: isActive ? '2px solid #000000' : '1px solid #e5e7eb',
                     borderLeft: hasActiveAlarm ? '4px solid var(--danger)' : (hasUnackAlarm ? '4px solid var(--warning)' : '4px solid transparent'),
                     cursor: 'pointer',
                     borderRadius: '4px'
@@ -99,7 +99,7 @@ export const SubmainDetail = () => {
                     <strong>{sm.displayName}</strong>
                     {hasActiveAlarm ? <span className="badge alarm">ALARM</span> : (hasUnackAlarm && <span className="badge warning">UNACK</span>)}
                   </div>
-                  <div style={{ fontSize: '0.75rem', color: isActive ? '#ddd' : 'var(--text-muted)' }}>
+                  <div style={{ fontSize: '0.75rem', color: '#000000' }}>
                     Tags: {sm.supplyTags.length + sm.returnTags.length}
                   </div>
                 </div>
@@ -110,10 +110,18 @@ export const SubmainDetail = () => {
 
         {/* Right: Submain P&ID Detail */}
         <div className="card" style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', overflow: 'hidden', padding: 0 }}>
-          <div style={{ padding: '1rem', borderBottom: '1px solid var(--border)' }}>
-            <h3>{systemId} - {activeSubmain?.displayName} Process View</h3>
+          <div style={{ padding: '0.65rem 1rem', borderBottom: '2px solid #000000', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#ffffff' }}>
+            <h3 style={{ margin: 0, fontWeight: 900, fontSize: '1.15rem' }}>{systemId} - {activeSubmain?.displayName} Process View (P&ID)</h3>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontSize: '0.82rem', fontWeight: 'bold' }}>
+              <span style={{ color: '#000000' }}>儀表符號: <strong style={{ border: '1.5px solid #000', borderRadius: '50%', padding: '1px 6px', marginRight: '2px' }}>○</strong> PT 壓力 | <strong style={{ border: '1.5px solid #000', borderRadius: '2px', padding: '1px 5px', marginRight: '2px' }}>□</strong> FT 流量 | <strong style={{ border: '1.5px solid #000', borderRadius: '50%', padding: '1px 6px', marginRight: '2px', outline: '1px solid #000' }}>◎</strong> DP 差壓</span>
+              <div style={{ display: 'flex', gap: '0.4rem' }}>
+                <span className="badge normal">正常: 細實線</span>
+                <span className="badge warning">預警: 粗虛線</span>
+                <span className="badge alarm">警報: 實心反白粗框</span>
+              </div>
+            </div>
           </div>
-          <div style={{ flex: 1, background: '#111', position: 'relative', overflow: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ flex: 1, background: '#ffffff', border: '1.5px solid #000000', position: 'relative', overflow: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <svg width="600" height="800" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <linearGradient id="pipeSupplyLg" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -129,11 +137,11 @@ export const SubmainDetail = () => {
               {/* Main Headers */}
               <path d="M 50 150 L 550 150" stroke="url(#pipeSupplyLg)" strokeWidth="16" fill="none" />
               <text x="60" y="130" fill="#2F91D1" fontSize="16" fontWeight="bold">SUPPLY MAIN HEADER ({systemId})</text>
-              <polygon points="520,140 540,150 520,160" fill="#fff" />
+              <polygon points="520,140 540,150 520,160" fill="#000000" />
 
               <path d="M 50 700 L 550 700" stroke="url(#pipeReturnLg)" strokeWidth="16" fill="none" />
               <text x="60" y="730" fill="#D45A4A" fontSize="16" fontWeight="bold">RETURN MAIN HEADER ({systemId})</text>
-              <polygon points="80,690 60,700 80,710" fill="#fff" />
+              <polygon points="80,690 60,700 80,710" fill="#000000" />
 
               {(() => {
                 const smSensors = sensors.filter(s => s.submainId === activeSubmainId);
@@ -146,52 +154,62 @@ export const SubmainDetail = () => {
                 return (
                   <g>
                     {/* Submain Branch Background */}
-                    <rect x="220" y="180" width="160" height="500" fill="rgba(255,255,255,0.02)" rx="4" pointerEvents="none" />
+                    <rect x="220" y="180" width="160" height="500" fill="rgba(0,0,0,0.02)" stroke="#000000" strokeDasharray="3 3" rx="4" pointerEvents="none" />
                     
                     {/* Supply Downward Pipe */}
                     <path d="M 300 150 L 300 380" stroke="url(#pipeSupplyLg)" strokeWidth="8" fill="none" pointerEvents="none" />
                     <polygon points="295,360 305,360 300,375" fill="#2F91D1" pointerEvents="none" />
                     
-                    {/* PTS */}
+                    {/* PTS: Circle Shape with High-Contrast Dual-Channel Alarm State */}
                     {pts ? (
                       <g transform="translate(300, 240)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pts.tagId); }} style={{ cursor: 'pointer' }}>
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke={pts.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                        <text x="0" y="5" fill="#fff" fontSize="14" textAnchor="middle">PT</text>
-                        <text x="35" y="-5" fill={pts.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="16" fontWeight="bold" textAnchor="start">{pts.value.toFixed(2)}</text>
-                        <text x="35" y="10" fill="#aaa" fontSize="12" textAnchor="start">{pts.displayTag}</text>
+                        <circle 
+                          cx="0" cy="0" r="24" fill="#ffffff" 
+                          stroke={pts.alarmState === 'ALARM' ? '#000000' : pts.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                          strokeWidth={pts.alarmState === 'ALARM' ? '3.5' : pts.alarmState === 'WARNING' ? '2.5' : '1.8'} 
+                          strokeDasharray={pts.alarmState === 'WARNING' ? '4 2' : undefined} 
+                        />
+                        <text x="0" y="5" fill="#000000" fontSize="14" fontWeight="bold" textAnchor="middle">PT</text>
+                        <text x="35" y="-5" fill="#000000" fontSize="16" fontWeight="900" textAnchor="start">{pts.value.toFixed(2)}</text>
+                        <text x="35" y="12" fill="#000000" fontSize="12" fontWeight="600" textAnchor="start">{pts.displayTag}</text>
                       </g>
                     ) : (
                       <g transform="translate(300, 240)">
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#555" fontSize="14" textAnchor="middle" pointerEvents="none">PT</text>
-                        <text x="35" y="5" fill="#555" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
+                        <circle cx="0" cy="0" r="24" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
+                        <text x="0" y="5" fill="#666666" fontSize="14" textAnchor="middle" pointerEvents="none">PT</text>
+                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
                       </g>
                     )}
 
                     {/* Valve */}
                     <g transform="translate(300, 310)" pointerEvents="none">
-                       <polygon points="-15,-10 -15,10 15,-10 15,10" fill="#333" stroke="#aaa" strokeWidth="2" />
+                       <polygon points="-15,-10 -15,10 15,-10 15,10" fill="#ffffff" stroke="#000000" strokeWidth="2" />
                     </g>
 
                     {/* TOOL Box */}
                     <g transform="translate(260, 380)" pointerEvents="none">
-                      <rect x="0" y="0" width="80" height="90" fill="#252525" stroke="#4B4B4B" strokeWidth="2" rx="4" />
-                      <text x="40" y="50" fill="#B8B8B8" fontSize="16" textAnchor="middle" fontWeight="bold">{toolName}</text>
+                      <rect x="0" y="0" width="80" height="90" fill="#ffffff" stroke="#000000" strokeWidth="2" rx="4" />
+                      <text x="40" y="50" fill="#000000" fontSize="16" textAnchor="middle" fontWeight="bold">{toolName}</text>
                     </g>
 
-                    {/* Flow Meter */}
+                    {/* FT: Square Shape (□) for Distinct Academic Thesis Identification */}
                     {ft ? (
                       <g transform="translate(300, 490)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ft.tagId); }} style={{ cursor: 'pointer' }}>
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke={ft.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                        <text x="0" y="5" fill="#fff" fontSize="14" textAnchor="middle">FT</text>
-                        <text x="35" y="-5" fill={ft.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="16" fontWeight="bold" textAnchor="start">{ft.value.toFixed(2)}</text>
-                        <text x="35" y="10" fill="#aaa" fontSize="12" textAnchor="start">{ft.displayTag}</text>
+                        <rect 
+                          x="-24" y="-24" width="48" height="48" rx="4" fill="#ffffff" 
+                          stroke={ft.alarmState === 'ALARM' ? '#000000' : ft.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                          strokeWidth={ft.alarmState === 'ALARM' ? '3.5' : ft.alarmState === 'WARNING' ? '2.5' : '1.8'} 
+                          strokeDasharray={ft.alarmState === 'WARNING' ? '4 2' : undefined} 
+                        />
+                        <text x="0" y="5" fill="#000000" fontSize="14" fontWeight="bold" textAnchor="middle">FT</text>
+                        <text x="35" y="-5" fill="#000000" fontSize="16" fontWeight="900" textAnchor="start">{ft.value.toFixed(2)}</text>
+                        <text x="35" y="12" fill="#000000" fontSize="12" fontWeight="600" textAnchor="start">{ft.displayTag}</text>
                       </g>
                     ) : (
                       <g transform="translate(300, 490)">
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#555" fontSize="14" textAnchor="middle" pointerEvents="none">FT</text>
-                        <text x="35" y="5" fill="#555" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
+                        <rect x="-24" y="-24" width="48" height="48" rx="4" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
+                        <text x="0" y="5" fill="#666666" fontSize="14" textAnchor="middle" pointerEvents="none">FT</text>
+                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
                       </g>
                     )}
 
@@ -199,37 +217,49 @@ export const SubmainDetail = () => {
                     <path d="M 300 470 L 300 700" stroke="url(#pipeReturnLg)" strokeWidth="8" fill="none" pointerEvents="none" />
                     <polygon points="295,680 305,680 300,695" fill="#D45A4A" pointerEvents="none" />
 
-                    {/* PTR */}
+                    {/* PTR: Circle Shape with High-Contrast Dual-Channel Alarm State */}
                     {ptr ? (
                       <g transform="translate(300, 600)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ptr.tagId); }} style={{ cursor: 'pointer' }}>
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke={ptr.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                        <text x="0" y="5" fill="#fff" fontSize="14" textAnchor="middle">PT</text>
-                        <text x="35" y="-5" fill={ptr.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="16" fontWeight="bold" textAnchor="start">{ptr.value.toFixed(2)}</text>
-                        <text x="35" y="10" fill="#aaa" fontSize="12" textAnchor="start">{ptr.displayTag}</text>
+                        <circle 
+                          cx="0" cy="0" r="24" fill="#ffffff" 
+                          stroke={ptr.alarmState === 'ALARM' ? '#000000' : ptr.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                          strokeWidth={ptr.alarmState === 'ALARM' ? '3.5' : ptr.alarmState === 'WARNING' ? '2.5' : '1.8'} 
+                          strokeDasharray={ptr.alarmState === 'WARNING' ? '4 2' : undefined} 
+                        />
+                        <text x="0" y="5" fill="#000000" fontSize="14" fontWeight="bold" textAnchor="middle">PT</text>
+                        <text x="35" y="-5" fill="#000000" fontSize="16" fontWeight="900" textAnchor="start">{ptr.value.toFixed(2)}</text>
+                        <text x="35" y="12" fill="#000000" fontSize="12" fontWeight="600" textAnchor="start">{ptr.displayTag}</text>
                       </g>
                     ) : (
                       <g transform="translate(300, 600)">
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#555" fontSize="14" textAnchor="middle" pointerEvents="none">PT</text>
-                        <text x="35" y="5" fill="#555" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
+                        <circle cx="0" cy="0" r="24" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
+                        <text x="0" y="5" fill="#666666" fontSize="14" textAnchor="middle" pointerEvents="none">PT</text>
+                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
                       </g>
                     )}
 
-                    {/* PDT */}
+                    {/* PDT: Concentric Double Circles (◎) for Differential Pressure */}
                     {pdt ? (
                       <g transform="translate(180, 420)" onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pdt.tagId); }} style={{ cursor: 'pointer' }}>
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke={pdt.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                        <text x="0" y="5" fill="#fff" fontSize="14" textAnchor="middle">PDT</text>
-                        <text x="35" y="5" fill={pdt.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="16" fontWeight="bold" textAnchor="start">{pdt.value.toFixed(2)}</text>
+                        <circle 
+                          cx="0" cy="0" r="24" fill="#ffffff" 
+                          stroke={pdt.alarmState === 'ALARM' ? '#000000' : pdt.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                          strokeWidth={pdt.alarmState === 'ALARM' ? '3.5' : pdt.alarmState === 'WARNING' ? '2.5' : '1.8'} 
+                          strokeDasharray={pdt.alarmState === 'WARNING' ? '4 2' : undefined} 
+                        />
+                        <circle cx="0" cy="0" r="16" fill="none" stroke="#000000" strokeWidth="1.2" />
+                        <text x="0" y="5" fill="#000000" fontSize="13" fontWeight="bold" textAnchor="middle">DP</text>
+                        <text x="35" y="5" fill="#000000" fontSize="16" fontWeight="900" textAnchor="start">{pdt.value.toFixed(2)}</text>
                         
-                        <path d="M 0 -24 L 0 -150 L 100 -150" stroke="#888" strokeWidth="2" strokeDasharray="4 4" fill="none" pointerEvents="none" />
-                        <path d="M 0 24 L 0 200 L 100 200" stroke="#888" strokeWidth="2" strokeDasharray="4 4" fill="none" pointerEvents="none" />
+                        <path d="M 0 -24 L 0 -150 L 100 -150" stroke="#000000" strokeWidth="1.5" strokeDasharray="4 4" fill="none" pointerEvents="none" />
+                        <path d="M 0 24 L 0 200 L 100 200" stroke="#000000" strokeWidth="1.5" strokeDasharray="4 4" fill="none" pointerEvents="none" />
                       </g>
                     ) : (
                       <g transform="translate(180, 420)">
-                        <circle cx="0" cy="0" r="24" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" pointerEvents="none" />
-                        <text x="0" y="5" fill="#555" fontSize="14" textAnchor="middle" pointerEvents="none">PDT</text>
-                        <text x="35" y="5" fill="#555" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
+                        <circle cx="0" cy="0" r="24" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" pointerEvents="none" />
+                        <circle cx="0" cy="0" r="16" fill="none" stroke="#000000" strokeWidth="1" strokeDasharray="2 2" pointerEvents="none" />
+                        <text x="0" y="5" fill="#666666" fontSize="13" textAnchor="middle" pointerEvents="none">DP</text>
+                        <text x="35" y="5" fill="#666666" fontSize="12" textAnchor="start" pointerEvents="none">NO DATA</text>
                       </g>
                     )}
                   </g>

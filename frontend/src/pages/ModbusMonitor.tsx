@@ -130,20 +130,20 @@ export const ModbusMonitor = () => {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <h2>Modbus & Simulator Center</h2>
         <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <button onClick={() => setActiveTab('MONITOR')} style={{ padding: '0.5rem 1rem', background: activeTab === 'MONITOR' ? 'var(--accent)' : '#333', border: 'none', color: '#fff', borderRadius: '4px', cursor: 'pointer' }}>Modbus Monitor</button>
-          <button onClick={() => setActiveTab('SIMULATOR')} style={{ padding: '0.5rem 1rem', background: activeTab === 'SIMULATOR' ? 'var(--accent)' : '#333', border: 'none', color: '#fff', borderRadius: '4px', cursor: 'pointer' }}>Sensor Simulator</button>
+          <button onClick={() => setActiveTab('MONITOR')} style={{ padding: '0.5rem 1rem', background: activeTab === 'MONITOR' ? '#ffffff' : '#f9fafb', color: '#000000', border: activeTab === 'MONITOR' ? '2.5px solid #000000' : '1.5px solid #000000', fontWeight: 'bold', border: 'none', color: '#000000', borderRadius: '4px', cursor: 'pointer' }}>Modbus Monitor</button>
+          <button onClick={() => setActiveTab('SIMULATOR')} style={{ padding: '0.5rem 1rem', background: activeTab === 'SIMULATOR' ? '#ffffff' : '#f9fafb', color: '#000000', border: activeTab === 'SIMULATOR' ? '2.5px solid #000000' : '1.5px solid #000000', fontWeight: 'bold', border: 'none', color: '#000000', borderRadius: '4px', cursor: 'pointer' }}>Sensor Simulator</button>
         </div>
       </div>
 
       {activeTab === 'MONITOR' && (
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div className="card" style={{ display: 'flex', gap: '1rem', padding: '1rem', marginBottom: '1rem' }}>
-            <input type="text" placeholder="Search Tag..." value={monitorSearch} onChange={e=>setMonitorSearch(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
-            <select value={monitorSys} onChange={e=>setMonitorSys(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+            <input type="text" placeholder="Search Tag..." value={monitorSearch} onChange={e=>setMonitorSearch(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
+            <select value={monitorSys} onChange={e=>setMonitorSys(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
               <option value="">All Systems</option>
               {Array.from(new Set(sensors.map(s => s.systemId))).map(sys => <option key={sys} value={sys}>{sys}</option>)}
             </select>
-            <select value={monitorType} onChange={e=>setMonitorType(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+            <select value={monitorType} onChange={e=>setMonitorType(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
               <option value="">All Types</option>
               <option value="PT">PT (Pressure)</option>
               <option value="FT">FT (Flow)</option>
@@ -223,20 +223,20 @@ export const ModbusMonitor = () => {
           <div className="card" style={{ width: '350px', display: 'flex', flexDirection: 'column', overflowY: 'auto', flexShrink: 0 }}>
             <h3 style={{ borderBottom: '1px solid var(--border)', paddingBottom: '0.5rem' }}>PCW Loop Simulator Center</h3>
             <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
-              <button onClick={() => setSimulatorControl('START', simInterval)} disabled={simulatorStatus.isRunning} style={{ flex: 1, padding: '0.5rem', background: 'var(--success)', color: '#fff', border: 'none', cursor: 'pointer', opacity: simulatorStatus.isRunning ? 0.5 : 1 }}>Start</button>
+              <button onClick={() => setSimulatorControl('START', simInterval)} disabled={simulatorStatus.isRunning} style={{ flex: 1, padding: '0.5rem', background: 'var(--success)', color: '#000000', border: 'none', cursor: 'pointer', opacity: simulatorStatus.isRunning ? 0.5 : 1 }}>Start</button>
               <button onClick={() => setSimulatorControl('PAUSE')} disabled={!simulatorStatus.isRunning} style={{ flex: 1, padding: '0.5rem', background: 'var(--warning)', color: '#000', border: 'none', cursor: 'pointer', opacity: !simulatorStatus.isRunning ? 0.5 : 1 }}>Pause</button>
-              <button onClick={() => setSimulatorControl('RESET')} style={{ flex: 1, padding: '0.5rem', background: 'var(--danger)', color: '#fff', border: 'none', cursor: 'pointer' }}>Reset</button>
+              <button onClick={() => setSimulatorControl('RESET')} style={{ flex: 1, padding: '0.5rem', background: 'var(--danger)', color: '#000000', border: 'none', cursor: 'pointer' }}>Reset</button>
             </div>
             <div style={{ marginTop: '1rem', fontSize: '0.85rem' }}>
               <label>Update Interval (ms):</label>
-              <input type="number" value={simInterval} onChange={e=>setSimInterval(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', marginTop: '0.2rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+              <input type="number" value={simInterval} onChange={e=>setSimInterval(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', marginTop: '0.2rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
             </div>
 
             <h3 style={{ borderBottom: '1px solid var(--border)', paddingBottom: '0.5rem', marginTop: '2rem' }}>Default Loop Settings</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginTop: '1rem', fontSize: '0.85rem' }}>
               <div>
                 <label>Target System</label>
-                <select value={targetOverrideSystem} onChange={e=>setTargetOverrideSystem(e.target.value)} style={{ width: '100%', padding: '0.5rem', marginTop: '0.2rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+                <select value={targetOverrideSystem} onChange={e=>setTargetOverrideSystem(e.target.value)} style={{ width: '100%', padding: '0.5rem', marginTop: '0.2rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
                   <option value="">-- Select System --</option>
                   {Array.from(new Set(sensors.map(s => s.systemId))).map(sys => <option key={sys} value={sys}>{sys}</option>)}
                 </select>
@@ -249,10 +249,10 @@ export const ModbusMonitor = () => {
                 const dp = sysSensors.find(s => s.measurementType === 'DP' || s.tagId.includes('PDT'));
                 
                 const renderLimitBox = (title: string, tag: typeof pt) => {
-                  if (!tag) return <div style={{ background: '#222', padding: '0.2rem', borderRadius: '2px' }}><span style={{ color: 'var(--accent)' }}>{title}</span><br/>N/A</div>;
+                  if (!tag) return <div style={{ background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.2rem', borderRadius: '2px' }}><span style={{ color: 'var(--accent)' }}>{title}</span><br/>N/A</div>;
                   const l = tag.engineeringLimits;
                   return (
-                    <div style={{ background: '#222', padding: '0.4rem', borderRadius: '4px', display: 'flex', flexDirection: 'column', gap: '0.2rem', textAlign: 'center' }}>
+                    <div style={{ background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.4rem', borderRadius: '4px', display: 'flex', flexDirection: 'column', gap: '0.2rem', textAlign: 'center' }}>
                       <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{title}</span>
                       <span style={{ fontWeight: 'bold' }}>Base: {l.baseline ?? 'N/A'}</span>
                       <span style={{ fontSize: '0.7rem', color: '#ff6b6b' }}>H/HH: {l.high}/{l.highHigh}</span>
@@ -263,7 +263,7 @@ export const ModbusMonitor = () => {
 
                 return (
                   <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '4px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                    <div style={{ marginBottom: '0.4rem', color: '#fff', fontWeight: 'bold' }}>Limits for {targetOverrideSystem}:</div>
+                    <div style={{ marginBottom: '0.4rem', color: '#000000', fontWeight: 'bold' }}>Limits for {targetOverrideSystem}:</div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.5rem' }}>
                       {renderLimitBox('PT', pt)}
                       {renderLimitBox('FT', ft)}
@@ -276,7 +276,7 @@ export const ModbusMonitor = () => {
               <button 
                 onClick={applySuggestedBaselinesToSystem} 
                 disabled={!targetOverrideSystem}
-                style={{ padding: '0.5rem', background: targetOverrideSystem ? 'var(--success)' : '#555', color: '#fff', border: 'none', cursor: targetOverrideSystem ? 'pointer' : 'not-allowed', fontWeight: 'bold' }}>
+                style={{ padding: '0.5rem', background: targetOverrideSystem ? 'var(--success)' : '#f3f4f6', color: '#000000', border: 'none', cursor: targetOverrideSystem ? 'pointer' : 'not-allowed', border: '1.5px solid #000000', fontWeight: 'bold' }}>
                 Apply Suggested Baselines
               </button>
             </div>
@@ -286,16 +286,16 @@ export const ModbusMonitor = () => {
               
               <div style={{ padding: '0.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <label style={{ fontWeight: 'bold', color: 'var(--accent)' }}>1. Select Tags to Modify</label>
-                <input type="text" placeholder="Search canonical tag" value={simSearchFilter} onChange={e=>setSimSearchFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555', width: '100%' }} />
-                <select value={simSysFilter} onChange={e=>setSimSysFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555', width: '100%' }}>
+                <input type="text" placeholder="Search canonical tag" value={simSearchFilter} onChange={e=>setSimSearchFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', width: '100%' }} />
+                <select value={simSysFilter} onChange={e=>setSimSysFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', width: '100%' }}>
                   <option value="">All Systems</option>
                   {Array.from(new Set(sensors.map(s => s.systemId))).map(sys => <option key={sys} value={sys}>{sys}</option>)}
                 </select>
-                <select value={simSubFilter} onChange={e=>setSimSubFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555', width: '100%' }}>
+                <select value={simSubFilter} onChange={e=>setSimSubFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', width: '100%' }}>
                   <option value="">All Submains</option>
                   {Array.from({length: 20}).map((_, i) => <option key={i} value={`Submain${String(i+1).padStart(2,'0')}`}>{`Submain${String(i+1).padStart(2,'0')}`}</option>)}
                 </select>
-                <select value={simTypeFilter} onChange={e=>setSimTypeFilter(e.target.value)} style={{ padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555', width: '100%' }}>
+                <select value={simTypeFilter} onChange={e=>setSimTypeFilter(e.target.value)} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', width: '100%' }}>
                   <option value="">All Sensor Types</option>
                   <option value="PRESSURE">PT (Pressure)</option>
                   <option value="FLOW">FT (Flow)</option>
@@ -319,7 +319,7 @@ export const ModbusMonitor = () => {
                       }
                     }
                   }
-                }} style={{ padding: '0.5rem', background: '#555', color: '#fff', border: 'none', cursor: 'pointer', marginTop: '0.2rem' }}>
+                }} style={{ padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', cursor: 'pointer', marginTop: '0.2rem' }}>
                   {simSelectedTags.length === filteredSimSensors.length && filteredSimSensors.length > 0 ? 'Deselect All' : `Select All Displayed (${filteredSimSensors.length})`}
                 </button>
               </div>
@@ -329,10 +329,10 @@ export const ModbusMonitor = () => {
                 if (!firstTag) return null;
                 const l = firstTag.engineeringLimits;
                 return (
-                  <div style={{ background: '#222', padding: '0.5rem', borderRadius: '4px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                  <div style={{ background: '#ffffff', border: '1.5px solid #000000', color: '#000000', padding: '0.5rem', borderRadius: '4px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                     <div style={{ color: 'var(--accent)', fontWeight: 'bold', marginBottom: '0.2rem' }}>Limits for {firstTag.tagId}:</div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '0.3rem' }}>
-                      <span style={{ fontWeight: 'bold', color: '#fff' }}>Base: {l.baseline ?? 'N/A'}</span>
+                      <span style={{ fontWeight: 'bold', color: '#000000' }}>Base: {l.baseline ?? 'N/A'}</span>
                       <span style={{ color: '#ff6b6b' }}>H/HH: {l.high}/{l.highHigh}</span>
                       <span style={{ color: '#4facfe' }}>L/LL: {l.low}/{l.lowLow}</span>
                     </div>
@@ -346,33 +346,33 @@ export const ModbusMonitor = () => {
               <div>
                 <label>Base Value</label>
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
-                  <input type="number" step="0.1" value={simBaseValue} onChange={e=>setSimBaseValue(Number(e.target.value))} style={{ flex: 1, padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
-                  <button onClick={applySuggestedBaselinesToSelected} style={{ padding: '0 0.5rem', background: '#444', color: '#fff', border: 'none', cursor: 'pointer', fontSize: '0.8rem' }} title="Set to Default Baseline">Auto</button>
+                  <input type="number" step="0.1" value={simBaseValue} onChange={e=>setSimBaseValue(Number(e.target.value))} style={{ flex: 1, padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
+                  <button onClick={applySuggestedBaselinesToSelected} style={{ padding: '0 0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: 'none', cursor: 'pointer', fontSize: '0.8rem' }} title="Set to Default Baseline">Auto</button>
                 </div>
               </div>
               <div>
                 <label>Noise (±)</label>
-                <input type="number" step="0.01" value={simNoise} onChange={e=>setSimNoise(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+                <input type="number" step="0.01" value={simNoise} onChange={e=>setSimNoise(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem' }}>
                 <div>
                   <label style={{ color: '#ff6b6b' }}>High-High</label>
-                  <input type="number" step="0.1" value={simHH} onChange={e=>setSimHH(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+                  <input type="number" step="0.1" value={simHH} onChange={e=>setSimHH(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
                 </div>
                 <div>
                   <label style={{ color: '#ff6b6b' }}>High</label>
-                  <input type="number" step="0.1" value={simH} onChange={e=>setSimH(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+                  <input type="number" step="0.1" value={simH} onChange={e=>setSimH(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
                 </div>
                 <div>
                   <label style={{ color: '#4facfe' }}>Low</label>
-                  <input type="number" step="0.1" value={simL} onChange={e=>setSimL(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+                  <input type="number" step="0.1" value={simL} onChange={e=>setSimL(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
                 </div>
                 <div>
                   <label style={{ color: '#4facfe' }}>Low-Low</label>
-                  <input type="number" step="0.1" value={simLL} onChange={e=>setSimLL(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+                  <input type="number" step="0.1" value={simLL} onChange={e=>setSimLL(Number(e.target.value))} style={{ width: '100%', padding: '0.5rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
                 </div>
               </div>
-              <button onClick={applyConfig} style={{ marginTop: '0.5rem', padding: '0.5rem', background: 'var(--accent)', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}>
+              <button onClick={applyConfig} style={{ marginTop: '0.5rem', padding: '0.5rem', background: 'var(--accent)', color: '#000000', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}>
                 Apply to Selected Tags ({simSelectedTags.length})
               </button>
             </div>

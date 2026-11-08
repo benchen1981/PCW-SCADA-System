@@ -129,15 +129,15 @@ export const ActiveAlarms = () => {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
           <h2>Alarm Center ({filteredAlarms.length})</h2>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <button onClick={() => setActiveTab('ACTIVE')} style={{ padding: '0.5rem 1rem', background: activeTab === 'ACTIVE' ? 'var(--accent)' : '#333', border: 'none', color: '#fff', borderRadius: '4px', cursor: 'pointer' }}>Active Alarms</button>
-            <button onClick={() => setActiveTab('HISTORICAL')} style={{ padding: '0.5rem 1rem', background: activeTab === 'HISTORICAL' ? 'var(--accent)' : '#333', border: 'none', color: '#fff', borderRadius: '4px', cursor: 'pointer' }}>Historical Alarms</button>
+            <button onClick={() => setActiveTab('ACTIVE')} style={{ padding: '0.5rem 1rem', background: activeTab === 'ACTIVE' ? '#ffffff' : '#f9fafb', color: '#000000', border: activeTab === 'ACTIVE' ? '2.5px solid #000000' : '1.5px solid #000000', fontWeight: 'bold', border: 'none', color: '#000000', borderRadius: '4px', cursor: 'pointer' }}>Active Alarms</button>
+            <button onClick={() => setActiveTab('HISTORICAL')} style={{ padding: '0.5rem 1rem', background: activeTab === 'HISTORICAL' ? '#ffffff' : '#f9fafb', color: '#000000', border: activeTab === 'HISTORICAL' ? '2.5px solid #000000' : '1.5px solid #000000', fontWeight: 'bold', border: 'none', color: '#000000', borderRadius: '4px', cursor: 'pointer' }}>Historical Alarms</button>
           </div>
         </div>
         
         <div className="card" style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', flexWrap: 'wrap', padding: '0.5rem 1rem', alignItems: 'center' }}>
           {activeTab === 'HISTORICAL' && (
             <>
-              <select value={timeRangeStr} onChange={e => handleTimeRangeSelect(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+              <select value={timeRangeStr} onChange={e => handleTimeRangeSelect(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
                 <option value="Last 30 min">Last 30 min</option>
                 <option value="Last 1 hour">Last 1 hour</option>
                 <option value="Last 2 hours">Last 2 hours</option>
@@ -147,18 +147,18 @@ export const ActiveAlarms = () => {
               </select>
               {timeRangeStr === 'Custom' && (
                 <>
-                  <input type="datetime-local" value={startTime} onChange={e => setStartTime(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+                  <input type="datetime-local" value={startTime} onChange={e => setStartTime(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
                   <span>to</span>
-                  <input type="datetime-local" value={endTime} onChange={e => setEndTime(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
+                  <input type="datetime-local" value={endTime} onChange={e => setEndTime(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
                 </>
               )}
-              <button onClick={fetchHistorical} style={{ padding: '0.3rem 0.6rem', background: 'var(--accent)', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Search</button>
-              <div style={{ width: '1px', background: '#555', margin: '0 0.5rem', height: '24px' }}></div>
+              <button onClick={fetchHistorical} style={{ padding: '0.3rem 0.6rem', background: 'var(--accent)', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>Search</button>
+              <div style={{ width: '1px', background: '#000000', margin: '0 0.5rem', height: '24px' }}></div>
             </>
           )}
 
-          <input type="text" placeholder="Search Tag..." value={searchTag} onChange={e => setSearchTag(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }} />
-          <select value={sysFilter} onChange={e => setSysFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <input type="text" placeholder="Search Tag..." value={searchTag} onChange={e => setSearchTag(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }} />
+          <select value={sysFilter} onChange={e => setSysFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Systems</option>
             <option value="PCW01">PCW01</option>
             <option value="PCW02">PCW02</option>
@@ -169,18 +169,18 @@ export const ActiveAlarms = () => {
             <option value="PCW07">PCW07</option>
             <option value="PCW08">PCW08</option>
           </select>
-          <select value={subFilter} onChange={e => setSubFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={subFilter} onChange={e => setSubFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Submains</option>
             {Array.from({length:20}, (_,i)=>`Submain${String(i+1).padStart(2,'0')}`).map(s => <option key={s} value={s}>{s}</option>)}
           </select>
-          <select value={priorityFilter} onChange={e => setPriorityFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={priorityFilter} onChange={e => setPriorityFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Priorities</option>
             <option value="CRITICAL">CRITICAL</option>
             <option value="HIGH">HIGH</option>
             <option value="MEDIUM">MEDIUM</option>
             <option value="LOW">LOW</option>
           </select>
-          <select value={stateFilter} onChange={e => setStateFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={stateFilter} onChange={e => setStateFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All States</option>
             <option value="ACTIVE_UNACK">ACTIVE_UNACK</option>
             <option value="ACTIVE_ACK">ACTIVE_ACK</option>
@@ -192,7 +192,7 @@ export const ActiveAlarms = () => {
           {activeTab === 'ACTIVE' && (
             <button 
               onClick={() => { if(window.confirm('ACK ALL unacknowledged alarms?')) acknowledgeAllAlarms('Current_User'); }} 
-              style={{ marginLeft: '0.5rem', padding: '0.3rem 0.6rem', background: 'var(--success)', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}
+              style={{ marginLeft: '0.5rem', padding: '0.3rem 0.6rem', background: 'var(--success)', color: '#000000', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}
             >
               ACK ALL
             </button>
@@ -201,7 +201,7 @@ export const ActiveAlarms = () => {
 
         <div className="card table-container" style={{ flex: 1, overflowY: 'auto' }}>
           <table>
-            <thead style={{ position: 'sticky', top: 0, background: 'var(--panel-bg)', zIndex: 1 }}>
+            <thead style={{ position: 'sticky', top: 0, background: '#ffffff', zIndex: 1 }}>
               <tr>
                 <th>Time</th>
                 <th>System</th>
@@ -242,7 +242,7 @@ export const ActiveAlarms = () => {
                     {(a.state === 'ACTIVE_UNACK' || a.state === 'CLEARED_UNACK') ? (
                       <button 
                         onClick={(e) => { e.stopPropagation(); acknowledgeAlarm(a.alarmId, 'HMI_OPERATOR'); }} 
-                        style={{ padding: '0.2rem 0.5rem', background: '#3b82f6', color: '#fff', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
+                        style={{ padding: '0.2rem 0.5rem', background: '#3b82f6', color: '#000000', border: 'none', cursor: 'pointer', borderRadius: '4px' }}
                       >
                         ACK
                       </button>
@@ -276,7 +276,7 @@ export const ActiveAlarms = () => {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', background: 'rgba(0,0,0,0.2)', padding: '1rem', borderRadius: '4px', marginBottom: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', background: '#ffffff', border: '1.5px solid #000000', padding: '1rem', borderRadius: '4px', marginBottom: '1rem' }}>
             <div><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Value at Alarm:</span> <div style={{ fontSize: '1.5rem', color: 'var(--danger)', fontFamily: 'var(--font-mono)' }}>{selectedAlarm.value.toFixed(2)} {selectedAlarm.unit}</div></div>
             <div><span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Limit Threshold:</span> <div style={{ fontSize: '1.5rem', color: 'var(--warning)', fontFamily: 'var(--font-mono)' }}>{selectedAlarm.limit.toFixed(2)} {selectedAlarm.unit}</div></div>
           </div>
@@ -304,14 +304,14 @@ export const ActiveAlarms = () => {
             <button 
               disabled={!selectedAlarm.state.includes('UNACK')} 
               onClick={() => { ackAlarm(selectedAlarm.alarmId, 'Current_User'); setSelectedAlarm({...selectedAlarm, state: selectedAlarm.state.replace('UNACK', 'ACK') as any}); }}
-              style={{ flex: 1, padding: '0.75rem', background: selectedAlarm.state.includes('UNACK') ? 'var(--success)' : '#444', color: '#fff', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: selectedAlarm.state.includes('UNACK') ? 'pointer' : 'not-allowed' }}
+              style={{ flex: 1, padding: '0.75rem', background: selectedAlarm.state.includes('UNACK') ? 'var(--success)' : '#f3f4f6', color: '#000000', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: selectedAlarm.state.includes('UNACK') ? 'pointer' : 'not-allowed', border: '1.5px solid #000000' }}
             >
               Acknowledge
             </button>
             <button 
               disabled={!selectedAlarm.state.startsWith('ACTIVE')} 
               onClick={() => { shelveAlarm(selectedAlarm.alarmId); setSelectedAlarm({...selectedAlarm, state: 'SHELVED'}); }}
-              style={{ flex: 1, padding: '0.75rem', background: selectedAlarm.state.startsWith('ACTIVE') ? 'var(--warning)' : '#444', color: '#000', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: selectedAlarm.state.startsWith('ACTIVE') ? 'pointer' : 'not-allowed' }}
+              style={{ flex: 1, padding: '0.75rem', background: selectedAlarm.state.startsWith('ACTIVE') ? 'var(--warning)' : '#f3f4f6', color: '#000', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: selectedAlarm.state.startsWith('ACTIVE') ? 'pointer' : 'not-allowed', border: '1.5px solid #000000' }}
             >
               Shelve (Silence)
             </button>

@@ -57,8 +57,8 @@ export const LiveSensors = () => {
           <span style={{ color: 'var(--text-muted)' }}>LAST UPDATE:</span> {lastFetch ? new Date(lastFetch).toLocaleTimeString() : '...'}
         </div>
         <div>
-          <button onClick={() => setViewMode('PROCESS')} style={{ background: viewMode === 'PROCESS' ? 'var(--accent)' : '#333', color: '#fff', border: 'none', padding: '0.2rem 0.5rem', marginRight: '0.5rem', cursor: 'pointer' }}>Process View</button>
-          <button onClick={() => setViewMode('TABLE')} style={{ background: viewMode === 'TABLE' ? 'var(--accent)' : '#333', color: '#fff', border: 'none', padding: '0.2rem 0.5rem', cursor: 'pointer' }}>Table View</button>
+          <button onClick={() => setViewMode('PROCESS')} style={{ background: viewMode === 'PROCESS' ? '#000000' : '#ffffff', color: viewMode === 'PROCESS' ? '#ffffff' : '#000000', border: '1.5px solid #000000', padding: '0.25rem 0.65rem', marginRight: '0.5rem', cursor: 'pointer', fontWeight: 'bold', borderRadius: '4px' }}>Process View</button>
+          <button onClick={() => setViewMode('TABLE')} style={{ background: viewMode === 'TABLE' ? '#000000' : '#ffffff', color: viewMode === 'TABLE' ? '#ffffff' : '#000000', border: '1.5px solid #000000', padding: '0.25rem 0.65rem', cursor: 'pointer', fontWeight: 'bold', borderRadius: '4px' }}>Table View</button>
         </div>
       </div>
       
@@ -72,41 +72,41 @@ export const LiveSensors = () => {
             placeholder="Search Canonical Tag..." 
             value={search} 
             onChange={e => setSearch(e.target.value)} 
-            style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555', borderRadius: '4px' }}
+            style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000', borderRadius: '4px' }}
           />
-          <select value={sysFilter} onChange={e => setSysFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={sysFilter} onChange={e => setSysFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Systems</option>
             {Array.from(new Set(sensors.map(s => s.systemId))).map(sys => <option key={sys} value={sys}>{sys}</option>)}
           </select>
-          <select value={subFilter} onChange={e => setSubFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={subFilter} onChange={e => setSubFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Submains</option>
             {Array.from(new Set(sensors.filter(s => !sysFilter || s.systemId === sysFilter).map(s => s.submainId))).map(sub => <option key={sub} value={sub}>{sub}</option>)}
           </select>
-          <select value={measFilter} onChange={e => setMeasFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={measFilter} onChange={e => setMeasFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Measurements</option>
             <option value="PRESSURE">Pressure</option>
             <option value="TEMPERATURE">Temperature</option>
             <option value="FLOW">Flow</option>
           </select>
-          <select value={posFilter} onChange={e => setPosFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={posFilter} onChange={e => setPosFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Positions</option>
             <option value="SUPPLY">Supply</option>
             <option value="RETURN">Return</option>
           </select>
-          <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={statusFilter} onChange={e => setStatusFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Status</option>
             <option value="NORMAL">NORMAL</option>
             <option value="WARNING">WARNING</option>
             <option value="ALARM">ALARM</option>
             <option value="ERROR">ERROR</option>
           </select>
-          <select value={qualityFilter} onChange={e => setQualityFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={qualityFilter} onChange={e => setQualityFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Quality</option>
             <option value="GOOD">GOOD</option>
             <option value="BAD">BAD</option>
             <option value="UNCERTAIN">UNCERTAIN</option>
           </select>
-          <select value={alarmStateFilter} onChange={e => setAlarmStateFilter(e.target.value)} style={{ padding: '0.25rem', background: '#333', color: '#fff', border: '1px solid #555' }}>
+          <select value={alarmStateFilter} onChange={e => setAlarmStateFilter(e.target.value)} style={{ padding: '0.25rem', background: '#ffffff', border: '1.5px solid #000000', color: '#000000', color: '#000000', border: '1.5px solid #000000' }}>
             <option value="">All Alarm States</option>
             <option value="NONE">NONE</option>
             <option value="HIHI">HIHI</option>
@@ -203,7 +203,7 @@ export const LiveSensors = () => {
                <h3>{selectedPcw} Process Overview</h3>
              </div>
              
-             <div style={{ flex: 1, background: '#111', position: 'relative', overflow: 'auto' }}>
+             <div style={{ flex: 1, background: '#ffffff', border: '1.5px solid #000000', position: 'relative', overflow: 'auto' }}>
                 <svg width="3400" height="900" style={{ minWidth: '3400px' }} viewBox="0 0 3400 900">
                   <defs>
                     <linearGradient id="pipeSupplyLg" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -219,12 +219,12 @@ export const LiveSensors = () => {
                   {/* Main Supply Header */}
                   <path d="M 50 150 L 3300 150" stroke="url(#pipeSupplyLg)" strokeWidth="16" fill="none" />
                   <text x="60" y="130" fill="#2F91D1" fontSize="18" fontWeight="bold">SUPPLY MAIN HEADER ({selectedPcw})</text>
-                  <polygon points="3250,140 3270,150 3250,160" fill="#fff" />
+                  <polygon points="3250,140 3270,150 3250,160" fill="#000000" />
 
                   {/* Main Return Header */}
                   <path d="M 50 750 L 3300 750" stroke="url(#pipeReturnLg)" strokeWidth="16" fill="none" />
                   <text x="60" y="780" fill="#D45A4A" fontSize="18" fontWeight="bold">RETURN MAIN HEADER ({selectedPcw})</text>
-                  <polygon points="3250,740 3270,750 3250,760" fill="#fff" />
+                  <polygon points="3250,740 3270,750 3250,760" fill="#000000" />
 
                   {/* Map over all 20 submains for this PCW */}
                   {Array.from({length:20}, (_,i)=>`Submain${String(i+1).padStart(2,'0')}`).map((sm, idx) => {
@@ -245,83 +245,105 @@ export const LiveSensors = () => {
                         <rect x={xBase - 60} y={180} width="120" height="540" fill={isSelected ? 'rgba(255,255,255,0.08)' : (hasAlarm ? 'rgba(239,68,68,0.1)' : 'transparent')} rx="4" />
                         
                         {/* Floor Reference Grid text */}
-                        <text x={xBase} y="80" fill="#666" fontSize="14" textAnchor="middle" fontWeight="bold">FAB L40 / F{14 + idx}</text>
-                        <line x1={xBase} y1="90" x2={xBase} y2="800" stroke="#333" strokeWidth="1" strokeDasharray="4 4" pointerEvents="none" />
+                        <text x={xBase} y="80" fill="#000000" fontSize="14" textAnchor="middle" fontWeight="bold">FAB L40 / F{14 + idx}</text>
+                        <line x1={xBase} y1="90" x2={xBase} y2="800" stroke="#cccccc" strokeWidth="1" strokeDasharray="4 4" pointerEvents="none" />
                         
-                        <text x={xBase} y="200" fill={isSelected ? '#fff' : (hasAlarm ? 'var(--danger)' : '#aaa')} fontSize="14" textAnchor="middle" fontWeight="bold">{sm}</text>
+                        <text x={xBase} y="200" fill='#000000' fontSize="14" textAnchor="middle" fontWeight="bold">{sm}</text>
                         
                         {/* Supply Branch Pipe */}
                         <path d={`M ${xBase} 150 L ${xBase} 440`} stroke="url(#pipeSupplyLg)" strokeWidth="6" fill="none" pointerEvents="none" />
                         <polygon points={`${xBase - 5},420 ${xBase + 5},420 ${xBase},430`} fill="#2F91D1" pointerEvents="none" />
                         
-                        {/* Render PTS */}
+                        {/* Render PTS: Circle (○) */}
                         {pts ? (
                           <g transform={`translate(${xBase}, 240)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pts.tagId); }}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke={pts.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                            <text x="0" y="4" fill="#fff" fontSize="11" textAnchor="middle">PT</text>
-                            <text x="-25" y="4" fill={pts.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="14" fontWeight="bold" textAnchor="end">{pts.value.toFixed(2)}</text>
+                            <circle 
+                              cx="0" cy="0" r="18" fill="#ffffff" 
+                              stroke={pts.alarmState === 'ALARM' ? '#000000' : pts.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                              strokeWidth={pts.alarmState === 'ALARM' ? '3' : pts.alarmState === 'WARNING' ? '2.5' : '1.5'} 
+                              strokeDasharray={pts.alarmState === 'WARNING' ? '3 2' : undefined} 
+                            />
+                            <text x="0" y="4" fill="#000000" fontSize="11" fontWeight="bold" textAnchor="middle">PT</text>
+                            <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{pts.value.toFixed(2)}</text>
                           </g>
                         ) : (
                           <g transform={`translate(${xBase}, 240)`}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#555" fontSize="11" textAnchor="middle">PT</text>
+                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
+                            <text x="0" y="4" fill="#666666" fontSize="11" textAnchor="middle">PT</text>
                           </g>
                         )}
 
                         {/* Valve */}
                         <g transform={`translate(${xBase}, 310)`} pointerEvents="none">
-                           <polygon points="-12,-8 -12,8 12,-8 12,8" fill="#333" stroke="#aaa" strokeWidth="2" />
+                           <polygon points="-12,-8 -12,8 12,-8 12,8" fill="#ffffff" stroke="#000000" strokeWidth="2" />
                         </g>
 
                         {/* FAB TOOL BOX */}
                         <g transform={`translate(${xBase - 35}, 380)`} pointerEvents="none">
-                          <rect x="0" y="0" width="70" height="60" fill="#252525" stroke="#4B4B4B" strokeWidth="2" rx="4" />
-                          <text x="35" y="35" fill="#B8B8B8" fontSize="12" textAnchor="middle" fontWeight="bold">TOOL{String(idx + 1).padStart(2, '0')}</text>
+                          <rect x="0" y="0" width="70" height="60" fill="#ffffff" stroke="#000000" strokeWidth="2" rx="4" />
+                          <text x="35" y="35" fill="#000000" fontSize="12" textAnchor="middle" fontWeight="bold">TOOL{String(idx + 1).padStart(2, '0')}</text>
                         </g>
 
                         {/* Return Branch Pipe */}
                         <path d={`M ${xBase} 440 L ${xBase} 750`} stroke="url(#pipeReturnLg)" strokeWidth="6" fill="none" pointerEvents="none" />
                         <polygon points={`${xBase - 5},730 ${xBase + 5},730 ${xBase},745`} fill="#D45A4A" pointerEvents="none" />
 
-                        {/* Render PTR */}
+                        {/* Render PTR: Circle (○) */}
                         {ptr ? (
                           <g transform={`translate(${xBase}, 510)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ptr.tagId); }}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke={ptr.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                            <text x="0" y="4" fill="#fff" fontSize="11" textAnchor="middle">PT</text>
-                            <text x="-25" y="4" fill={ptr.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="14" fontWeight="bold" textAnchor="end">{ptr.value.toFixed(2)}</text>
+                            <circle 
+                              cx="0" cy="0" r="18" fill="#ffffff" 
+                              stroke={ptr.alarmState === 'ALARM' ? '#000000' : ptr.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                              strokeWidth={ptr.alarmState === 'ALARM' ? '3' : ptr.alarmState === 'WARNING' ? '2.5' : '1.5'} 
+                              strokeDasharray={ptr.alarmState === 'WARNING' ? '3 2' : undefined} 
+                            />
+                            <text x="0" y="4" fill="#000000" fontSize="11" fontWeight="bold" textAnchor="middle">PT</text>
+                            <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{ptr.value.toFixed(2)}</text>
                           </g>
                         ) : (
                           <g transform={`translate(${xBase}, 510)`}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#555" fontSize="11" textAnchor="middle">PT</text>
+                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
+                            <text x="0" y="4" fill="#666666" fontSize="11" textAnchor="middle">PT</text>
                           </g>
                         )}
 
-                        {/* Render PDT */}
+                        {/* Render PDT: Concentric Double Circles (◎) */}
                         {pdt ? (
                           <g transform={`translate(${xBase}, 600)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(pdt.tagId); }}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke={pdt.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                            <text x="0" y="4" fill="#fff" fontSize="11" textAnchor="middle">DP</text>
-                            <text x="-25" y="4" fill={pdt.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="14" fontWeight="bold" textAnchor="end">{pdt.value.toFixed(2)}</text>
+                            <circle 
+                              cx="0" cy="0" r="18" fill="#ffffff" 
+                              stroke={pdt.alarmState === 'ALARM' ? '#000000' : pdt.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                              strokeWidth={pdt.alarmState === 'ALARM' ? '3' : pdt.alarmState === 'WARNING' ? '2.5' : '1.5'} 
+                              strokeDasharray={pdt.alarmState === 'WARNING' ? '3 2' : undefined} 
+                            />
+                            <circle cx="0" cy="0" r="12" fill="none" stroke="#000000" strokeWidth="1" />
+                            <text x="0" y="4" fill="#000000" fontSize="10" fontWeight="bold" textAnchor="middle">DP</text>
+                            <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{pdt.value.toFixed(2)}</text>
                           </g>
                         ) : (
                           <g transform={`translate(${xBase}, 600)`}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#555" fontSize="11" textAnchor="middle">DP</text>
+                            <circle cx="0" cy="0" r="18" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
+                            <circle cx="0" cy="0" r="12" fill="none" stroke="#000000" strokeWidth="1" strokeDasharray="2 2" />
+                            <text x="0" y="4" fill="#666666" fontSize="10" textAnchor="middle">DP</text>
                           </g>
                         )}
 
-                        {/* Flow Meter FT */}
+                        {/* Flow Meter FT: Square Shape (□) */}
                         {ft ? (
                           <g transform={`translate(${xBase}, 690)`} onClick={(e) => { e.preventDefault(); e.stopPropagation(); openTagDetail(ft.tagId); }}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke={ft.alarmState !== 'NONE' ? '#D62828' : '#aaa'} strokeWidth="2" />
-                            <text x="0" y="4" fill="#fff" fontSize="11" textAnchor="middle">FT</text>
-                            <text x="-25" y="4" fill={ft.alarmState !== 'NONE' ? '#D62828' : '#fff'} fontSize="14" fontWeight="bold" textAnchor="end">{ft.value.toFixed(2)}</text>
+                            <rect 
+                              x="-18" y="-18" width="36" height="36" rx="3" fill="#ffffff" 
+                              stroke={ft.alarmState === 'ALARM' ? '#000000' : ft.alarmState === 'WARNING' ? '#b45309' : '#000000'} 
+                              strokeWidth={ft.alarmState === 'ALARM' ? '3' : ft.alarmState === 'WARNING' ? '2.5' : '1.5'} 
+                              strokeDasharray={ft.alarmState === 'WARNING' ? '3 2' : undefined} 
+                            />
+                            <text x="0" y="4" fill="#000000" fontSize="11" fontWeight="bold" textAnchor="middle">FT</text>
+                            <text x="-25" y="4" fill="#000000" fontSize="14" fontWeight="900" textAnchor="end">{ft.value.toFixed(2)}</text>
                           </g>
                         ) : (
                           <g transform={`translate(${xBase}, 690)`}>
-                            <circle cx="0" cy="0" r="18" fill="#222" stroke="#555" strokeWidth="2" strokeDasharray="2 2" />
-                            <text x="0" y="4" fill="#555" fontSize="11" textAnchor="middle">FT</text>
+                            <rect x="-18" y="-18" width="36" height="36" rx="3" fill="#ffffff" stroke="#000000" strokeWidth="1.5" strokeDasharray="2 2" />
+                            <text x="0" y="4" fill="#666666" fontSize="11" textAnchor="middle">FT</text>
                           </g>
                         )}
                         
