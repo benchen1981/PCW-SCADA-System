@@ -16,9 +16,9 @@
 3. [Core Mathematical Foundations & Algorithms](#3-core-mathematical-foundations--algorithms)
 4. [7 Industrial Hardening Layers Against False Alarms](#4-7-industrial-hardening-layers-against-false-alarms)
 5. [Frontend High-Performance Downsampling Benchmarks](#5-frontend-high-performance-downsampling-benchmarks)
-6. [14-Phase Development Evolution Roadmap](#6-13-phase-development-evolution-roadmap)
-7. [Master Prompts Index (Prompts 001~232)](#7-master-prompts-index-prompts-001228)
-8. [Debugging Records & Root-Cause Analysis (Events 001~067)](#8-debugging-records--root-cause-analysis-events-001065)
+6. [15-Phase Development Evolution Roadmap](#6-15-phase-development-evolution-roadmap)
+7. [Master Prompts Index (Prompts 001~242)](#7-master-prompts-index-prompts-001242)
+8. [Debugging Records & Root-Cause Analysis (Events 001~075)](#8-debugging-records--root-cause-analysis-events-001075)
 9. [Execution Steps & Comprehensive User Guide](#9-execution-steps--comprehensive-user-guide)
 10. [Experimental Verification & Quantitative Evidence](#10-experimental-verification--quantitative-evidence)
 11. [Oral Defense 30 Questions Cross-Reference (Table 5-1)](#11-oral-defense-30-questions-cross-reference-table-5-1)
@@ -62,16 +62,24 @@ Level 1: Fab Process Instrumentation & Secondary Utilities
 [8 Independent PCW Loops / 80 Submains / 160 PTs / 80 TTs / 16 FTs / PRV Balancing Valves]
 ```
 
-### 2.2 Modbus TCP Holding Register Allocation (40001~40160)
-All 160 PTs are encoded as standard 16-bit unsigned integers with a fixed scale factor of 100 (e.g., 2.50 bar = 2500):
-- **PCW01 (Litho Zone 1, EUV)**: PT-01 ~ PT-20 ➔ Registers `40001 ~ 40020` (Baseline 2.20 / 1.70 bar)
-- **PCW02 (Litho Zone 2, DUV)**: PT-21 ~ PT-40 ➔ Registers `40021 ~ 40040` (Baseline 2.20 / 1.70 bar)
-- **PCW03 (Etch Zone 1, Dielectric)**: PT-41 ~ PT-60 ➔ Registers `40041 ~ 40060` (Baseline 2.10 / 1.65 bar)
-- **PCW04 (Etch Zone 2, Conductor)**: PT-61 ~ PT-80 ➔ Registers `40061 ~ 40080` (Baseline 2.10 / 1.65 bar)
-- **PCW05 (Thin Film 1, CVD/ALD)**: PT-81 ~ PT-100 ➔ Registers `40081 ~ 40100` (Baseline 2.00 / 1.60 bar)
-- **PCW06 (Thin Film 2, PVD Sputter)**: PT-101 ~ PT-120 ➔ Registers `40101 ~ 40120` (Baseline 2.00 / 1.60 bar)
-- **PCW07 (Diffusion & Ion Implantation)**: PT-121 ~ PT-140 ➔ Registers `40121 ~ 40140` (Baseline 2.00 / 1.60 bar)
-- **PCW08 (CMP Chemical Mechanical Planarization)**: PT-141 ~ PT-160 ➔ Registers `40141 ~ 40160` (Baseline 2.00 / 1.60 bar)
+### 2.2 Modbus TCP Holding Register Allocation (40001~40160) & Engineering Limits
+All 160 PTs are encoded as standard 16-bit unsigned integers with a fixed scale factor of 100 (e.g., 1.50 bar = 1500), partitioned into four functional equipment groups:
+- **PCW01 & PCW02 (Lithography Zone 1 & 2, ASML EUV/ArFi Scanners)**:
+  - PT-01 ~ PT-40 ➔ Registers `40001 ~ 40040` (PT Baseline = 1.50 bar, HIHI = 1.80, HI = 1.70, LO = 1.30, LOLO = 1.20 bar)
+  - Main Flowmeters FT-01 ~ FT-04 (FT Baseline = 180 LPM, HIHI = 220, HI = 200, LO = 160, LOLO = 150 LPM)
+  - Submain Differential Pressure DP-01 ~ DP-20 (DP Baseline = 0.30 bar, HIHI = 0.60, HI = 0.50 bar)
+- **PCW03 & PCW04 (Etch Zone 1 & 2, High-Aspect-Ratio Dielectric & Conductor Etchers)**:
+  - PT-41 ~ PT-80 ➔ Registers `40041 ~ 40080` (PT Baseline = 1.90 bar, HIHI = 2.20, HI = 2.10, LO = 1.70, LOLO = 1.50 bar)
+  - Main Flowmeters FT-05 ~ FT-08 (FT Baseline = 180 LPM, HIHI = 220, HI = 200, LO = 160, LOLO = 150 LPM)
+  - Submain Differential Pressure DP-21 ~ DP-40 (DP Baseline = 0.30 bar, HIHI = 0.60, HI = 0.50 bar)
+- **PCW05 & PCW06 (Thin Film Zone 1 & 2, ALD/CVD Deposition & PVD Sputter Tools)**:
+  - PT-81 ~ PT-120 ➔ Registers `40081 ~ 40120` (PT Baseline = 2.50 bar, HIHI = 2.80, HI = 2.70, LO = 2.30, LOLO = 2.20 bar)
+  - Main Flowmeters FT-09 ~ FT-12 (FT Baseline = 260 LPM, HIHI = 300, HI = 280, LO = 240, LOLO = 230 LPM)
+  - Submain Differential Pressure DP-41 ~ DP-60 (DP Baseline = 0.30 bar, HIHI = 0.60, HI = 0.50 bar)
+- **PCW07 & PCW08 (Diffusion, Ion Implantation & CMP Planarization Area)**:
+  - PT-121 ~ PT-160 ➔ Registers `40121 ~ 40160` (PT Baseline = 2.20 bar, HIHI = 2.50, HI = 2.40, LO = 2.00, LOLO = 1.90 bar)
+  - Main Flowmeters FT-13 ~ FT-16 (FT Baseline = 240 LPM, HIHI = 280, HI = 260, LO = 220, LOLO = 200 LPM)
+  - Submain Differential Pressure DP-61 ~ DP-80 (DP Baseline = 0.30 bar, HIHI = 0.60, HI = 0.50 bar)
 
 ### 2.3 Dual-Cleanroom Fab & CUB 3D Spatial Layout
 Modeled after real-world Tier-1 12-inch mega-fabs:
@@ -161,7 +169,7 @@ To eliminate UI freezing when rendering 100,000 points in industrial trend analy
 
 ---
 
-## 6. 14-Phase Development Evolution Roadmap
+## 6. 15-Phase Development Evolution Roadmap
 
 - **Phase 1 (POC & Virtual PLC, Prompts 001~015)**: Python pyModbusTCP exposing 160 Holding Registers (40001~40160).
 - **Phase 2 (3440×1440 Web SCADA HMI, Prompts 016~035)**: Ultrawide dark dashboard with SVG P&ID hydraulic flowsheets.
@@ -176,13 +184,14 @@ To eliminate UI freezing when rendering 100,000 points in industrial trend analy
 - **Phase 11 (50k-Word Master's Thesis & Data Pipeline, Prompts 209~224)**: Generated 50k-word thesis with 21 figures and 22 tables.
 - **Phase 12 (Dual Fab/CUB Spatial Topology & Oral Defense Strategy, Prompts 225~228)**: Resolved all P0/P1/P2 risks; compiled 30 oral defense Q&As.
 - **Phase 13 (Deep Defense Integration & Formal Scale Lock, Prompts 229~230)**: Dissolved all 30 Q&As into Chapters 1~5; locked 160 PT formal scale; created Table 5-1 cross-index and Appendix C.
-- **Phase 14 (High-Contrast Monochrome UI Overhaul & B&W Printing Standardization, Prompts 231~232)**: Completely converted Web SCADA HMI to high-contrast pure white (#ffffff) background and deep black (#000000) typography; wrapped top navigation into discrete bordered buttons; converted P&ID flowsheet to CAD drafting standard for laser printing; unified full master archives.
+- **Phase 14 (Monochrome High-Contrast UI Overhaul & Laser Printing Standardization, Prompts 231~235)**: Completely converted Web SCADA HMI to high-contrast pure white (#ffffff) background and deep black (#000000) typography; wrapped top navigation into discrete bordered buttons; converted P&ID flowsheet to CAD drafting standard for laser printing; unified full master archives.
+- **Phase 15 (8-PCW Multi-Sensor 35-min Stress Test Suite, 10-Submain Topology Lockdown & Ghost Element Purge, Prompts 236~242)**: Conducted 160 runs of 35-minute physical stress tests (accumulating 5,600 historian data points) across all 8 PCW loops and 160 PTs, validating 100% drift capture and 95.0% noise-robustness; formally locked the plant-wide physical scale to 8 loops × 10 submains (80 submains, 160 PT, 80 DP, 16 FT, 256 total sensors); completely purged Submain11~20, TOOL11~20, fallback dashed circles, and "NO DATA" phantom placeholders; patched SubmainDetail multi-system scoping (`systemId && submainId`); rescaled SVG viewport to 1800px; regenerated high-contrast thesis figures.
 
 ---
 
-## 7. Master Prompts Index (Prompts 001~232)
+## 7. Master Prompts Index (Prompts 001~242)
 
-Archived in full within [prompt_001-228.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-228.md). Key milestones:
+Archived in full within [prompt_001-242.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-242.md) (and [prompt 01-242.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)). Key milestones:
 - **Prompts 001-015**: Project scaffolding, FastAPI startup, initial POC validation.
 - **Prompts 016-035**: Submain detail views, SVG P&ID rendering, differential pressure UI.
 - **Prompts 036-060**: 3-tier early warning rules, 256-sensor tag mapping inventory.
@@ -198,12 +207,15 @@ Archived in full within [prompt_001-228.md](file:///Users/benchen1981/Downloads/
 - **Prompts 223-224**: Word master template integration, section break and binding margin protection.
 - **Prompts 225-226**: 3D spatial layout modeling (Fab RF to B1F, CUB, Exhaust, HPM, MAU).
 - **Prompts 227-228**: P0/P1/P2 pre-submission risk elimination, bilateral OLS, bilingual README.
+- **Prompts 231-235**: Monochrome high-contrast theme refactoring, bordered navigation buttons, comprehensive README and archive synchronization.
+- **Prompts 236-238**: Addressing committee challenges, mathematical formalism, 8-PCW 35-min multi-sensor stress test execution (160 runs, 5,600 historian points).
+- **Prompts 239-242**: Formally locking 8 loops × 10 submains scale, updating G1~G4 baseline limits, purging non-existent sensors/tools/placeholders, master Prompt 001~242 and Debug 001~075 consolidation.
 
 ---
 
-## 8. Debugging Records & Root-Cause Analysis (Events 001~067)
+## 8. Debugging Records & Root-Cause Analysis (Events 001~075)
 
-Archived in full within [debug_001-065.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-065.md). Key resolutions:
+Archived in full within [debug_001-075.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-075.md) (and [debug 01-075.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)). Key resolutions:
 1. **SPA 404 on Page Refresh (Vercel)**: Implemented catch-all rewrite rule to `index.html` in `vercel.json` (Event 052).
 2. **Artificial Flatness in Synthetic Signals**: Added micro-oscillations and multi-fault injection equations (Event 053).
 3. **Word Template Binding Margins & Section Corruption**: Engineered custom OpenXML DOM parser to preserve 3 sections and 3.0 cm gutter (Event 058).
@@ -214,6 +226,11 @@ Archived in full within [debug_001-065.md](file:///Users/benchen1981/Downloads/W
 8. **Physical Scale Discrepancy (320 vs 160 PT)**: Formally locked 160 PT (40001~40160) / 256 sensors; contextualized 320 PT as early estimate (Event 065).
 9. **Toner Bleed and Invisible White Text in Laser Printing**: Converted entire UI to pure white (#ffffff) with black (#000000) typography and bordered buttons; fixed white text bug in P&ID instruments (Event 066).
 10. **macOS Vite IPv6/IPv4 Dual-Stack Connection Refusal**: Standardized endpoint to `http://localhost:5173/` for headless browser validation and automated screenshot embedding (Event 067).
+11. **ProposedDualWindowEngine Constructor Signature & Drift Rate Scale Factor**: Resolved constructor parameter mismatch and adjusted drift calculation rate to ensure robust cone crossing within 35 minutes across all 160 testing runs (Event 071).
+12. **8-Loop 10-Submain Lockdown & Precise G1~G4 Engineering Limits Alignment**: Refactored `pcwSystems.ts` to strictly lock submain count to 10 per loop (80 submains total) and mapped exact baseline limits for PCW01~08 (Event 072).
+13. **SubmainDetail Multi-System Collision Fix via Scoped Primary Keys**: Patched sensor filter to scope by both `systemId` and `submainId`, ensuring complete hydraulic isolation between identical submain IDs across systems (Event 073).
+14. **P&ID Flowsheet Ghost Instrument & Phantom TOOL11~20 Purge**: Completely eradicated fallback dashed placeholders and "NO DATA" markers, restricting rendered equipment strictly to TOOL01~10 (Event 074).
+15. **SVG Viewport Dynamic Rescaling (1800px) & Monochrome Printing Certification**: Re-engineered SVG layout to width 1800px with 165px pitch for 10 submains, eliminating 1600px of dead margin and capturing updated high-contrast thesis figures (Event 075).
 
 ---
 
@@ -315,10 +332,10 @@ All 30 defense questions have been dissolved into the thesis narrative:
 /Users/benchen1981/Downloads/Web SCADA/
 ├── README.md                                  # [Bilingual Master] Master Documentation
 ├── README_EN.md                               # [English Edition] Standalone English Documentation
-├── prompt_001-228.md                          # 232 Development Prompts & Architecture Milestones
-├── prompt 01-228.md                           # Synced Prompt Archive
-├── debug_001-065.md                           # 70 Debug Events & Root-Cause Analysis
-├── debug 01-065.md                            # Synced Debug Archive
+├── prompt_001-242.md                          # 242 Development Prompts & Architecture Milestones
+├── prompt 01-242.md                           # Synced Prompt Archive
+├── debug_001-075.md                           # 75 Debug Events & Root-Cause Analysis
+├── debug 01-075.md                            # Synced Debug Archive
 ├── build_perfect_thesis.py                    # Master Thesis Generation Engine (21 Figs, 22 Tables, Q1~Q30)
 ├── apply_template_and_supplement.py           # Word & Markdown Thesis Typesetting Script
 ├── generate_thesis_figures.py                 # 300 DPI Vector Blueprint & Curve Generator
@@ -337,8 +354,8 @@ All 30 defense questions have been dissolved into the thesis narrative:
 │       ├── evidence/                          # 100-Run Batch Validation Evidence & Plots
 │       ├── venv/                              # Python 3 Virtual Environment
 │       ├── vercel.json                        # Vercel Production Configuration
-│       ├── prompt_001-228.md                  # Codebase Synced Prompt Master
-│       ├── debug_001-065.md                   # Codebase Synced Debug Master
+│       ├── prompt_001-242.md                  # Codebase Synced Prompt Master
+│       ├── debug_001-075.md                   # Codebase Synced Debug Master
 │       ├── README.md                          # Codebase Synced Master README
 │       └── README_zh.md                       # Codebase Synced Traditional Chinese README
 └── Prompt/                                    # Conceptual Specifications & Project Charters
@@ -356,8 +373,8 @@ All 30 defense questions have been dissolved into the thesis narrative:
   - [PCW_論文送審與口試策略_正式規模版.md](file:///Users/benchen1981/Downloads/Web%20SCADA/thesis/PCW_%E8%AB%96%E6%96%87%E9%80%81%E5%AF%A9%E8%88%87%E5%8F%A3%E8%A9%A6%E7%AD%96%E7%95%A5_%E6%AD%A3%E5%BC%8F%E8%A6%8F%E6%A8%A1%E7%89%88.md)
   - [SPEECH_SCRIPT_50K.md](file:///Users/benchen1981/Downloads/Web%20SCADA/SPEECH_SCRIPT_50K.md)
 - **Development History & Engineering Logs**:
-  - [prompt_001-228.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-228.md) / [prompt 01-228.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-228.md)
-  - [debug_001-065.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-065.md) / [debug 01-065.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-065.md)
+  - [prompt_001-242.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-242.md) / [prompt 01-242.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)
+  - [debug_001-075.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-075.md) / [debug 01-075.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)
 - **Production Codebase & Build Scripts**:
   - [Code/pcw-poc-v1_merged/](file:///Users/benchen1981/Downloads/Web%20SCADA/Code/pcw-poc-v1_merged/)
   - [build_perfect_thesis.py](file:///Users/benchen1981/Downloads/Web%20SCADA/build_perfect_thesis.py)
