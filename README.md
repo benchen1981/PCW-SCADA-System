@@ -18,8 +18,8 @@
 4. [7 層工業級硬化防誤報防線 / 7 Industrial Hardening Layers](#4-7-層工業級硬化防誤報防線--7-industrial-hardening-layers)
 5. [前端大數據渲染優化 / Frontend High-Performance Downsampling](#5-前端大數據渲染優化--frontend-high-performance-downsampling)
 6. [十五階段開發演進歷程 / 15-Phase Development Evolution](#6-十五階段開發演進歷程--15-phase-development-evolution)
-7. [所有 Prompt 對話紀錄索引 / Master Prompts Index (001~254)](#7-所有-prompt-對話紀錄索引--master-prompts-index-001254)
-8. [除錯紀錄與技術排障總結 / Debugging Records & Technical Resolutions (001~083)](#8-除錯紀錄與技術排障總結--debugging-records--technical-resolutions-001083)
+7. [所有 Prompt 對話紀錄索引 / Master Prompts Index (001~255)](#7-所有-prompt-對話紀錄索引--master-prompts-index-001255)
+8. [除錯紀錄與技術排障總結 / Debugging Records & Technical Resolutions (001~084)](#8-除錯紀錄與技術排障總結--debugging-records--technical-resolutions-001084)
 9. [執行步驟與使用方法 / Execution Steps & Usage Guide](#9-執行步驟與使用方法--execution-steps--usage-guide)
 10. [實驗驗證數據與佐證資料 / Experimental Verification & Evidence Chain](#10-實驗驗證數據與佐證資料--experimental-verification--evidence-chain)
 11. [口試與審查 30 題防禦對照表 / Oral Defense 30 Questions Cross-Reference](#11-口試與審查-30-題防禦對照表--oral-defense-30-questions-cross-reference)
@@ -223,14 +223,14 @@ $$	ext{PI}_{95}(h) = t_{0.025, 8} \cdot s_e \cdot \sqrt{1 + rac{1}{n} + rac{(h
 11. **Phase 11 (5 萬字學術碩士論文構建與圖表數據鏈, Prompt 209~224)**：產出 50,000 字論文全文、21 張高解析學術圖表、22 張三線表與水頭損失推導。
 12. **Phase 12 (雙層 Fab/CUB 空間拓撲與口試防線全方位完善, Prompt 225~228)**：融入頂樓排氣、6F 風管、側邊 HPM/MAU 及 CUB 大樓；化解 P0/P1/P2 所有送審風險，建構 30 題標準答辯手冊。
 13. **Phase 13 (30 題口試防線打散融入各章節與正式規模鎖定, Prompt 229~230)**：將 30 道教授最苛刻質詢全數打散有機融入第一章至第五章；鎖定 160 PT (40001~40160) 正式規模；建立表 5-1 交叉對照索引；附錄 C 收錄開發與除錯總成。
-14. **Phase 14 (論文黑白印刷純白底／純黑字介面重構與中英 README 總成, Prompt 231~235)**：全面重構 Web SCADA 前端為高對比純白底（#ffffff）、深色字（純黑 #000000）；上方功能按鈕全面配置實體邊框；P&ID 圖紙化適配學術雙面黑白雷射印刷裝訂；全套中英文 README、prompt 01-254.md 與 debug 01-083.md 完整總成。
+14. **Phase 14 (論文黑白印刷純白底／純黑字介面重構與中英 README 總成, Prompt 231~235)**：全面重構 Web SCADA 前端為高對比純白底（#ffffff）、深色字（純黑 #000000）；上方功能按鈕全面配置實體邊框；P&ID 圖紙化適配學術雙面黑白雷射印刷裝訂；全套中英文 README、prompt 01-255.md 與 debug 01-084.md 完整總成。
 15. **Phase 15 (8-PCW 全廠多感測器 35 分鐘壓力測試套件、10-Submain 規格鎖定與非實體幽靈元件徹底淨化, Prompt 236~242)**：針對教授審查挑戰全面調整 Modbus 模擬器，於 8 套 PCW 160 支 PT 上執行 160 場次 35 分鐘長程壓力模擬，累積 5,600 筆真實 historian trend，100% 捕獲微漂移並驗證 95.0% 抗噪穩健度；全面盤點全廠規模為 8 loops × 10 submains（共 80 次幹管、160 PT、80 DP、16 FT、256 總感測器），徹底清除前端 Submain11~20、TOOL11~20、fallback 虛線圓圈與 "NO DATA" 幽靈元件，修正 SubmainDetail systemId 隔離，SVG 畫布自適應縮短為 1800px，產出新版高對比截圖與最終論文。
 
 ---
 
-## 7. 所有 Prompt 對話紀錄索引 / Master Prompts Index (001~254)
+## 7. 所有 Prompt 對話紀錄索引 / Master Prompts Index (001~255)
 
-詳細對話紀錄已完整歸檔至 [prompt_001-254.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-254.md) (及 [prompt 01-254.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md))。各階段代表性 Prompt 導航如下：
+詳細對話紀錄已完整歸檔至 [prompt_001-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-255.md) (及 [prompt 01-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md))。各階段代表性 Prompt 導航如下：
 
 | Prompt 區間 | 核心需求與任務摘要 | 產出檔案與成果 |
 |---|---|---|
@@ -250,15 +250,15 @@ $$	ext{PI}_{95}(h) = t_{0.025, 8} \cdot s_e \cdot \sqrt{1 + rac{1}{n} + rac{(h
 | **Prompt 225 - 226** | 雙層 Fab (5F/3F 主無塵室, 4F/2F Subfab) 與 CUB/排氣/HPM/MAU 拓撲升級 | `fig_fab_vertical_layout.png`, 表 1-1 |
 | **Prompt 227 - 228** | 全面落實送審策略、完善 P0/P1/P2 風險、雙向外推公式、中英文 README | `PCW 論文 20261101 0800.docx`, README.md |
 | **Prompt 229 - 230** | 30 題口試防線打散融入論文各章節、建立表 5-1、全套中英 README 歸檔 | `build_perfect_thesis.py`, README.md |
-| **Prompt 231 - 235** | 論文黑白印刷純白底／純黑字介面重構、上方按鈕邊框化、Prompt/Debug 總成 | `update_frontend_white_theme.py`, `prompt 01-254.md` |
+| **Prompt 231 - 235** | 論文黑白印刷純白底／純黑字介面重構、上方按鈕邊框化、Prompt/Debug 總成 | `update_frontend_white_theme.py`, `prompt 01-255.md` |
 | **Prompt 236 - 238** | 教授審查意見回應、數理公式形式化、8-PCW 35分鐘長程壓力測試 (160 場次, 5,600 點) | `run_8pcw_pt_stress_test.py`, 驗證圖表 |
-| **Prompt 239 - 242** | 8 loops × 10 submains 系統架構鎖定、四群組基線與門檻更新、非實體 Sensor/Tool 徹底清除、全套 Prompt 001~242 / Debug 001~075 總成 | `pcwSystems.ts`, `LiveSensors.tsx`, `prompt 01-254.md`, `debug 01-083.md` |
+| **Prompt 239 - 242** | 8 loops × 10 submains 系統架構鎖定、四群組基線與門檻更新、非實體 Sensor/Tool 徹底清除、全套 Prompt 001~242 / Debug 001~075 總成 | `pcwSystems.ts`, `LiveSensors.tsx`, `prompt 01-255.md`, `debug 01-084.md` |
 
 ---
 
-## 8. 除錯紀錄與技術排障總結 / Debugging Records & Technical Resolutions (001~083)
+## 8. 除錯紀錄與技術排障總結 / Debugging Records & Technical Resolutions (001~084)
 
-完整 83 筆除錯紀錄收錄於 [debug_001-083.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-083.md) (及 [debug 01-083.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md))。核心技術排障總結如下：
+完整 84 筆除錯紀錄收錄於 [debug_001-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-084.md) (及 [debug 01-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md))。核心技術排障總結如下：
 1. **Vercel SPA 404 刷新崩潰**：配置 `vercel.json` 全局 rewrite 導向 `index.html`，修復深度路由無法存取問題（Debug Event 052）。
 2. **Modbus 信號過平穩無物理真實性**：加入水力微幅週期擾動與五大故障模式注入方程式，逼真模擬結垢與洩漏（Debug Event 053）。
 3. **Word 範本裝訂邊界與分節破壞**：撰寫 OpenXML DOM 解析器，嚴格保護 3 個 Section 邊界與標準裝訂邊界（Debug Event 058）。
@@ -283,7 +283,7 @@ $$	ext{PI}_{95}(h) = t_{0.025, 8} \cdot s_e \cdot \sqrt{1 + rac{1}{n} + rac{(h
 22. **流體力學閉式解推導、二項分佈檢驗與三大核心演算法虛擬碼深度整合**：補齊 Darcy-Weisbach、Colebrook-White、二項分佈累積機率與對稱 OLS 解析解，正式定義 Algorithm 1/2/3 虛擬碼，落實 100% 內文交互引用（Debug Event 080）。
 23. **實體硬體環境規格探測 (Apple M5 10-Core, 16GB RAM) 與 10,000 次微秒級延遲基準實測**：透過系統探針取得真實硬體參數填入表 4-1，實測 10,000 次推論延遲（單一演算法 16~48 μs、總管線 89.36 μs、吞吐量 11,190 ops/s）並繪製圖 4-5（Debug Event 081）。
 24. **教授 Meeting 版本 (PCW 論文 20261106 Meeting.docx) 標題贅字與非正式章節命名修正**：修正標題重複字、章節 3.3 工業暫存器映射正名與 5.3~5.5 連續編號，備份原檔並產出 Meeting 優化版（Debug Event 082）。
-25. **學術標準三線表 (Booktabs) 全面套用與黑白雷射列印高對比優化**：頂線 1.5pt、表頭底線 0.75pt、底線 1.5pt，消除縱線，表頭設為 #F1F5F9 淺灰底黑字，確保黑白雙面列印清晰銳利，表名在上、圖名在下（Debug Event 083）。
+V. **論文依教授指示全面精進：去除贅飾、公式正式化、模型主角定位與套用 LaTeX 模板**：刪除排氣/變電站/答辯標記贅述，精進樓層與製程冷卻說明；形式化推導 Darcy-Weisbach/Colebrook-White/二項分佈/OLS/TTL 閉式解與 Algorithm 1~3 虛擬碼；以 Apple M5 基準評測與 1,600 次全廠測試為主角；完整套用 `Latex-template` 模板並更新所有圖表（Debug Event 084）。
 
 ---
 
@@ -481,10 +481,10 @@ $$	ext{Lead Time 物理定義: } 	ext{LeadTime} = T_{	ext{HardAlarm}} - T_{	ext{
 /Users/benchen1981/Downloads/Web SCADA/
 ├── README.md                                  # [本文件] 專案詳細中英文完整說明書
 ├── README_EN.md                               # [英文版] 國際版獨立完整專案說明書
-├── prompt_001-254.md                          # 完整 254 筆開發對話紀錄與架構里程碑
-├── prompt 01-254.md                           # 同步格式對話紀錄 (無底線)
-├── debug_001-083.md                           # 完整 83 筆系統除錯歷程與問題排除紀錄
-├── debug 01-083.md                            # 同步格式除錯紀錄 (無底線)
+├── prompt_001-255.md                          # 完整 255 筆開發對話紀錄與架構里程碑
+├── prompt 01-255.md                           # 同步格式對話紀錄 (無底線)
+├── debug_001-084.md                           # 完整 84 筆系統除錯歷程與問題排除紀錄
+├── debug 01-084.md                            # 同步格式除錯紀錄 (無底線)
 ├── build_perfect_thesis.py                    # 終極學位論文構建引擎 (21 圖 + 22 表 + Q1~Q30 融接)
 ├── apply_template_and_supplement.py           # 碩士論文 Word 與 Markdown 自動排版工具
 ├── generate_thesis_figures.py                 # 論文高解析向量圖表生成腳本
@@ -506,10 +506,10 @@ $$	ext{Lead Time 物理定義: } 	ext{LeadTime} = T_{	ext{HardAlarm}} - T_{	ext{
 │       ├── evidence/                          # 100+ 批次驗證佐證截圖與混淆矩陣資料
 │       ├── venv/                              # Python 3 獨立虛擬環境
 │       ├── vercel.json                        # Vercel 雲端部署與 SPA 路由重寫設定檔
-│       ├── prompt_001-254.md                  # 程式碼目錄同步之 Prompt Master 紀錄
-│       ├── prompt 01-254.md                   # 程式碼目錄同步之 Prompt 紀錄 (無底線)
-│       ├── debug_001-083.md                   # 程式碼目錄同步之 Debug Master 紀錄
-│       ├── debug 01-083.md                    # 程式碼目錄同步之 Debug 紀錄 (無底線)
+│       ├── prompt_001-255.md                  # 程式碼目錄同步之 Prompt Master 紀錄
+│       ├── prompt 01-255.md                   # 程式碼目錄同步之 Prompt 紀錄 (無底線)
+│       ├── debug_001-084.md                   # 程式碼目錄同步之 Debug Master 紀錄
+│       ├── debug 01-084.md                    # 程式碼目錄同步之 Debug 紀錄 (無底線)
 │       ├── README.md                          # 程式碼目錄同步之中英文 README
 │       └── README_zh.md                       # 程式碼目錄繁體中文專用說明書
 └── Prompt/                                    # 早期需求計畫書與概念設計存檔
@@ -527,8 +527,8 @@ $$	ext{Lead Time 物理定義: } 	ext{LeadTime} = T_{	ext{HardAlarm}} - T_{	ext{
   - [PCW_論文送審與口試策略_正式規模版.md](file:///Users/benchen1981/Downloads/Web%20SCADA/thesis/PCW_%E8%AB%96%E6%96%87%E9%80%81%E5%AF%A9%E8%88%87%E5%8F%A3%E8%A9%A6%E7%AD%96%E7%95%A5_%E6%AD%A3%E5%BC%8F%E8%A6%8F%E6%A8%A1%E7%89%88.md)
   - [SPEECH_SCRIPT_50K.md](file:///Users/benchen1981/Downloads/Web%20SCADA/SPEECH_SCRIPT_50K.md)
 - **開發對話與除錯歷史**：
-  - [prompt_001-254.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-254.md) / [prompt 01-254.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)
-  - [debug_001-083.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-083.md) / [debug 01-083.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)
+  - [prompt_001-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-255.md) / [prompt 01-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)
+  - [debug_001-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-084.md) / [debug 01-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)
 - **實體系統程式碼與構建引擎**：
   - [Code/pcw-poc-v1_merged/](file:///Users/benchen1981/Downloads/Web%20SCADA/Code/pcw-poc-v1_merged/)
   - [build_perfect_thesis.py](file:///Users/benchen1981/Downloads/Web%20SCADA/build_perfect_thesis.py)
