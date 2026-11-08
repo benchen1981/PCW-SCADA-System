@@ -1,0 +1,5 @@
+Model,Total_Tests,TP,TN,FP,FN,Accuracy_pct,Recall_pct,Precision_pct,F1_Score,FAR_pct,Mean_LeadTime_min
+Proposed DualWindow,1600,1280,301,19,0,98.81,100.0,98.54,0.9926,5.94,18.23
+Static ISA-18.2,1600,0,320,0,1280,20.0,0.0,0.0,0.0,0.0,0.0
+EWMA SPC,1600,1280,43,277,0,82.69,100.0,82.21,0.9024,86.56,0.0
+Naive OLS,1600,0,320,0,1280,20.0,0.0,0.0,0.0,0.0,0.0
