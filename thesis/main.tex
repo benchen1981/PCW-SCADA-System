@@ -1,0 +1,573 @@
+%!TEX program = xelatex
+% 【關鍵設定】fontset=none 代表不使用預設字型，我們要自己設定
+\documentclass[fontset=none, a4paper, 12pt]{ctexart} 
+
+% ==========================================
+% 1. 套件載入區
+% ==========================================
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{fontspec} % 必須載入，用於讀取 ttf
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{caption}
+% 圖表與標題間距壓縮
+\captionsetup[figure]{skip=4pt}
+\setlength{\intextsep}{7pt}
+\setlength{\textfloatsep}{7pt}
+\setlength{\floatsep}{7pt}
+\usepackage[hidelinks]{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{placeins}
+\usepackage{needspace}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\floatname{algorithm}{演算法}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{pdfpages} % 插入口試審核頁掃描 PDF
+\sloppy
+
+
+% =====  refs.bib 管理文獻的關鍵設定 =====
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxbibnames=99,
+  giveninits=true,
+  doi=true,
+  url=true,
+  isbn=false
+]{biblatex}
+
+\addbibresource{refs.bib}
+% 作者改成：姓在前、名字縮寫在後
+\DeclareNameAlias{default}{family-given}
+
+% 最後一位作者前使用 &，比較接近 APA
+\DeclareDelimFormat{finalnamedelim}{\addcomma\space\&\space}
+
+% article 不顯示 In:
+\renewbibmacro{in:}{%
+  \ifentrytype{article}
+    {}
+    {\printtext{\bibstring{in}\intitlepunct}}}
+
+% 文章標題不要加引號
+\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat[inproceedings]{title}{#1}
+\DeclareFieldFormat[misc]{title}{#1}
+
+% ==========================================
+% 2. 字型設定
+% ==========================================
+
+% 整份論文的中文主字型：標楷體
+\setCJKmainfont{kaiu.ttf}[
+    AutoFakeBold=2.5,
+    AutoFakeSlant=0.3
+]
+% 整份論文的英文字型
+\setmainfont{TeX Gyre Termes}
+% ------------------------------------------
+% 封面專用字型
+% ------------------------------------------
+% 封面中文：標楷體
+\newCJKfontfamily\coverzh{kaiu.ttf}[
+    AutoFakeBold=2.5,
+    AutoFakeSlant=0.3
+]
+% 封面英文：Times New Roman
+\newfontfamily\coveren{Times New Roman}
+
+
+% ====================================
+% 3. 版面與格式設定
+% ====================================
+
+\geometry{a4paper, top=3cm, bottom=3cm, left=3cm, right=3cm}
+
+% 【頁碼規範】頁碼位置應置於每頁的頁尾，對齊方式為置中
+\pagestyle{plain} 
+
+% 圖表標題中文化
+\captionsetup[figure]{name=圖}
+\captionsetup[table]{name=表}
+\ctexset{bibname = {參考文獻}}
+
+% 章節標題格式
+\titleformat{\section}[block]{\centering\fontsize{20}{24}\selectfont\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\fontsize{16}{20}\selectfont\bfseries}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}[block]{\fontsize{14}{18}\selectfont\bfseries}{\thesubsubsection.}{1em}{}
+
+% 編號格式
+\renewcommand{\thesection}{第\chinese{section}章}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% ==========================================
+% 目錄、表目錄、圖目錄設定
+% ==========================================
+
+% 標題名稱
+\renewcommand{\contentsname}{目錄}
+\renewcommand{\listtablename}{表目錄}
+\renewcommand{\listfigurename}{圖目錄}
+
+% ---------- 目錄標題置中 ----------
+\renewcommand{\cfttoctitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill\null}
+
+% ---------- 表目錄標題置中 ----------
+\renewcommand{\cftlottitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill\null}
+
+% ---------- 圖目錄標題置中 ----------
+\renewcommand{\cftloftitlefont}{\hfill\Large\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill\null}
+
+% ---------- 標題與內容距離 ----------
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{1.2em}
+
+\setlength{\cftbeforelottitleskip}{0pt}
+\setlength{\cftafterlottitleskip}{1.2em}
+
+\setlength{\cftbeforeloftitleskip}{0pt}
+\setlength{\cftafterloftitleskip}{1.2em}
+
+% ---------- 目錄項目點線 ----------
+% 使誌謝辭、摘要、Abstract、目錄、表目錄、圖目錄也顯示 ........ i
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+
+% ---------- 目錄字體 ----------
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+
+% ---------- 章節間距 ----------
+\setlength{\cftbeforesecskip}{1.5em}
+
+
+\begin{document}
+
+
+% ==========================================
+% 封面（不顯示頁碼）
+% ==========================================
+
+% 封面上下左右邊界各 3 公分
+\newgeometry{
+    a4paper,
+    top=3cm,
+    bottom=3cm,
+    left=3cm,
+    right=3cm
+}
+
+\begin{titlepage}
+    \centering
+    \thispagestyle{empty}
+
+    \vspace*{0.7cm}
+
+    % 中文校名與學程名稱：標楷體 20pt，同一行
+    {\coverzh
+    \fontsize{20pt}{28pt}\selectfont
+    \begingroup
+    \xeCJKsetup{CJKglue=\hskip -1.55pt}
+    \makebox[\textwidth][c]{%
+        國立中興大學人工智慧與資料科學碩士在職學位學程%
+    }
+    \endgroup
+    \par}
+
+    \vspace{0.35cm}
+
+    % 論文類別
+    {\coverzh
+    \fontsize{20pt}{28pt}\selectfont
+    碩士學位論文\par}
+
+    % 論文類別與中文題目之間
+    \vspace{2.5cm}
+
+    % 中文論文題目：倒三角形排列
+    {\coverzh
+    \fontsize{20pt}{29pt}\selectfont
+    XXXX\par}
+
+    \vspace{0.75cm}
+
+    % 英文論文題目：Times New Roman 20pt
+    {\coveren
+    \fontsize{20pt}{26pt}\selectfont
+    \makebox[\textwidth][c]{%
+     
+    }\par}
+
+    % 論文題目與指導教授資訊之間
+    \vspace{2.4cm}
+
+    % 指導教授
+    {\coverzh
+    \fontsize{20pt}{28pt}\selectfont
+    指導教授：
+    \hspace{0.3em}
+    林長鋆
+    \hspace{0.1em}
+    {\coveren Chang-Yun Lin}\par}
+
+    \vspace{0.35cm}
+
+    % 研究生
+    {\coverzh
+    \fontsize{20pt}{28pt}\selectfont
+    研究生：
+    \hspace{0.3em}
+    XXX
+    \hspace{0.1em}
+    {\coveren XXX}\par}
+
+    % 研究生與完成日期之間
+    \vspace{2.0cm}
+
+    % 論文完成日期
+    {\coverzh
+    \fontsize{20pt}{28pt}\selectfont
+    中華民國一百一十X年八月\par}
+
+\end{titlepage}
+
+% 恢復論文正文原本的邊界設定
+\restoregeometry
+
+\clearpage
+
+% ==========================================
+% 口試審核頁（不編頁碼）
+% ==========================================
+% 尚未取得口試審核頁時，保留以下空白頁。
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+    \Large 口試審核頁預留
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+% ------------------------------------------------------------
+% 【口試審核頁 PDF 插入方法】
+% 取得掃描 PDF 後：
+% 1. 將上面的「口試審核頁預留」區塊刪掉或註解。
+% 2. 將 PDF 放入 picture/ 資料夾。
+% 3. 取消下方程式碼的註解。
+%
+% \includepdf[
+%     pages=1,
+%     fitpaper=false,
+%     trim=0mm 1.5mm 1.5mm 0mm,
+%     clip,
+%     pagecommand={\thispagestyle{empty}}
+% ]{picture/口試審核頁檔名.pdf}
+% \clearpage
+% ------------------------------------------------------------
+
+\clearpage
+
+
+% ==========================================
+% 誌謝（置於中文摘要之前，不顯示頁碼，目錄不用放）
+% ==========================================
+
+\clearpage
+\pagenumbering{gobble}
+\pagestyle{empty}
+
+\begin{center}
+    \large\bfseries 誌謝
+\end{center}
+\vspace{0.5em}
+
+.........
+
+
+\vspace{2em}
+
+\begin{flushright}
+XXX　謹誌\\
+中華民國一百一十X年八月
+\end{flushright}
+
+
+%======================================
+% 前半部：羅馬數字編碼 (i, ii, iii...)
+% 規範：摘要至正文前，以小寫羅馬數字連續編碼
+% =====================================
+
+\clearpage
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+% ==========================================
+% 中文摘要
+% ==========================================
+\phantomsection
+\addcontentsline{toc}{section}{摘要}
+\begin{center}
+\large\bfseries 摘要
+\end{center}
+\vspace{0.5em}
+
+.....
+
+\vspace{1em}
+\noindent \textbf{關鍵詞：}
+
+\newpage
+
+% ==========================================
+% 英文摘要 (Abstract)
+% ==========================================
+\phantomsection
+\addcontentsline{toc}{section}{Abstract}
+\begin{center}
+\large\bfseries Abstract
+\end{center}
+\vspace{0.5em}
+
+......
+
+\vspace{1em}
+\noindent \textbf{Keywords:}
+
+\newpage
+
+
+% ==========================================
+% 目錄
+% ==========================================
+\phantomsection
+\addcontentsline{toc}{section}{目錄}
+\tableofcontents
+\newpage
+
+% 表目錄
+\phantomsection
+\addcontentsline{toc}{section}{表目錄}
+\listoftables
+\newpage
+
+% 圖目錄
+\phantomsection
+\addcontentsline{toc}{section}{圖目錄}
+\listoffigures
+\newpage
+
+% ==========================================
+% 正文：阿拉伯數字頁碼 1, 2, 3...
+% ==========================================
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\begin{doublespace}
+
+% ============================================================
+% 第一章 緒論
+% ============================================================
+\section{緒論}
+
+\subsection{研究背景與動機}
+% 請撰寫內容。
+
+\subsection{研究目的}
+% 請撰寫內容。
+
+% 如需三級標題，可使用：
+% \subsubsection{次小節標題}
+% 請撰寫內容。
+
+% ============================================================
+% 第二章 文獻探討
+% ============================================================
+\clearpage
+\section{文獻探討}
+
+\subsection{小節標題}
+% 請依研究主題自行修改小節名稱與內容。
+
+\subsubsection{次小節標題}
+% 請撰寫內容。
+
+% ============================================================
+% 圖片插入範例（一般直式圖片）
+% ============================================================
+% 使用方式：將圖片放在 picture/，取消以下註解並修改檔名、圖名、label。
+%
+% 文中引用寫法：如圖~\ref{fig:example} 所示。
+%
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[
+%         width=0.82\textwidth,
+%         keepaspectratio
+%     ]{picture/your_figure.png}
+%     \caption{請輸入圖片標題}
+%     \label{fig:example}
+% \end{figure}
+%
+% 寬度常用值：0.7\textwidth、0.82\textwidth、0.95\textwidth。
+% 若圖片過高，可加入 height=0.55\textheight。
+
+% ============================================================
+% 表格插入範例（tabularx，自動分配欄寬）
+% ============================================================
+% 文中引用寫法：如表~\ref{tab:example} 所示。
+%
+% \begin{table}[H]
+% \centering
+% \caption{請輸入表格標題}
+% \label{tab:example}
+% \footnotesize
+% \renewcommand{\arraystretch}{1.12}
+% \setlength{\tabcolsep}{4pt}
+% \begin{tabularx}{0.96\textwidth}{
+% >{\raggedright\arraybackslash}p{3.0cm}
+% >{\centering\arraybackslash}p{2.0cm}
+% >{\raggedright\arraybackslash}X}
+% \hline
+% 欄位一 & 欄位二 & 欄位三 \\
+% \hline
+% 範例 A & 1 & 請填寫內容 \\
+% 範例 B & 2 & 請填寫內容 \\
+% \hline
+% \end{tabularx}
+% \end{table}
+
+% ============================================================
+% 第三章 研究方法
+% ============================================================
+\clearpage
+\section{研究方法}
+
+\subsection{研究架構}
+% 請撰寫內容。
+
+\subsection{資料來源與研究設計}
+% 請撰寫內容。
+
+\subsection{研究方法或模型}
+% 請撰寫內容。
+
+% ============================================================
+% 橫式大型圖片插入範例（只旋轉圖片與圖說）
+% ============================================================
+% 適合流程圖、模型架構圖、寬版圖。
+%
+% \clearpage
+% \begin{sidewaysfigure}[p]
+%     \centering
+%     \includegraphics[
+%         width=1.05\textheight,
+%         height=0.98\textwidth,
+%         keepaspectratio
+%     ]{picture/your_wide_figure.png}
+%     \caption{請輸入橫式圖片標題}
+%     \label{fig:wide-example}
+% \end{sidewaysfigure}
+% \clearpage
+
+% ============================================================
+% 同一圖放兩張圖片範例
+% ============================================================
+% \begin{figure}[H]
+% \centering
+% \begin{minipage}{0.92\textwidth}
+% \centering
+%
+% \includegraphics[width=\linewidth,height=0.32\textheight,keepaspectratio]
+% {picture/figure_a.png}
+% \vspace{0.25em}
+% {\scriptsize (a) 子圖 A}
+%
+% \vspace{0.8em}
+%
+% \includegraphics[width=\linewidth,height=0.32\textheight,keepaspectratio]
+% {picture/figure_b.png}
+% \vspace{0.25em}
+% {\scriptsize (b) 子圖 B}
+%
+% \end{minipage}
+% \caption{請輸入整組圖片標題}
+% \label{fig:two-images}
+% \end{figure}
+
+% ============================================================
+% 公式插入範例（如不需要可直接刪除此註解區）
+% ============================================================
+% 文中引用：由式~\eqref{eq:example} 可知……
+%
+% \begin{equation}
+% y = ax + b
+% \label{eq:example}
+% \end{equation}
+
+% ============================================================
+% 第四章 實驗結果與討論
+% ============================================================
+\clearpage
+\section{實驗結果與討論}
+
+\subsection{實驗結果}
+% 請撰寫內容。
+
+\subsection{結果分析與討論}
+% 請撰寫內容。
+
+% ============================================================
+% 第五章 結論與未來展望
+% ============================================================
+\clearpage
+\section{結論與未來展望}
+
+\subsection{研究成果概述}
+% 請撰寫內容。
+
+\subsection{研究限制}
+% 請撰寫內容。
+
+\subsection{未來研究方向}
+% 請撰寫內容。
+
+\subsection{總結}
+% 請撰寫內容。
+
+% ============================================================
+% 文獻引用方法
+% ============================================================
+% refs.bib 中先建立文獻，例如 example2026。
+% 正文可寫：作者提出相關方法~\cite{example2026}。
+% 多篇引用：\cite{example2026,exampleBook2025}
+
+% ==========================================
+% 參考文獻
+% ==========================================
+\clearpage
+\phantomsection
+\printbibliography[heading=bibintoc,title={參考文獻}]
+
+\end{doublespace}
+\end{document}
