@@ -1,0 +1,429 @@
+{
+ "data_profile": {
+  "tags": [
+   "PT-1"
+  ],
+  "rows": 480,
+  "start": "2026-08-05T03:01:00",
+  "end": "2026-08-05T11:00:01",
+  "min": 1.570100964834692,
+  "max": 1.749991494098575,
+  "mean": 1.6381928478547618,
+  "rows_ge_alarm": 66,
+  "sampling_min": {
+   "min": 1.0,
+   "max": 1.0166666666666666,
+   "median": 1.0
+  },
+  "parameters": {
+   "AlarmLimit": 1.7,
+   "NThreshold": 2,
+   "TrendWindow": 5,
+   "Gate30": 1.55,
+   "Gate20": 1.58,
+   "Gate10": 1.62,
+   "BaselineMin": 60,
+   "CurrentMin": 10
+  }
+ },
+ "E1": {
+  "confusion_all_rows": {
+   "T30": {
+    "TP": 12,
+    "FP": 90,
+    "FN": 83,
+    "TN": 295,
+    "Precision": 0.11764705882352941,
+    "Recall": 0.12631578947368421,
+    "F1": 0.1218274111675127,
+    "Accuracy": 0.6395833333333333,
+    "FPR": 0.23376623376623376,
+    "WarningRate": 0.2125
+   },
+   "T20": {
+    "TP": 6,
+    "FP": 64,
+    "FN": 79,
+    "TN": 331,
+    "Precision": 0.08571428571428572,
+    "Recall": 0.07058823529411765,
+    "F1": 0.07741935483870968,
+    "Accuracy": 0.7020833333333333,
+    "FPR": 0.1620253164556962,
+    "WarningRate": 0.14583333333333334
+   },
+   "T10": {
+    "TP": 2,
+    "FP": 27,
+    "FN": 73,
+    "TN": 378,
+    "Precision": 0.06896551724137931,
+    "Recall": 0.02666666666666667,
+    "F1": 0.038461538461538464,
+    "Accuracy": 0.7916666666666666,
+    "FPR": 0.06666666666666667,
+    "WarningRate": 0.06041666666666667
+   }
+  },
+  "confusion_non_event_rows": {
+   "T30": {
+    "TP": 12,
+    "FP": 90,
+    "FN": 18,
+    "TN": 294,
+    "Precision": 0.11764705882352941,
+    "Recall": 0.4,
+    "F1": 0.1818181818181818,
+    "Accuracy": 0.7391304347826086,
+    "FPR": 0.234375,
+    "WarningRate": 0.2463768115942029
+   },
+   "T20": {
+    "TP": 6,
+    "FP": 64,
+    "FN": 14,
+    "TN": 330,
+    "Precision": 0.08571428571428572,
+    "Recall": 0.3,
+    "F1": 0.13333333333333333,
+    "Accuracy": 0.8115942028985508,
+    "FPR": 0.16243654822335024,
+    "WarningRate": 0.16908212560386474
+   },
+   "T10": {
+    "TP": 2,
+    "FP": 27,
+    "FN": 8,
+    "TN": 377,
+    "Precision": 0.06896551724137931,
+    "Recall": 0.2,
+    "F1": 0.10256410256410257,
+    "Accuracy": 0.9154589371980676,
+    "FPR": 0.06683168316831684,
+    "WarningRate": 0.07004830917874397
+   }
+  },
+  "operational": {
+   "input_rows": 480,
+   "hard_alarm_rows": 66,
+   "any_warning_rows": 102,
+   "false_warning_rows": 90,
+   "false_warning_rate": 0.8823529411764706,
+   "avg_lead_to_next_event_min": 75.55555555555556,
+   "max_lead_to_next_event_min": 116.0,
+   "n_gt2_rows": 66,
+   "warning_streaks": 24,
+   "false_warning_streaks": 21
+  },
+  "episodes": [
+   {
+    "episode": 1,
+    "onset": "2026-08-05T05:08:00",
+    "end": "2026-08-05T06:13:00",
+    "duration_min": 66.0,
+    "peak": 1.749991494098575,
+    "gap_from_prev_min": null,
+    "first_warning": "2026-08-05T04:42:00",
+    "lead_min": 26.0,
+    "lead_T30": 26.0,
+    "lead_T20": 26.0,
+    "lead_T10": 24.0
+   }
+  ],
+  "episode_summary": {
+   "episodes": 1,
+   "warned_within_30min": 1,
+   "mean_lead_min": 26.0,
+   "median_lead_min": 26.0
+  },
+  "detector_attribution": {
+   "forecast_only": 61,
+   "density_only": 37,
+   "both": 4
+  },
+  "excel_event_summary": {
+   "first_event": "2026-08-05T05:08:00",
+   "T30_last_warning_before": "2026-08-05T05:07:00",
+   "T30_lead_min": 1.0,
+   "T20_last_warning_before": "2026-08-05T05:07:00",
+   "T20_lead_min": 1.0,
+   "T10_last_warning_before": "2026-08-05T04:59:00",
+   "T10_lead_min": 9.0
+  }
+ },
+ "E1b": {
+  "n_threshold": [
+   {
+    "nth": 1.5,
+    "TP": 13,
+    "FP": 107,
+    "FN": 17,
+    "TN": 277,
+    "Precision": 0.10833333333333334,
+    "Recall": 0.43333333333333335,
+    "F1": 0.1733333333333333,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 23
+   },
+   {
+    "nth": 2.0,
+    "TP": 12,
+    "FP": 90,
+    "FN": 18,
+    "TN": 294,
+    "Precision": 0.11764705882352941,
+    "Recall": 0.4,
+    "F1": 0.1818181818181818,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 21
+   },
+   {
+    "nth": 2.5,
+    "TP": 12,
+    "FP": 86,
+    "FN": 18,
+    "TN": 298,
+    "Precision": 0.12244897959183673,
+    "Recall": 0.4,
+    "F1": 0.1875,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 23
+   },
+   {
+    "nth": 3.0,
+    "TP": 12,
+    "FP": 75,
+    "FN": 18,
+    "TN": 309,
+    "Precision": 0.13793103448275862,
+    "Recall": 0.4,
+    "F1": 0.20512820512820515,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 25
+   }
+  ],
+  "gates": [
+   {
+    "config": "with gates 1.55/1.58/1.62",
+    "TP": 12,
+    "FP": 90,
+    "FN": 18,
+    "TN": 294,
+    "Precision": 0.11764705882352941,
+    "Recall": 0.4,
+    "F1": 0.1818181818181818,
+    "false_streaks": 21
+   },
+   {
+    "config": "without gates",
+    "TP": 12,
+    "FP": 90,
+    "FN": 18,
+    "TN": 294,
+    "Precision": 0.11764705882352941,
+    "Recall": 0.4,
+    "F1": 0.1818181818181818,
+    "false_streaks": 21
+   }
+  ],
+  "baseline": [
+   {
+    "baseline_min": 30,
+    "TP": 12,
+    "FP": 66,
+    "FN": 18,
+    "TN": 318,
+    "Precision": 0.15384615384615385,
+    "Recall": 0.4,
+    "F1": 0.2222222222222222,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 26,
+    "valid_rows": 469
+   },
+   {
+    "baseline_min": 45,
+    "TP": 12,
+    "FP": 86,
+    "FN": 18,
+    "TN": 298,
+    "Precision": 0.12244897959183673,
+    "Recall": 0.4,
+    "F1": 0.1875,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 22,
+    "valid_rows": 469
+   },
+   {
+    "baseline_min": 60,
+    "TP": 12,
+    "FP": 90,
+    "FN": 18,
+    "TN": 294,
+    "Precision": 0.11764705882352941,
+    "Recall": 0.4,
+    "F1": 0.1818181818181818,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 21,
+    "valid_rows": 469
+   },
+   {
+    "baseline_min": 90,
+    "TP": 12,
+    "FP": 98,
+    "FN": 18,
+    "TN": 286,
+    "Precision": 0.10909090909090909,
+    "Recall": 0.4,
+    "F1": 0.17142857142857143,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 23,
+    "valid_rows": 469
+   },
+   {
+    "baseline_min": 120,
+    "TP": 12,
+    "FP": 109,
+    "FN": 18,
+    "TN": 275,
+    "Precision": 0.09917355371900827,
+    "Recall": 0.4,
+    "F1": 0.15894039735099338,
+    "episodes_warned": 1,
+    "episodes": 1,
+    "false_streaks": 24,
+    "valid_rows": 469
+   }
+  ],
+  "symmetric_slope": {
+   "note": "slope kept signed; only HI-side alarm exists in this dataset so the result must equal the max(0,.) version",
+   "T30": {
+    "TP": 12,
+    "FP": 90,
+    "FN": 18,
+    "TN": 294,
+    "Precision": 0.11764705882352941,
+    "Recall": 0.4,
+    "F1": 0.1818181818181818,
+    "Accuracy": 0.7391304347826086,
+    "FPR": 0.234375,
+    "WarningRate": 0.2463768115942029
+   },
+   "identical_predictions": true
+  }
+ },
+ "E1c": {
+  "limits": {
+   "lowLow": 1.2,
+   "low": 1.3,
+   "high": 1.7,
+   "highHigh": 1.8,
+   "baseline": 1.5
+  },
+  "params": {
+   "theta": 2,
+   "slopeGatePct": 5,
+   "releaseHold": 3
+  },
+  "evaluated_rows": 411,
+  "confusion_non_event_rows": {
+   "T30": {
+    "TP": 12,
+    "FP": 92,
+    "FN": 18,
+    "TN": 223,
+    "Precision": 0.11538461538461539,
+    "Recall": 0.4,
+    "F1": 0.1791044776119403,
+    "Accuracy": 0.6811594202898551,
+    "FPR": 0.2920634920634921,
+    "WarningRate": 0.30144927536231886
+   },
+   "T20": {
+    "TP": 7,
+    "FP": 59,
+    "FN": 13,
+    "TN": 266,
+    "Precision": 0.10606060606060606,
+    "Recall": 0.35,
+    "F1": 0.1627906976744186,
+    "Accuracy": 0.7913043478260869,
+    "FPR": 0.18153846153846154,
+    "WarningRate": 0.19130434782608696
+   },
+   "T10": {
+    "TP": 4,
+    "FP": 14,
+    "FN": 6,
+    "TN": 321,
+    "Precision": 0.2222222222222222,
+    "Recall": 0.4,
+    "F1": 0.2857142857142857,
+    "Accuracy": 0.9420289855072463,
+    "FPR": 0.041791044776119404,
+    "WarningRate": 0.05217391304347826
+   }
+  },
+  "episodes": [
+   {
+    "episode": 1,
+    "onset": "2026-08-05T06:17:00",
+    "end": "2026-08-05T07:22:00",
+    "duration_min": 66.0,
+    "peak": 1.664673424573884,
+    "gap_from_prev_min": null,
+    "first_warning": null,
+    "lead_min": null,
+    "lead_T30": null,
+    "lead_T20": null,
+    "lead_T10": null
+   }
+  ],
+  "state_counts": {
+   "NORMAL": 239,
+   "T-30": 38,
+   "T-20": 48,
+   "T-10": 18,
+   "EVENT": 68
+  },
+  "episode_summary": {
+   "episodes": 1,
+   "warned_within_30min": 0,
+   "mean_lead_min": null
+  },
+  "warning_streaks": 23,
+  "false_warning_streaks": 20
+ },
+ "E5": {
+  "vectors": 2000,
+  "state_mismatches": 0,
+  "state_distribution": {
+   "NORMAL": 1297,
+   "T-30": 370,
+   "EVENT": 104,
+   "T-10": 154,
+   "T-20": 75
+  },
+  "max_abs_error": {
+   "baseAvg60": 0.0,
+   "slope": 0.0,
+   "m60": 0.0,
+   "m10": 0.0,
+   "n10": 0.0,
+   "forecast10": 0.0,
+   "forecast20": 0.0,
+   "forecast30": 0.0,
+   "slopeOls": 0.0,
+   "r2": 2.220446049250313e-16,
+   "band30": 0.0,
+   "ttl": 0.0
+  }
+ }
+}

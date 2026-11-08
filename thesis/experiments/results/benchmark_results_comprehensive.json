@@ -1,0 +1,254 @@
+{
+  "system_specs": {
+    "host_platform": "Apple Silicon M-Series / macOS Darwin",
+    "python_runtime": "3.9.6",
+    "data_frequency": "1 Hz industrial polling / 1 min resampled window",
+    "benchmark_sample_count": 10000,
+    "physical_scale": "8 PCW Loops, 80 Submain Pairs, 256 Total Sensors"
+  },
+  "real_fab_dataset_e1": {
+    "Static Threshold (ISA-18.2 Standard)": {
+      "n": 480,
+      "TP": 65,
+      "FP": 1,
+      "FN": 30,
+      "TN": 384,
+      "Accuracy": 0.9354166666666667,
+      "Precision": 0.9848484848484849,
+      "Recall": 0.6842105263157895,
+      "Specificity": 0.9974025974025974,
+      "F1": 0.8074534161490684,
+      "FAR": 0.0025974025974025974,
+      "LeadTime": {
+        "count": 65,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      }
+    },
+    "EWMA Control Chart (SPC, λ=0.2, 3σ)": {
+      "n": 480,
+      "TP": 72,
+      "FP": 18,
+      "FN": 23,
+      "TN": 367,
+      "Accuracy": 0.9145833333333333,
+      "Precision": 0.8,
+      "Recall": 0.7578947368421053,
+      "Specificity": 0.9532467532467532,
+      "F1": 0.7783783783783784,
+      "FAR": 0.046753246753246755,
+      "LeadTime": {
+        "count": 72,
+        "mean": 2.0833333333333335,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 30.0
+      }
+    },
+    "Naive OLS Linear Trend (10-point Slope)": {
+      "n": 480,
+      "TP": 58,
+      "FP": 47,
+      "FN": 37,
+      "TN": 338,
+      "Accuracy": 0.825,
+      "Precision": 0.5523809523809524,
+      "Recall": 0.6105263157894737,
+      "Specificity": 0.8779220779220779,
+      "F1": 0.5800000000000001,
+      "FAR": 0.12207792207792208,
+      "LeadTime": {
+        "count": 58,
+        "mean": 3.689655172413793,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 27.0
+      }
+    },
+    "Proposed Method (T-30 Dual-Window + 7-Layer Hardening)": {
+      "n": 480,
+      "TP": 79,
+      "FP": 114,
+      "FN": 16,
+      "TN": 271,
+      "Accuracy": 0.7291666666666666,
+      "Precision": 0.40932642487046633,
+      "Recall": 0.8315789473684211,
+      "Specificity": 0.7038961038961039,
+      "F1": 0.548611111111111,
+      "FAR": 0.2961038961038961,
+      "LeadTime": {
+        "count": 79,
+        "mean": 3.4430379746835444,
+        "median": 1.0,
+        "min": 1.0,
+        "max": 27.0
+      }
+    }
+  },
+  "synthetic_10k_stress_test": {
+    "Static Threshold (ISA-18.2 Standard)": {
+      "n": 10000,
+      "TP": 2625,
+      "FP": 0,
+      "FN": 37,
+      "TN": 7338,
+      "Accuracy": 0.9963,
+      "Precision": 1.0,
+      "Recall": 0.9861006761833208,
+      "Specificity": 1.0,
+      "F1": 0.9930017022886324,
+      "FAR": 0.0,
+      "LeadTime": {
+        "count": 2625,
+        "mean": 25.01207351946117,
+        "median": 24.954452028927378,
+        "min": 21.009208539584897,
+        "max": 28.99981296882423
+      }
+    },
+    "EWMA Control Chart (SPC, λ=0.2, 3σ)": {
+      "n": 10000,
+      "TP": 1506,
+      "FP": 221,
+      "FN": 1156,
+      "TN": 7117,
+      "Accuracy": 0.8623,
+      "Precision": 0.8720324261725536,
+      "Recall": 0.5657400450788881,
+      "Specificity": 0.9698828018533661,
+      "F1": 0.6862611073137389,
+      "FAR": 0.03011719814663396,
+      "LeadTime": {
+        "count": 1506,
+        "mean": 25.045908938127926,
+        "median": 25.145226257205398,
+        "min": 21.009601646481094,
+        "max": 28.995435038945402
+      }
+    },
+    "Naive OLS Linear Trend (10-point Slope)": {
+      "n": 10000,
+      "TP": 2336,
+      "FP": 1718,
+      "FN": 326,
+      "TN": 5620,
+      "Accuracy": 0.7956,
+      "Precision": 0.576221016280217,
+      "Recall": 0.8775356874530428,
+      "Specificity": 0.7658762605614609,
+      "F1": 0.6956521739130433,
+      "FAR": 0.23412373943853912,
+      "LeadTime": {
+        "count": 2336,
+        "mean": 24.9779464036231,
+        "median": 24.999353652680014,
+        "min": 21.00156502284487,
+        "max": 28.99961440651766
+      }
+    },
+    "Proposed Method (T-30 Dual-Window + 7-Layer Hardening)": {
+      "n": 10000,
+      "TP": 2662,
+      "FP": 2258,
+      "FN": 0,
+      "TN": 5080,
+      "Accuracy": 0.7742,
+      "Precision": 0.5410569105691057,
+      "Recall": 1.0,
+      "Specificity": 0.6922867266285091,
+      "F1": 0.7021893959377473,
+      "FAR": 0.30771327337149085,
+      "LeadTime": {
+        "count": 2662,
+        "mean": 24.977575494513527,
+        "median": 24.930290780280902,
+        "min": 21.004287424810567,
+        "max": 28.99963352946023
+      }
+    }
+  },
+  "computational_performance": {
+    "Static Threshold (ISA-18.2 Standard)": {
+      "mean_latency_us": 0.17,
+      "p50_latency_us": 0.17,
+      "p95_latency_us": 0.21,
+      "p99_latency_us": 0.25,
+      "throughput_ops_sec": 4322081
+    },
+    "EWMA Control Chart (SPC, λ=0.2, 3σ)": {
+      "mean_latency_us": 3.36,
+      "p50_latency_us": 3.33,
+      "p95_latency_us": 3.54,
+      "p99_latency_us": 4.38,
+      "throughput_ops_sec": 290885
+    },
+    "Naive OLS Linear Trend (10-point Slope)": {
+      "mean_latency_us": 1.61,
+      "p50_latency_us": 1.58,
+      "p95_latency_us": 1.71,
+      "p99_latency_us": 2.12,
+      "throughput_ops_sec": 595028
+    },
+    "Proposed Method (T-30 Dual-Window + 7-Layer Hardening)": {
+      "mean_latency_us": 6.62,
+      "p50_latency_us": 6.5,
+      "p95_latency_us": 6.96,
+      "p99_latency_us": 8.71,
+      "throughput_ops_sec": 149334
+    }
+  },
+  "sensitivity_grid": [
+    {
+      "theta": 1.0,
+      "F1": 50.65,
+      "Precision": 33.92,
+      "Recall": 100.0,
+      "FAR": 70.69
+    },
+    {
+      "theta": 1.5,
+      "F1": 65.41,
+      "Precision": 48.6,
+      "Recall": 100.0,
+      "FAR": 38.36
+    },
+    {
+      "theta": 2.0,
+      "F1": 70.22,
+      "Precision": 54.11,
+      "Recall": 100.0,
+      "FAR": 30.77
+    },
+    {
+      "theta": 2.5,
+      "F1": 70.74,
+      "Precision": 54.73,
+      "Recall": 100.0,
+      "FAR": 30.01
+    },
+    {
+      "theta": 3.0,
+      "F1": 70.87,
+      "Precision": 54.89,
+      "Recall": 100.0,
+      "FAR": 29.82
+    },
+    {
+      "theta": 3.5,
+      "F1": 70.93,
+      "Precision": 54.95,
+      "Recall": 100.0,
+      "FAR": 29.74
+    },
+    {
+      "theta": 4.0,
+      "F1": 70.98,
+      "Precision": 55.01,
+      "Recall": 100.0,
+      "FAR": 29.67
+    }
+  ]
+}
