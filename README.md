@@ -223,7 +223,7 @@ $$	ext{PI}_{95}(h) = t_{0.025, 8} \cdot s_e \cdot \sqrt{1 + rac{1}{n} + rac{(h
 11. **Phase 11 (5 萬字學術碩士論文構建與圖表數據鏈, Prompt 209~224)**：產出 50,000 字論文全文、21 張高解析學術圖表、22 張三線表與水頭損失推導。
 12. **Phase 12 (雙層 Fab/CUB 空間拓撲與口試防線全方位完善, Prompt 225~228)**：融入頂樓排氣、6F 風管、側邊 HPM/MAU 及 CUB 大樓；化解 P0/P1/P2 所有送審風險，建構 30 題標準答辯手冊。
 13. **Phase 13 (30 題口試防線打散融入各章節與正式規模鎖定, Prompt 229~230)**：將 30 道教授最苛刻質詢全數打散有機融入第一章至第五章；鎖定 160 PT (40001~40160) 正式規模；建立表 5-1 交叉對照索引；附錄 C 收錄開發與除錯總成。
-14. **Phase 14 (論文黑白印刷純白底／純黑字介面重構與中英 README 總成, Prompt 231~232)**：全面重構 Web SCADA 前端為高對比純白底（#ffffff）、深色字（純黑 #000000）；上方功能按鈕全面配置實體邊框；P&ID 圖紙化適配學術雙面黑白雷射印刷裝訂；全套中英文 README、prompt 01-232.md 與 debug 01-067.md 完整總成。
+14. **Phase 14 (論文黑白印刷純白底／純黑字介面重構與中英 README 總成, Prompt 231~235)**：全面重構 Web SCADA 前端為高對比純白底（#ffffff）、深色字（純黑 #000000）；上方功能按鈕全面配置實體邊框；P&ID 圖紙化適配學術雙面黑白雷射印刷裝訂；全套中英文 README、prompt 01-235.md 與 debug 01-070.md 完整總成。
 
 ---
 
@@ -249,7 +249,7 @@ $$	ext{PI}_{95}(h) = t_{0.025, 8} \cdot s_e \cdot \sqrt{1 + rac{1}{n} + rac{(h
 | **Prompt 225 - 226** | 雙層 Fab (5F/3F 主無塵室, 4F/2F Subfab) 與 CUB/排氣/HPM/MAU 拓撲升級 | `fig_fab_vertical_layout.png`, 表 1-1 |
 | **Prompt 227 - 228** | 全面落實送審策略、完善 P0/P1/P2 風險、雙向外推公式、中英文 README | `PCW 論文 20261101 0800.docx`, README.md |
 | **Prompt 229 - 230** | 30 題口試防線打散融入論文各章節、建立表 5-1、全套中英 README 歸檔 | `build_perfect_thesis.py`, README.md |
-| **Prompt 231 - 232** | 論文黑白印刷純白底／純黑字介面重構、上方按鈕邊框化、Prompt/Debug 總成 | `update_frontend_white_theme.py`, `prompt 01-232.md` |
+| **Prompt 231 - 232** | 論文黑白印刷純白底／純黑字介面重構、上方按鈕邊框化、Prompt/Debug 總成 | `update_frontend_white_theme.py`, `prompt 01-235.md` |
 
 ---
 
@@ -265,6 +265,9 @@ $$	ext{PI}_{95}(h) = t_{0.025, 8} \cdot s_e \cdot \sqrt{1 + rac{1}{n} + rac{(h
 7. **時間視窗邊界差一 (Off-by-One)**：形式化證明半開區間 $[t-70, t-10)$ 包含離散點 $P_{t-70}\dots P_{t-11}$ 共 60 點，消除 1 分鐘時序偏移（Debug Event 064）。
 8. **正式實作規模混淆 (320 PT vs 160 PT)**：徹底釐清並鎖定 160 PT / 256 感測器正式基準，將 320 PT 明確轉化為歷史規劃澄清（Debug Event 065）。
 9. **論文印刷深黑底色碳粉溢染與反白數值隱形**：全面將 SCADA HMI 切換為高對比純白底（#ffffff）與純黑字（#000000），上方導覽列改為帶邊框按鈕，修復 P&ID 泡泡數值在白底下之反白 Bug（Debug Event 066）。
+10. **深色內嵌樣式殘留深層排查**：全面清查排除 `HistorianTrend.tsx` 抽屜 `#111`、`ActiveAlarms.tsx` 診斷遮罩 `rgba(0,0,0,0.2)`、`PredictionT30.tsx` 表頭邊框 `#555/#444`，實現 100% 純白無暗色殘留（Debug Event 068）。
+11. **P&ID 幾何儀表符號與黑白列印雙通道警報線型**：導入國際規範之 PT 圓形 `○`、FT 方形 `□`、DP 雙同心圓 `◎`；正常為細實線、預警為 2.5px 粗虛線、警報為實心反白黑底白字；P&ID 頂部常駐印刷圖例列（Debug Event 069）。
+12. **GitHub 遠端推送重定向、認證同步與 .gitignore 排除**：補齊 `.gitignore` 排除 `venv/`、`node_modules/`，同步遠端大小寫 URL 為 `https://github.com/benchen1981/PCW-SCADA-System.git`，成功推送 140 個檔案（Debug Event 070）。
 10. **macOS Vite 本地自動化子代理 IPv6/IPv4 連線拒絕**：統一端點為 `http://localhost:5173/`，解決雙棧解析問題，自動化替換論文所有最新純白截圖（Debug Event 067）。
 
 ---

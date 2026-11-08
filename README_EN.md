@@ -317,7 +317,7 @@ All 30 defense questions have been dissolved into the thesis narrative:
 ├── README_EN.md                               # [English Edition] Standalone English Documentation
 ├── prompt_001-228.md                          # 232 Development Prompts & Architecture Milestones
 ├── prompt 01-228.md                           # Synced Prompt Archive
-├── debug_001-065.md                           # 67 Debug Events & Root-Cause Analysis
+├── debug_001-065.md                           # 70 Debug Events & Root-Cause Analysis
 ├── debug 01-065.md                            # Synced Debug Archive
 ├── build_perfect_thesis.py                    # Master Thesis Generation Engine (21 Figs, 22 Tables, Q1~Q30)
 ├── apply_template_and_supplement.py           # Word & Markdown Thesis Typesetting Script
