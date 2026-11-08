@@ -1,0 +1,1934 @@
+{
+  "metadata": {
+    "total_runs": 160,
+    "pcw_systems_count": 8,
+    "sensors_tested": 16,
+    "test_iterations_per_sensor": 10,
+    "duration_per_run_min": 35,
+    "overall_prediction_success_rate": 95.0,
+    "drift_prediction_accuracy": 100.0,
+    "noise_rejection_rate": 100.0
+  },
+  "sensor_summaries": {
+    "PCW01_PT_01_S": {
+      "system": "PCW01",
+      "pos": "SUPPLY",
+      "base": 2.2,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        13.0,
+        17.0,
+        18.0,
+        16.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 22,
+          "hard_alarm_min": null,
+          "lead_time": 13.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-20"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 15,
+          "hard_alarm_min": null,
+          "lead_time": 20.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW01_PT_02_R": {
+      "system": "PCW01",
+      "pos": "RETURN",
+      "base": 1.7,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        14.0,
+        17.0,
+        21.0,
+        18.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 21,
+          "hard_alarm_min": null,
+          "lead_time": 14.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 14,
+          "hard_alarm_min": null,
+          "lead_time": 21.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 26,
+          "hard_alarm_min": null,
+          "lead_time": 9.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW02_PT_01_S": {
+      "system": "PCW02",
+      "pos": "SUPPLY",
+      "base": 2.2,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        12.0,
+        16.0,
+        18.0,
+        9.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 23,
+          "hard_alarm_min": null,
+          "lead_time": 12.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 26,
+          "hard_alarm_min": null,
+          "lead_time": 9.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW02_PT_02_R": {
+      "system": "PCW02",
+      "pos": "RETURN",
+      "base": 1.7,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        10.0,
+        16.0,
+        18.0,
+        10.0,
+        16.0,
+        18.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 25,
+          "hard_alarm_min": null,
+          "lead_time": 10.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 25,
+          "hard_alarm_min": null,
+          "lead_time": 10.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-20"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW03_PT_01_S": {
+      "system": "PCW03",
+      "pos": "SUPPLY",
+      "base": 2.1,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        14.0,
+        16.0,
+        18.0,
+        13.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 21,
+          "hard_alarm_min": null,
+          "lead_time": 14.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 22,
+          "hard_alarm_min": null,
+          "lead_time": 13.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 28,
+          "hard_alarm_min": null,
+          "lead_time": 7.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW03_PT_02_R": {
+      "system": "PCW03",
+      "pos": "RETURN",
+      "base": 1.65,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        9.0,
+        16.0,
+        18.0,
+        13.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 26,
+          "hard_alarm_min": null,
+          "lead_time": 9.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 22,
+          "hard_alarm_min": null,
+          "lead_time": 13.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 12,
+          "hard_alarm_min": null,
+          "lead_time": 23.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW04_PT_01_S": {
+      "system": "PCW04",
+      "pos": "SUPPLY",
+      "base": 2.1,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        14.0,
+        17.0,
+        18.0,
+        16.0,
+        19.0,
+        20.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 21,
+          "hard_alarm_min": null,
+          "lead_time": 14.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 16,
+          "hard_alarm_min": null,
+          "lead_time": 19.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 15,
+          "hard_alarm_min": null,
+          "lead_time": 20.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW04_PT_02_R": {
+      "system": "PCW04",
+      "pos": "RETURN",
+      "base": 1.65,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        20.0,
+        17.0,
+        19.0,
+        12.0,
+        16.0,
+        20.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 15,
+          "hard_alarm_min": null,
+          "lead_time": 20.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 16,
+          "hard_alarm_min": null,
+          "lead_time": 19.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 23,
+          "hard_alarm_min": null,
+          "lead_time": 12.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-20"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 15,
+          "hard_alarm_min": null,
+          "lead_time": 20.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 35,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW05_PT_01_S": {
+      "system": "PCW05",
+      "pos": "SUPPLY",
+      "base": 2.0,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        13.0,
+        17.0,
+        18.0,
+        14.0,
+        17.0,
+        19.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 22,
+          "hard_alarm_min": null,
+          "lead_time": 13.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 21,
+          "hard_alarm_min": null,
+          "lead_time": 14.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 16,
+          "hard_alarm_min": null,
+          "lead_time": 19.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 16,
+          "hard_alarm_min": null,
+          "lead_time": 19.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW05_PT_02_R": {
+      "system": "PCW05",
+      "pos": "RETURN",
+      "base": 1.6,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        18.0,
+        17.0,
+        18.0,
+        15.0,
+        16.0,
+        18.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 20,
+          "hard_alarm_min": null,
+          "lead_time": 15.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW06_PT_01_S": {
+      "system": "PCW06",
+      "pos": "SUPPLY",
+      "base": 2.0,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        15.0,
+        16.0,
+        18.0,
+        15.0,
+        16.0,
+        18.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 20,
+          "hard_alarm_min": null,
+          "lead_time": 15.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 20,
+          "hard_alarm_min": null,
+          "lead_time": 15.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW06_PT_02_R": {
+      "system": "PCW06",
+      "pos": "RETURN",
+      "base": 1.6,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        10.0,
+        17.0,
+        18.0,
+        10.0,
+        19.0,
+        18.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 25,
+          "hard_alarm_min": null,
+          "lead_time": 10.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-20"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 25,
+          "hard_alarm_min": null,
+          "lead_time": 10.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 16,
+          "hard_alarm_min": null,
+          "lead_time": 19.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW07_PT_01_S": {
+      "system": "PCW07",
+      "pos": "SUPPLY",
+      "base": 1.9,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        10.0,
+        16.0,
+        19.0,
+        18.0,
+        16.0,
+        18.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 25,
+          "hard_alarm_min": null,
+          "lead_time": 10.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 16,
+          "hard_alarm_min": null,
+          "lead_time": 19.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW07_PT_02_R": {
+      "system": "PCW07",
+      "pos": "RETURN",
+      "base": 1.5,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        11.0,
+        17.0,
+        18.0,
+        13.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 24,
+          "hard_alarm_min": null,
+          "lead_time": 11.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 22,
+          "hard_alarm_min": null,
+          "lead_time": 13.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 21,
+          "hard_alarm_min": null,
+          "lead_time": 14.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW08_PT_01_S": {
+      "system": "PCW08",
+      "pos": "SUPPLY",
+      "base": 1.9,
+      "span": 0.40000000000000013,
+      "test_count": 10,
+      "prediction_hits": 9,
+      "alarm_hits": 0,
+      "lead_times": [
+        15.0,
+        17.0,
+        18.0,
+        15.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 1,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 20,
+          "hard_alarm_min": null,
+          "lead_time": 15.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 20,
+          "hard_alarm_min": null,
+          "lead_time": 15.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": true,
+          "first_pred_min": 28,
+          "hard_alarm_min": null,
+          "lead_time": 7.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    },
+    "PCW08_PT_02_R": {
+      "system": "PCW08",
+      "pos": "RETURN",
+      "base": 1.5,
+      "span": 0.3999999999999999,
+      "test_count": 10,
+      "prediction_hits": 10,
+      "alarm_hits": 0,
+      "lead_times": [
+        20.0,
+        16.0,
+        18.0,
+        16.0,
+        17.0,
+        18.0
+      ],
+      "false_alarms": 0,
+      "test_details": [
+        {
+          "iteration": 1,
+          "fault": "DRIFT_UP",
+          "desc": "Standard slow drift up (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 15,
+          "hard_alarm_min": null,
+          "lead_time": 20.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 2,
+          "fault": "DRIFT_UP",
+          "desc": "Moderate drift up (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-20"
+        },
+        {
+          "iteration": 3,
+          "fault": "DRIFT_UP",
+          "desc": "Fast drift up (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 4,
+          "fault": "DRIFT_DOWN",
+          "desc": "Standard slow drift down (1.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 19,
+          "hard_alarm_min": null,
+          "lead_time": 16.0,
+          "final_state": "T-30"
+        },
+        {
+          "iteration": 5,
+          "fault": "DRIFT_DOWN",
+          "desc": "Moderate drift down (1.5% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 18,
+          "hard_alarm_min": null,
+          "lead_time": 17.0,
+          "final_state": "T-20"
+        },
+        {
+          "iteration": 6,
+          "fault": "DRIFT_DOWN",
+          "desc": "Fast drift down (2.0% span/min)",
+          "pred_hit": true,
+          "first_pred_min": 17,
+          "hard_alarm_min": null,
+          "lead_time": 18.0,
+          "final_state": "T-10"
+        },
+        {
+          "iteration": 7,
+          "fault": "STEP",
+          "desc": "Sudden step jump (+25% span, HI breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 8,
+          "fault": "STEP",
+          "desc": "Sudden step drop (-25% span, LO breach)",
+          "pred_hit": true,
+          "first_pred_min": 11,
+          "hard_alarm_min": null,
+          "lead_time": 24.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 9,
+          "fault": "SPIKE",
+          "desc": "High-intensity transient noise spikes (p=0.08)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        },
+        {
+          "iteration": 10,
+          "fault": "OSCILLATION",
+          "desc": "Periodic resonant chattering oscillation (T=8min)",
+          "pred_hit": false,
+          "first_pred_min": null,
+          "hard_alarm_min": null,
+          "lead_time": 0.0,
+          "final_state": "NORMAL"
+        }
+      ]
+    }
+  }
+}
