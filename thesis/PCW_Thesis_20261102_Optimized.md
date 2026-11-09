@@ -143,30 +143,30 @@ $$
 
 **表 3-1　研究對象與系統實體拓撲配置清冊**
 
-| 系統代碼 | 安裝樓層分區 | 對應製程區域與設備 | PT 基準 (Baseline) | FT 基準 (Baseline) | DP 基準 (Baseline) || --- | --- | --- | --- | --- | --- || PCW01 | 5F Cleanroom / 4F Subfab | EUV 微影極紫外光核心 (G1) | 1.50 bar | 180 L/min | 0.30 bar || PCW02 | 5F Cleanroom / 4F Subfab | 浸潤式 DUV 微影機台 (G1) | 1.50 bar | 180 L/min | 0.30 bar || PCW03 | 3F Cleanroom / 2F Subfab | 高深寬比電漿蝕刻機台 (G2) | 1.90 bar | 180 L/min | 0.30 bar || PCW04 | 3F Cleanroom / 2F Subfab | 原子層沉積 ALD/CVD (G2) | 1.90 bar | 180 L/min | 0.30 bar || PCW05 | 3F Cleanroom / 2F Subfab | 化學機械研磨 CMP 系統 (G3) | 2.50 bar | 260 L/min | 0.30 bar || PCW06 | 3F Cleanroom / 2F Subfab | 高精密離子植入機台 (G3) | 2.50 bar | 260 L/min | 0.30 bar || PCW07 | 1F Utility / B1F Plant | 乾式真空水泵及洗滌塔 (G4) | 2.20 bar | 240 L/min | 0.30 bar || PCW08 | 1F Utility / B1F Plant | 射頻 RF 電源櫃與輔助設備 (G4) | 2.20 bar | 240 L/min | 0.30 bar |
+| 系統代碼 | 安裝樓層分區 | 對應製程區域與設備 | PT 基準 (Baseline) | FT 基準 (Baseline) | DP 基準 (Baseline) || --- | --- | --- | --- | --- | --- || PCW01 | 2F Cleanroom | EUV 微影極紫外光核心 (G1) | 1.50 bar | 180 L/min | 0.30 bar || PCW02 | 2F Cleanroom | 浸潤式 DUV 微影機台 (G1) | 1.50 bar | 180 L/min | 0.30 bar || PCW03 | 1F Sub-Fab | 高深寬比電漿蝕刻機台 (G2) | 1.90 bar | 180 L/min | 0.30 bar || PCW04 | 1F Sub-Fab | 原子層沉積 ALD/CVD (G2) | 1.90 bar | 180 L/min | 0.30 bar || PCW05 | 1F Sub-Fab | 化學機械研磨 CMP 系統 (G3) | 2.50 bar | 260 L/min | 0.30 bar || PCW06 | 1F Sub-Fab | 高精密離子植入機台 (G3) | 2.50 bar | 260 L/min | 0.30 bar || PCW07 | CUB | 乾式真空水泵及洗滌塔 (G4) | 2.20 bar | 240 L/min | 0.30 bar || PCW08 | CUB | 射頻 RF 電源櫃與輔助設備 (G4) | 2.20 bar | 240 L/min | 0.30 bar |
 
 ![圖 3-1：Web SCADA 次幹管路（Submain）P&ID 水力監控與供回水測點配置圖](file:///Users/benchen1981/Downloads/Web SCADA/優化/截圖 2026-10-10 下午1.33.01.png)
 *圖 3-1：Web SCADA 次幹管路（Submain）P&ID 水力監控與供回水測點配置圖*
 
 ## 3.2 雙層 Fab 8 套 PCW 系統分組與工程警報限值
 
-半導體廠務冷卻水管網之水力特性與散熱需求因製程不同而異。本研究將 8 套 PCW 系統依製程要求劃分為 G1～G4 四大參數群組。每個群組設定了嚴格的 Baseline 運轉基準值與 HIHI/HI/LO/LOLO 工程警報限值。門檻值如何決定？：門檻設定嚴格依據晶圓機台熱交換器原廠規格書（Equipment Heat Exchanger Spec）與廠務操作 SOP，具有明確之工程物理意義，並於設定表中完整記錄單位、適用 Tag 與版本。如表 3-2 至 3-4 所列，PT 壓力、FT 流量及 DP 供回水差壓均具有明確之物理限值定義。
+半導體廠務冷卻水管網之水力特性與散熱需求因製程不同而異。本研究將 8 套 PCW 系統依製程要求劃分為 G1～G4 四大參數群組。每個群組設定了嚴格的 Baseline 運轉基準值與 HIHI/HI/LO/LOLO 工程警報限值。門檻設定嚴格依據晶圓機台熱交換器原廠規格書（Equipment Heat Exchanger Spec）與廠務操作 SOP，具有明確之工程物理意義，並於設定表中完整記錄單位、適用 Tag 與版本。如表 3-2 至 3-4 所列，PT 壓力、FT 流量及 DP 供回水差壓均具有明確之物理限值定義。
 
 **表 3-2　PT 壓力傳送器工程警報限值與 Baseline 正式設定表**
 
-| 群組代碼 | 涵蓋系統 | 監控對象 | LOLO (bar) | LO (bar) | Baseline (bar) | HI (bar) | HIHI (bar) || --- | --- | --- | --- | --- | --- | --- | --- || G1 | PCW01, PCW02 (5F/4F) | 所有 PT Sensor | 1.20 | 1.30 | 1.50 | 1.70 | 1.80 || G2 | PCW03, PCW04 (3F/2F) | 所有 PT Sensor | 1.50 | 1.70 | 1.90 | 2.10 | 2.20 || G3 | PCW05, PCW06 (3F/2F) | 所有 PT Sensor | 2.20 | 2.30 | 2.50 | 2.70 | 2.80 || G4 | PCW07, PCW08 (1F/B1) | 所有 PT Sensor | 1.90 | 2.00 | 2.20 | 2.40 | 2.50 |
+| 群組代碼 | 涵蓋系統 | 監控對象 | LOLO (bar) | LO (bar) | Baseline (bar) | HI (bar) | HIHI (bar) || --- | --- | --- | --- | --- | --- | --- | --- || G1 | PCW01, PCW02 (2F Cleanroom) | 所有 PT Sensor | 1.20 | 1.30 | 1.50 | 1.70 | 1.80 || G2 | PCW03, PCW04 (1F Sub-Fab) | 所有 PT Sensor | 1.50 | 1.70 | 1.90 | 2.10 | 2.20 || G3 | PCW05, PCW06 (1F Sub-Fab) | 所有 PT Sensor | 2.20 | 2.30 | 2.50 | 2.70 | 2.80 || G4 | PCW07, PCW08 (CUB) | 所有 PT Sensor | 1.80 | 1.90 | 2.10 | 2.30 | 2.40 |
 
 **表 3-3　FT 流量計工程警報限值與 Baseline 正式設定表**
 
-| 群組代碼 | 涵蓋系統 | 監控對象 | LOLO (L/min) | LO (L/min) | Baseline (L/min) | HI (L/min) | HIHI (L/min) || --- | --- | --- | --- | --- | --- | --- | --- || G1 | PCW01, PCW02 (5F/4F) | 所有 FT Sensor | 150 | 160 | 180 | 200 | 220 || G2 | PCW03, PCW04 (3F/2F) | 所有 FT Sensor | 150 | 160 | 180 | 200 | 220 || G3 | PCW05, PCW06 (3F/2F) | 所有 FT Sensor | 230 | 240 | 260 | 280 | 300 || G4 | PCW07, PCW08 (1F/B1) | 所有 FT Sensor | 200 | 220 | 240 | 260 | 280 |
+| 群組代碼 | 涵蓋系統 | 監控對象 | LOLO (L/min) | LO (L/min) | Baseline (L/min) | HI (L/min) | HIHI (L/min) || --- | --- | --- | --- | --- | --- | --- | --- || G1 | PCW01, PCW02 (2F Cleanroom) | 所有 FT Sensor | 150 | 160 | 180 | 200 | 220 || G2 | PCW03, PCW04 (1F Sub-Fab) | 所有 FT Sensor | 150 | 160 | 180 | 200 | 220 || G3 | PCW05, PCW06 (1F Sub-Fab) | 所有 FT Sensor | 230 | 240 | 260 | 280 | 300 || G4 | PCW07, PCW08 (CUB) | 所有 FT Sensor | 200 | 220 | 240 | 260 | 280 |
 
 **表 3-4　DP 供回水差壓工程警報限值設定表 (差壓偏高代表阻抗過大)**
 
-| 群組代碼 | 涵蓋系統 | 監控對象 | 正常基準 DP (bar) | DP HI 門檻 (bar) | DP HIHI 門檻 (bar) | 工程異常診斷含義 || --- | --- | --- | --- | --- | --- | --- || G1 | PCW01, PCW02 (5F/4F) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | 微影機台濾網阻塞 / 供回水水力失衡 || G2 | PCW03, PCW04 (3F/2F) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | 蝕刻機冷卻盤結垢 / 阻抗異常升高 || G3 | PCW05, PCW06 (3F/2F) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | CMP 研磨液熱交換器阻塞 / 壓降異常 || G4 | PCW07, PCW08 (1F/B1) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | 真空泵保護閥半閉 / 流量受阻過熱 |
+| 群組代碼 | 涵蓋系統 | 監控對象 | 正常基準 DP (bar) | DP HI 門檻 (bar) | DP HIHI 門檻 (bar) | 工程異常診斷含義 || --- | --- | --- | --- | --- | --- | --- || G1 | PCW01, PCW02 (2F Cleanroom) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | 微影機台濾網阻塞 / 供回水水力失衡 || G2 | PCW03, PCW04 (1F Sub-Fab) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | 蝕刻機冷卻盤結垢 / 阻抗異常升高 || G3 | PCW05, PCW06 (1F Sub-Fab) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | CMP 研磨液熱交換器阻塞 / 壓降異常 || G4 | PCW07, PCW08 (CUB) | 所有 DP Sensor | 0.30 | 0.50 | 0.60 | 真空泵保護閥半閉 / 流量受阻過熱 |
 
 ## 3.3 Modbus TCP 模擬資料架構與暫存器映射核對
 
-在真實半導體晶圓廠環境中，受限於商業機密、保密協定（NDA）及極端故障罕見發生之客觀現實，研究團隊無法在產線上關閉閥門進行破壞性測試。因此，本研究嚴格依據真實廠務 PLC 規範開發了高擬真 Modbus TCP 模擬引擎。模擬器產生之時序信號基於物理水力方程與隨機擾動模型合成：
+考量半導體連續製程運轉安全性與極端故障罕見性，本研究依據真實廠務 PLC 規範與水力管網物理特性，建置工業級 Modbus TCP 時序模擬架構。模擬器產生之時序信號基於物理水力方程與隨機擾動模型合成：
 
 $$
 x(t) = P_{\text{base}} + A \cdot \sin\left( \frac{2\pi t}{T} \right) + \epsilon(t) + \delta_{\text{fault}}(t), \quad \epsilon(t) \sim \mathcal{N}(0, \sigma^2) \tag{3-5}
@@ -203,7 +203,7 @@ $$
 \bar{P}_{\text{base}}(t) = \frac{1}{N_B} \sum_{i=0}^{N_B-1} P_{t-10-i}, \quad N_B = 60 \tag{3-7}
 $$
 
-為什麼使用 60 分鐘作為歷史基準？：在半導體水力系統中，60 分鐘正好涵蓋冷卻水管網 2 個完整的熱慣性平衡週期（通常約 20～30 分鐘一循環），能有效平滑隨機白雜訊，同時維持對微弱基準偏移之敏銳度。
+在半導體水力系統中，60 分鐘正好涵蓋冷卻水管網 2 個完整的熱慣性平衡週期（通常約 20～30 分鐘一循環），能有效平滑隨機白雜訊，同時維持對微弱基準偏移之敏銳度。
 
 • 前期視窗 \mathcal{W}_{\text{prior}} (Prior Window)：採半開區間 [t-10, t-5)，包含離散取樣點 \{P_{t-10}, P_{t-9}, P_{t-8}, P_{t-7}, P_{t-6}\}，總樣本數為 N_P = 5。
 
@@ -219,7 +219,7 @@ $$
 d(t) = \operatorname{sgn}(S(t)) = \begin{cases} +1, & \text{若 } S(t) \ge 0 \text{ (正向漂移)} \\ -1, & \text{若 } S(t) < 0 \text{ (負向漂移)} \end{cases} \tag{3-9}
 $$
 
-【參考視窗污染防護機制】：如何避免參考視窗被異常資料污染？系統建立嚴格的異常隔離規則：當某一測點處於固定警報或預測 EVENT 期間時，該段數據被標記為不良品質，推論引擎凍結基準更新；待故障排除且連續 30 分鐘數值平穩落於安全帶後，方才重新啟動歷史基準滑動，杜絕基準漂移污染。所有特徵完全依託推論當下已可取得之歷史數據，絕不使用未來數據（Past-Only，原 Q16）。
+【參考視窗污染防護機制】：系統建立嚴格的異常隔離規則：當某一測點處於固定警報或預測 EVENT 期間時，該段數據被標記為不良品質，推論引擎凍結基準更新；待故障排除且連續 30 分鐘數值平穩落於安全帶後，方才重新啟動歷史基準滑動，杜絕基準漂移污染。所有特徵完全依託推論當下已可取得之歷史數據，絕不使用未來數據（Past-Only，原 Q16）。
 
 ### 3.4.2　Drift Detection：異常密度比值模型 (Algorithm 1: DW-ADE) 數學推導與二項分佈檢定
 
@@ -282,7 +282,7 @@ Output: 異常密度比值 N_10, 局部斜率 S, 漂移旗標 is_drift, 統計 p
 
 ### 3.4.3　Forecast：雙向對稱 OLS 動態外推、95% 信賴漏斗錐與閉式 TTL 解 (Algorithm 2)
 
-趨勢預測模型對近期序列採用普通最小平方法（OLS）進行局部回歸。局部線性外推預測未來的物理依據何在？：在流體力學中，微小洩漏擴大或微濾網淤積在短時間尺度（10～30 分鐘）內屬於緩慢演變的準穩態過程（Quasi-Steady Process），其流動阻抗遵循局部一階導數展開。本系統外推嚴格限制在 30 分鐘黃金處置窗口內，不進行跨小時的長程外推；一旦發生劇烈階躍非線性變化，即由 Layer 5 事件隔離邏輯即刻收斂至 EVENT 狀態。
+趨勢預測模型對近期序列採用普通最小平方法（OLS）進行局部回歸。在流體力學中，微小洩漏擴大或微濾網淤積在短時間尺度（10～30 分鐘）內屬於緩慢演變的準穩態過程（Quasi-Steady Process），其流動阻抗遵循局部一階導數展開。本系統外推嚴格限制在 30 分鐘黃金處置窗口內，不進行跨小時的長程外推；一旦發生劇烈階躍非線性變化，即由 Layer 5 事件隔離邏輯即刻收斂至 EVENT 狀態。
 
 設時間自變數向量 \mathbf{t} = [-9, -8, \dots, 0]^T，觀測值向量 \mathbf{y} = [x_{t-9}, \dots, x_t]^T。設計矩陣 \mathbf{X} 與正規方程式（Normal Equations）矩陣形式解為：
 
@@ -304,7 +304,7 @@ $$
 
 其中自由度 df = n - 2 = 8，\alpha = 0.05 時臨界值 t_{8, 0.975} \approx 2.306。此方程式精確刻畫了外推預測不確定性隨預測視界 h 延伸而呈雙曲線發散之幾何物理特性，形成 95% 統計信賴漏斗錐。
 
-【高壓與低壓雙向對稱預測公式與 TTL 閉式解】：為解決高低壓不對稱預測之重大審查風險，本研究嚴格定義雙向對稱公式：
+【高壓與低壓雙向對稱預測公式與 TTL 閉式解】：模型定義雙向對稱外推公式：
 
 $$
 \text{TTL}^+ = \frac{L_{\text{HI}} - P_t}{\hat{\beta}_1} \quad (\text{若 } \hat{\beta}_1 > 0), \qquad \text{TTL}^- = \frac{P_t - L_{\text{LO}}}{|\hat{\beta}_1|} \quad (\text{若 } \hat{\beta}_1 < 0) \tag{3-18}
@@ -398,7 +398,7 @@ Output: 收斂硬化狀態 state_final, 融合風險指數 RiskIndex, 歷史抑�
 
 ## 3.6 前端歷史趨勢渲染之 Spike-Preserving MinMax 降採樣演算法
 
-在長時程歷史趨勢分析中，若直接將 100,000 個原始點送入前端 Canvas 繪製，將導致記憶體佔用飆升至數百兆位元組，瀏覽器主線程凍結長達近 1 秒。本研究研發了「Spike-Preserving MinMax Bucket 降採樣演算法」。演算法為何能保證 100% 突波保真？：傳統等距抽取（Stride Sampling）每隔 K 點抽一點，極易跳過僅持續數秒之水錘突波（保留率為 0.0%）；MinMax 演算法給定原始序列 X = {x_1, ..., x_N} 與目標桶數 K（例如 1000 桶），在每個區間 [s_m, e_m] 內，遍歷搜尋並保留局部最小值點與局部最大值點，並維持兩者出現之時間先後順序輸出。計算複雜度為嚴格的 O(N) 線性時間，在 Apple M 系列晶片上處理 100,000 個數據點耗時僅 0.179ms，Canvas 繪製耗時自 980ms 降至 16ms，前端記憶體開銷降至 38MB，使 Web SCADA 在任何工業終端上皆能維持滿幀 60 FPS 順暢縮放，且極端水錘突波保真度達 100.0%。
+在長時程歷史趨勢分析中，若直接將 100,000 個原始點送入前端 Canvas 繪製，將導致記憶體佔用飆升至數百兆位元組，瀏覽器主線程凍結長達近 1 秒。本研究研發了「Spike-Preserving MinMax Bucket 降採樣演算法」。傳統等距抽取（Stride Sampling）每隔 K 點抽一點，極易跳過僅持續數秒之水錘突波（保留率為 0.0%）；MinMax 演算法給定原始序列 X = {x_1, ..., x_N} 與目標桶數 K（例如 1000 桶），在每個區間 [s_m, e_m] 內，遍歷搜尋並保留局部最小值點與局部最大值點，並維持兩者出現之時間先後順序輸出。計算複雜度為嚴格的 O(N) 線性時間，在 Apple M 系列晶片上處理 100,000 個數據點耗時僅 0.179ms，Canvas 繪製耗時自 980ms 降至 16ms，前端記憶體開銷降至 38MB，使 Web SCADA 在任何工業終端上皆能維持滿幀 60 FPS 順暢縮放，且極端水錘突波保真度達 100.0%。
 
 ## 3.7 多層級水力異常評估機制 (Multi-Level Anomaly Assessment)
 
@@ -406,7 +406,7 @@ Output: 收斂硬化狀態 state_final, 融合風險指數 RiskIndex, 歷史抑�
 
 【第一層級：PT 測點級 (Sensor Tier)】：獨立監控單支 PT 壓力傳送器，計算 BaseAvg60、Slope、N10、Forecast_h 及 TTL，標記單點之健康狀態與剩餘時間。單一 PT 測點異常絕不代表整套 PCW 系統異常。
 
-【第二層級：Branch 次幹管分支差壓級 (Submain Branch Tier)】：將同一組次幹管之供水傳送器 P_supply 與回水傳送器 P_return 進行物理配對，計算即時供回水差壓 DP = P_supply - P_return。差壓 DP 如何精確區隔濾網阻塞與管件洩漏？：依據管網阻抗 Delta_P = R * Q²。若機台濾網積垢，微通道阻抗 R 增大，供回水差壓顯著升高（DP > HI）；若發生旁通短路、減壓閥破損或管件破裂，水流走捷徑，供回水差壓急遽跌落（DP < LO）。透過單一 DP 指標即可在物理上完美區隔兩類相反的機械故障。
+【第二層級：Branch 次幹管分支差壓級 (Submain Branch Tier)】：將同一組次幹管之供水傳送器 P_supply 與回水傳送器 P_return 進行物理配對，計算即時供回水差壓 DP = P_supply - P_return。依據管網阻抗 Delta_P = R * Q²。若機台濾網積垢，微通道阻抗 R 增大，供回水差壓顯著升高（DP > HI）；若發生旁通短路、減壓閥破損或管件破裂，水流走捷徑，供回水差壓急遽跌落（DP < LO）。透過單一 DP 指標即可在物理上完美區隔兩類相反的機械故障。
 
 【第三層級：PCW 全系統級 (System Tier)】：聚合各套 PCW 下屬 10 組次幹管之整體水力狀態。若僅有 1 組分支發生 DP 異常，判定為局部機台端異常（Local Anomaly）；若同一套 PCW 有超過 3 組以上分支同時出現同向壓力衰退或供水總幹管流量 FT 驟降，系統自動升級為「全系統級水力失衡警示（Systemic Header Anomaly）」，指示二次側主水泵氣蝕故障或一次側冰水供應受阻。
 
@@ -414,7 +414,7 @@ Output: 收斂硬化狀態 state_final, 融合風險指數 RiskIndex, 歷史抑�
 
 ## 4.1 實驗環境體系與真實執行軟硬體規格
 
-為全面回應學術審查對實驗真實性與可重現性之嚴格挑戰，本研究建置了完整的邊緣運算與工業軟硬體回圈實測環境。實驗嚴格禁止純概念性之無數據宣稱，所有指標均基於真實程式碼執行、計時器採樣與實時推論日誌精算。系統硬體、作業系統、執行期及資料庫規格如表 4-1 所示。
+本研究建置完整之邊緣運算與工業軟硬體回圈實測環境，所有評估數據均基於實體主機執行採樣、計時器高精度量測與推論日誌計算。系統硬體、作業系統、執行期及資料庫規格如表 4-1 所示。
 
 **表 4-1　實驗環境軟硬體規格、作業系統、資料庫與測試資料集參數清冊**
 
@@ -422,7 +422,7 @@ Output: 收斂硬化狀態 state_final, 融合風險指數 RiskIndex, 歷史抑�
 
 ## 4.2 評估指標體系與四大基準對比模型
 
-針對教授所提出之評估指標嚴謹度要求，本研究建立涵蓋二元分類品質、工業可靠度、時間裕度及運算耗時之全方位評估體系。在每個推論評估點 t，將模型預測狀態與地面真值（Ground Truth）比對，計入混淆矩陣之真陽性 (TP)、假陽性 (FP)、假陰性 (FN) 及真陰性 (TN)。
+本研究建立涵蓋二元分類品質、工業可靠度、時間裕度及運算耗時之全方位量化評估體系。在每個推論評估點 t，將模型預測狀態與地面真值（Ground Truth）比對，計入混淆矩陣之真陽性 (TP)、假陽性 (FP)、假陰性 (FN) 及真陰性 (TN)。
 
 各項量化評估指標之正式數學定義如下：
 
@@ -550,7 +550,7 @@ $$
 
 ## 4.8 超參數敏感度分析 (E1b & E3)
 
-針對口試審查常提之超參數選定依據，本研究開展了多維度敏感度分析：包括 N10 判定門檻 \theta in {1.5, 2.0, 2.5, 3.0}、跨度標準化閘門 g in {2.5%, 5.0%, 10.0%}、以及歷史基準視窗 N_B in {30, 45, 60, 90, 120} 分鐘。圖 4-7 展示了參數敏感度分析結果，表 4-7 詳列了各組參數下之量化指標。
+為評估超參數對模型推論穩定性之影響，本研究執行多維度敏感度分析：包括 N10 判定門檻 \theta in {1.5, 2.0, 2.5, 3.0}、跨度標準化閘門 g in {2.5%, 5.0%, 10.0%}、以及歷史基準視窗 N_B in {30, 45, 60, 90, 120} 分鐘。圖 4-7 展示了參數敏感度分析結果，表 4-7 詳列了各組參數下之量化指標。
 
 ![圖 4-7：執行期參數敏感度分析（θ 門檻 × 跨度閘門 g 針對負樣本預警率與平均提前量之影響）](file:///Users/benchen1981/Downloads/Web SCADA/thesis/figures/fig_e3_sensitivity.png)
 *圖 4-7：執行期參數敏感度分析（θ 門檻 × 跨度閘門 g 針對負樣本預警率與平均提前量之影響）*
@@ -592,7 +592,7 @@ $$
 
 # 第五章　結論與未來展望
 
-## 5.1 研究成果、學術貢獻與發明專利核心權利要求
+## 5.1 研究成果與學術貢獻
 
 本研究針對先進半導體雙層晶圓廠 (Fab) 與中央廠務大樓 (CUB) 之全廠垂直公用管網架構，成功設計並落實了一套具備邊緣推論能力之 Web SCADA 早期預警與趨勢預測平台。研究成果與主要學術貢獻總結如下：
 
@@ -603,8 +603,6 @@ $$
 3. 突破 Web SCADA 渲染極限：研發 Spike-Preserving MinMax Bucket 降採樣演算法，實現 10 萬點歷史趨勢 0.179ms 處理、60 FPS 零延遲順暢可視化，且百分之百保留極限水錘突波。
 
 4. 構築生產級 7 層硬化防護網：建立資料品質閘門、跨度標準化門檻、OLS 95% 信賴錐、TTL 剩餘時間、事件隔離、ISA-18.2 防彈跳門閂及多維融合風險評分，在 132,600 次評估中達成零誤報之工程穩定性。
-
-【發明專利核心權利要求組合】：若本論文技術成果申請發明專利，其核心獨立項保護之特徵組合在於：一種結合雙層半導體無塵室垂直水力拓撲、嚴格 Past-Only 半開視窗因果約束之二項分佈 N10 異常密度檢定、具備 95% 信賴漏斗錐之雙向對稱 OLS 線性外推、7 層工業硬化防誤報防線、以及具備突波保留保真度之 Spike-Preserving MinMax 降採樣方法與 Web SCADA 邊緣推論系統。
 
 ## 5.2 四項研究問題 (RQ1~RQ4) 逐項回答與成果對應
 
@@ -645,14 +643,6 @@ $$
 ## 5.5 總結
 
 本論文成功整合了應用統計學、時間序列分析、工業物聯網串流通訊與現代 Web 前端架構，為半導體廠務製程冷卻水系統打造了一套高精度、可解釋且兼具極致渲染效能的 Web SCADA 早期預警平台。研究成果不僅在學術上為時序因果漂移偵測提供清晰之理論基石，更在工程上具備立即移植至真實晶圓廠運行、申請發明專利及參與高階競賽之完整實證實力。
-
-## 5.6 審查委員預詢問題（Q&A）與章節論據索引對照表
-
-為使參與口試與論文審查之教授委員及書審人員能迅速檢閱全論文對各大關鍵挑戰之科學論據，本節將十大最核心問題及正文詳細對應章節整理如表 5-1，所有核心疑慮均已於正文嚴格論證完畢。
-
-**表 5-1　審查委員最常提出之十大關鍵問題、技術答辯與論文正文對應索引表**
-
-| 編號 | 審查委員關鍵質詢題目 (Defense Question) | 論文正文論據與技術答辯要點 | 正文對應章節索引 || --- | --- | --- | --- || Q-01 | 本研究與傳統 SCADA 固定門檻警報有何本質差異？ | 傳統 SCADA 屬事後反應型（越限才警報，破壞已造成）；本系統著眼於正常安全帶內的微小行為偏移，利用 N10 統計檢定與 OLS 外推，在越限前平均爭取 23~237 分鐘處置時間，兩者本質互補。 | 第 1.1.2 節、表 1-2 || Q-02 | 為什麼優先採用統計推論而非直接上深度學習 (ML/DL)？ | 半導體廠極度缺乏標記故障樣本；統計模型推論耗時僅 12ms、具備 100% 物理可解釋性、無過擬合與黑盒子風險，最符合安全苛求（Safety-Critical）工業標準。ML/DL 列為 V2/V3 未來展望。 | 第 1.4 節、第 2.4 節 || Q-03 | 特徵工程如何確保絕對沒有資料洩漏 (No Data Leakage)？ | 嚴格劃分 [t-70, t-10) 基準期與近期視窗，推論時刻 t 僅使用截至 t 已產生的過去數據，嚴禁全時段全域標準化與中心移動平均，在因果律上百分之百杜絕 Look-ahead Bias。 | 第 2.5 節、第 3.4.1 節 || Q-04 | 為什麼基準視窗選 60 分鐘、近期視窗選 5 分鐘？ | 經 4.5 節敏感度分析證實：30 分鐘基線太敏感（假預警 26 段），120 分鐘太遲鈍；60 分鐘涵蓋 2 個熱平衡循環，達成靈敏度與穩健性最佳平衡，5 分鐘則有效濾除單點白雜訊抖動。 | 第 3.4.1 節、第 4.5 節、表 4-6 || Q-05 | 模型是否能對稱預測高壓越限與低壓越限？ | 是。3.4.3 節正式推導了雙向對稱公式：正向斜率 Slope^+ 結合 HI/HIHI 門檻外推預測超壓；負向斜率 Slope^- 結合 LO/LOLO 門檻外推預測失壓，兩者皆具備對稱封閉式 TTL 解。 | 第 3.4.3 節、圖 3-5 || Q-06 | 單一 PT 測點異常是否代表整套 PCW 系統異常？ | 否。本研究設計三層級水力架構（PT ➔ Branch DP ➔ PCW 系統）。單點異常僅標記為區域性；結合供回水 DP 區隔濾網阻塞與短路；超過 3 組分支劣化才升級為全系統失衡。 | 第 3.7 節 || Q-07 | 使用 Modbus 模擬器而非真實晶圓廠數據，研究是否失真？ | 晶圓廠極端故障極罕見且受商業機密 NDA 保護，無法在生產線上關閥測試；模擬引擎基於真實物理水力方程開發，且暫存器與封包與真實 PLC 100% 等價，代碼隨時可無縫對接。 | 第 3.3 節、第 4.1 節 || Q-08 | 預警提前時間 Lead Time 的嚴格物理定義是什麼？ | Lead Time 嚴格定義為 LeadTime = T_HardAlarm - T_EarlyWarning，代表相對傳統 SCADA 固定警報所爭取到的額外預警時間，本研究絕不冒充其為晶圓物理報廢時間。 | 第 4.4 節、公式 (4-1) || Q-09 | 如何證明生產代碼與理論數學模型完全一致？ | 4.2 節建立獨立 Excel 參考模型逐筆核對，且經 2,000 組向量跨語言檢核，BaseAvg60、Slope、M60、M10、N10 及 TTL 之最大絕對誤差為 0.000000000，達到 100% 數學與程式實作一致性。 | 第 4.2 節、表 4-2 || Q-10 | 系統正式投入晶圓廠運維之上線路線圖為何？ | 本研究已在測試台完成技術 SAT 驗收；正式上線依循 Phase 1 離線回放、Phase 2 旁路影子模式（Shadow Mode 並行 6 個月）、Phase 3 正式並網巡檢，確保現有產線零風險。 | 第 1.4 節、第 5.4 節 |
 
 # 參考文獻
 - Caballero, D., et al. (2026). Predictive maintenance in smart manufacturing: A comprehensive survey on data-driven methodologies. IEEE Transactions on Industrial Informatics, 22(3), 1420-1435.- Kaufman, S., Rosset, S., Perlich, C., & Stitelman, O. (2012). Leakage in data mining: Formulation, detection, and avoidance. ACM Transactions on Knowledge Discovery from Data (TKDD), 6(4), 1-21.- Li, X., et al. (2024). Prognostics and health management for semiconductor manufacturing facilities: Challenges and opportunities. IEEE Transactions on Semiconductor Manufacturing, 37(1), 45-58.- Lin, Y. H., et al. (2023). Hydraulic dynamic modeling and differential pressure control in dual-level semiconductor fab cooling systems. Journal of Process Control, 118, 102-115.- Montgomery, D. C. (2020). Introduction to Statistical Quality Control (8th ed.). John Wiley & Sons.- Smith, R. K., et al. (2021). Facility utility system reliability and thermal management in EUV lithography cleanrooms. IEEE Transactions on Automation Science and Engineering, 18(4), 1890-1902.- International Society of Automation (ISA). (2016). Management of Alarm Systems for the Process Industries (ANSI/ISA-18.2-2016). Research Triangle Park, NC: ISA.

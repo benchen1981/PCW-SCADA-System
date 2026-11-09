@@ -17,8 +17,8 @@
 4. [7 Industrial Hardening Layers Against False Alarms](#4-7-industrial-hardening-layers-against-false-alarms)
 5. [Frontend High-Performance Downsampling Benchmarks](#5-frontend-high-performance-downsampling-benchmarks)
 6. [15-Phase Development Evolution Roadmap](#6-15-phase-development-evolution-roadmap)
-7. [Master Prompts Index (Prompts 001~255)](#7-master-prompts-index-prompts-001255)
-8. [Debugging Records & Root-Cause Analysis (Events 001~084)](#8-debugging-records--root-cause-analysis-events-001084)
+7. [Master Prompts Index (Prompts 001~256)](#7-master-prompts-index-prompts-001256)
+8. [Debugging Records & Root-Cause Analysis (Events 001~085)](#8-debugging-records--root-cause-analysis-events-001085)
 9. [Execution Steps & Comprehensive User Guide](#9-execution-steps--comprehensive-user-guide)
 10. [Experimental Verification & Quantitative Evidence](#10-experimental-verification--quantitative-evidence)
 11. [Oral Defense 30 Questions Cross-Reference (Table 5-1)](#11-oral-defense-30-questions-cross-reference-table-5-1)
@@ -189,9 +189,9 @@ To eliminate UI freezing when rendering 100,000 points in industrial trend analy
 
 ---
 
-## 7. Master Prompts Index (Prompts 001~255)
+## 7. Master Prompts Index (Prompts 001~256)
 
-Archived in full within [prompt_001-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-255.md) (and [prompt 01-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)). Key milestones:
+Archived in full within [prompt_001-256.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-256.md) (and [prompt 01-256.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)). Key milestones:
 - **Prompts 001-015**: Project scaffolding, FastAPI startup, initial POC validation.
 - **Prompts 016-035**: Submain detail views, SVG P&ID rendering, differential pressure UI.
 - **Prompts 036-060**: 3-tier early warning rules, 256-sensor tag mapping inventory.
@@ -222,12 +222,13 @@ Archived in full within [prompt_001-255.md](file:///Users/benchen1981/Downloads/
 - **Prompt 253**: Professor Meeting Edition overhaul (`PCW 論文 20261106 Meeting.docx`): applied Booktabs formatting, eliminated duplicate titles, and synchronized 1,600 tests.
 - **Prompt 254**: Master documentation update: generated complete Prompts 001~254, Debug Events 001~083, execution guide, and operating manual.
 - **Prompt 255**: Thesis overhaul per professor review: streamlined text, formal closed-form equations, model/inference primacy, and LaTeX template deployment.
+- **Prompt 256**: Comprehensive textual polishing: eliminated rhetorical oral-exam fluff, unified spatial and baseline parameters, and removed defense index tables.
 
 ---
 
-## 8. Debugging Records & Root-Cause Analysis (Events 001~084)
+## 8. Debugging Records & Root-Cause Analysis (Events 001~085)
 
-Archived in full within [debug_001-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-084.md) (and [debug 01-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)). Key resolutions:
+Archived in full within [debug_001-085.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-085.md) (and [debug 01-085.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)). Key resolutions:
 1. **SPA 404 on Page Refresh (Vercel)**: Implemented catch-all rewrite rule to `index.html` in `vercel.json` (Event 052).
 2. **Artificial Flatness in Synthetic Signals**: Added micro-oscillations and multi-fault injection equations (Event 053).
 3. **Word Template Binding Margins & Section Corruption**: Engineered custom OpenXML DOM parser to preserve 3 sections and 3.0 cm gutter (Event 058).
@@ -351,10 +352,10 @@ All 30 defense questions have been dissolved into the thesis narrative:
 /Users/benchen1981/Downloads/Web SCADA/
 ├── README.md                                  # [Bilingual Master] Master Documentation
 ├── README_EN.md                               # [English Edition] Standalone English Documentation
-├── prompt_001-255.md                          # 255 Development Prompts & Architecture Milestones
-├── prompt 01-255.md                           # Synced Prompt Archive
-├── debug_001-084.md                           # 84 Debug Events & Root-Cause Analysis
-├── debug 01-084.md                            # Synced Debug Archive
+├── prompt_001-256.md                          # 256 Development Prompts & Architecture Milestones
+├── prompt 01-256.md                           # Synced Prompt Archive
+├── debug_001-085.md                           # 85 Debug Events & Root-Cause Analysis
+├── debug 01-085.md                            # Synced Debug Archive
 ├── build_perfect_thesis.py                    # Master Thesis Generation Engine (21 Figs, 22 Tables, Q1~Q30)
 ├── apply_template_and_supplement.py           # Word & Markdown Thesis Typesetting Script
 ├── generate_thesis_figures.py                 # 300 DPI Vector Blueprint & Curve Generator
@@ -373,8 +374,8 @@ All 30 defense questions have been dissolved into the thesis narrative:
 │       ├── evidence/                          # 100-Run Batch Validation Evidence & Plots
 │       ├── venv/                              # Python 3 Virtual Environment
 │       ├── vercel.json                        # Vercel Production Configuration
-│       ├── prompt_001-255.md                  # Codebase Synced Prompt Master
-│       ├── debug_001-084.md                   # Codebase Synced Debug Master
+│       ├── prompt_001-256.md                  # Codebase Synced Prompt Master
+│       ├── debug_001-085.md                   # Codebase Synced Debug Master
 │       ├── README.md                          # Codebase Synced Master README
 │       └── README_zh.md                       # Codebase Synced Traditional Chinese README
 └── Prompt/                                    # Conceptual Specifications & Project Charters
@@ -392,8 +393,8 @@ All 30 defense questions have been dissolved into the thesis narrative:
   - [PCW_論文送審與口試策略_正式規模版.md](file:///Users/benchen1981/Downloads/Web%20SCADA/thesis/PCW_%E8%AB%96%E6%96%87%E9%80%81%E5%AF%A9%E8%88%87%E5%8F%A3%E8%A9%A6%E7%AD%96%E7%95%A5_%E6%AD%A3%E5%BC%8F%E8%A6%8F%E6%A8%A1%E7%89%88.md)
   - [SPEECH_SCRIPT_50K.md](file:///Users/benchen1981/Downloads/Web%20SCADA/SPEECH_SCRIPT_50K.md)
 - **Development History & Engineering Logs**:
-  - [prompt_001-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-255.md) / [prompt 01-255.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)
-  - [debug_001-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-084.md) / [debug 01-084.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)
+  - [prompt_001-256.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt_001-256.md) / [prompt 01-256.md](file:///Users/benchen1981/Downloads/Web%20SCADA/prompt%2001-242.md)
+  - [debug_001-085.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug_001-085.md) / [debug 01-085.md](file:///Users/benchen1981/Downloads/Web%20SCADA/debug%2001-075.md)
 - **Production Codebase & Build Scripts**:
   - [Code/pcw-poc-v1_merged/](file:///Users/benchen1981/Downloads/Web%20SCADA/Code/pcw-poc-v1_merged/)
   - [build_perfect_thesis.py](file:///Users/benchen1981/Downloads/Web%20SCADA/build_perfect_thesis.py)
